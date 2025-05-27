@@ -19,13 +19,14 @@
             --green: #138808;
             --navy-blue: #454593;
             --dark-blue: #0d2b4e;
-            --gold: #d4af37;
             --light-gray: #f8f9fa;
             --transition: all 0.3s ease;
         }
+        
         body {
             font-family: 'Poppins', sans-serif;
         }
+        
         /* Footer Styles */
         footer {
             background-color: var(--navy-blue);
@@ -33,8 +34,8 @@
             padding: 60px 0 20px;
             position: relative;
             background-image: linear-gradient(to bottom, var(--navy-blue), #000040);
-            overflow: hidden;
         }
+        
         footer::before {
             content: '';
             position: absolute;
@@ -43,50 +44,53 @@
             right: 0;
             height: 5px;
             background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
+        
         .footer-logo {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
+        
         .footer-logo img {
             height: 60px;
             margin-right: 15px;
             filter: brightness(0) invert(1);
             transition: var(--transition);
         }
-        .footer-logo:hover img {
-            transform: rotate(5deg) scale(1.05);
-        }
+        
         .footer-logo-text {
             display: flex;
             flex-direction: column;
             line-height: 1.2;
         }
+        
         .footer-logo-text .title {
             font-weight: 700;
             font-size: 1.4rem;
             color: white;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
+        
         .footer-logo-text .subtitle {
             font-size: 0.8rem;
             font-weight: 400;
             color: rgba(255,255,255,0.8);
             letter-spacing: 1px;
         }
+        
         .footer-about {
             margin-bottom: 20px;
             color: rgba(255,255,255,0.8);
             font-size: 0.95rem;
             line-height: 1.7;
         }
+        
         .footer-social {
             display: flex;
             gap: 15px;
             margin-top: 20px;
         }
+        
         .footer-social a {
             display: flex;
             align-items: center;
@@ -99,11 +103,13 @@
             transition: var(--transition);
             font-size: 1rem;
         }
+        
         .footer-social a:hover {
             background-color: var(--saffron);
-            transform: translateY(-3px) scale(1.1);
+            transform: translateY(-3px);
             color: var(--navy-blue);
         }
+        
         .footer-heading {
             color: white;
             font-weight: 600;
@@ -111,8 +117,8 @@
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
+        
         .footer-heading::after {
             content: '';
             position: absolute;
@@ -123,54 +129,37 @@
             background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
             border-radius: 3px;
         }
+        
         .footer-links {
             list-style: none;
             padding: 0;
             margin: 0;
         }
+        
         .footer-links li {
             margin-bottom: 12px;
-            transition: var(--transition);
         }
+        
         .footer-links a {
             color: rgba(255,255,255,0.8);
             text-decoration: none;
             transition: var(--transition);
             display: inline-block;
-            position: relative;
-            padding-left: 15px;
             font-size: 0.95rem;
         }
-        .footer-links a::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 8px;
-            height: 2px;
-            background-color: var(--saffron);
-            opacity: 0;
-            transition: var(--transition);
-        }
+        
         .footer-links a:hover {
             color: white;
-            padding-left: 20px;
             transform: translateX(5px);
         }
-        .footer-links a:hover::before {
-            opacity: 1;
-            width: 10px;
-        }
-        .footer-links li:hover {
-            transform: translateX(5px);
-        }
+        
         .footer-contact-info {
             list-style: none;
             padding: 0;
             margin: 0;
             color: rgba(255,255,255,0.8);
         }
+        
         .footer-contact-info li {
             margin-bottom: 15px;
             display: flex;
@@ -178,6 +167,7 @@
             line-height: 1.6;
             font-size: 0.95rem;
         }
+        
         .footer-contact-info i {
             color: var(--saffron);
             margin-right: 12px;
@@ -185,54 +175,7 @@
             font-size: 1.1rem;
             min-width: 18px;
         }
-        .footer-newsletter {
-            margin-top: 25px;
-        }
-        .footer-newsletter p {
-            color: rgba(255,255,255,0.8);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-        .newsletter-form {
-            display: flex;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            transform: translateY(0);
-            transition: var(--transition);
-        }
-        .newsletter-form:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        .newsletter-form input {
-            flex: 1;
-            padding: 12px 15px;
-            border: none;
-            font-size: 0.95rem;
-            outline: none;
-            background-color: rgba(255,255,255,0.9);
-            transition: var(--transition);
-        }
-        .newsletter-form input:focus {
-            background-color: white;
-        }
-        .newsletter-form button {
-            background: linear-gradient(to right, var(--saffron), #ff8c00);
-            color: var(--navy-blue);
-            border: none;
-            padding: 0 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-        }
-        .newsletter-form button:hover {
-            background: linear-gradient(to right, #ff8c00, var(--saffron));
-        }
+        
         .footer-bottom {
             margin-top: 50px;
             padding-top: 20px;
@@ -241,6 +184,7 @@
             color: rgba(255,255,255,0.7);
             font-size: 0.85rem;
         }
+        
         .footer-bottom-links {
             display: flex;
             justify-content: center;
@@ -248,57 +192,23 @@
             margin-top: 15px;
             flex-wrap: wrap;
         }
+        
         .footer-bottom-links a {
             color: rgba(255,255,255,0.7);
             text-decoration: none;
             transition: var(--transition);
-            position: relative;
-            padding: 0 5px;
         }
-        .footer-bottom-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background-color: var(--saffron);
-            transition: var(--transition);
-        }
+        
         .footer-bottom-links a:hover {
             color: var(--saffron);
         }
-        .footer-bottom-links a:hover::after {
-            width: 100%;
-        }
-        .footer-bottom-links a:not(:last-child)::before {
+        
+        .footer-bottom-links a:not(:last-child)::after {
             content: '|';
-            position: absolute;
-            right: -12px;
+            margin-left: 10px;
             color: rgba(255,255,255,0.3);
         }
-        .flag-theme-btn {
-            position: absolute;
-            top: -25px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(to bottom, var(--saffron) 33%, var(--white) 33% 66%, var(--green) 66%);
-            border-radius: 50%;
-            border: 3px solid var(--navy-blue);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--navy-blue);
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: var(--transition);
-            z-index: 10;
-        }
-        .flag-theme-btn:hover {
-            transform: translateY(-5px) rotate(10deg);
-        }
+        
         .designer-credit {
             display: flex;
             align-items: center;
@@ -306,117 +216,84 @@
             margin-top: 20px;
             color: rgba(255,255,255,0.6);
             font-size: 0.8rem;
-            transition: var(--transition);
+            flex-wrap: wrap;
+            gap: 5px;
         }
-        .designer-credit:hover {
-            color: var(--saffron);
+        
+        .designer-credit a {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: bold;
         }
-      
-        .designer-credit:hover .designer-logo {
-            transform: scale(1.1) rotate(5deg);
-            filter: brightness(1) invert(0) drop-shadow(0 0 5px rgba(255, 153, 51, 0.5));
-        }
-        .floating-triangle {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.05);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            animation: float 8s ease-in-out infinite;
-        }
-        .floating-circle {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.03);
-            animation: float 10s ease-in-out infinite reverse;
-        }
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
-            }
-            50% {
-                transform: translateY(-20px) rotate(5deg);
-            }
-        }
-        .animate-delay-1 {
-            animation-delay: 0.5s;
-        }
-        .animate-delay-2 {
-            animation-delay: 1s;
-        }
-        .animate-delay-3 {
-            animation-delay: 1.5s;
-        }
+        
+        /* Responsive adjustments */
         @media (max-width: 991.98px) {
             .footer-col {
                 margin-bottom: 30px;
             }
+            
             .footer-logo img {
                 height: 50px;
             }
         }
+        
         @media (max-width: 767.98px) {
             footer {
                 padding: 50px 0 20px;
             }
+            
             .footer-logo {
                 justify-content: center;
                 text-align: center;
             }
+            
             .footer-about, 
             .footer-heading,
             .footer-links,
-            .footer-contact-info,
-            .footer-newsletter {
+            .footer-contact-info {
                 text-align: center;
             }
+            
             .footer-heading::after {
                 left: 50%;
                 transform: translateX(-50%);
             }
+            
             .footer-social {
                 justify-content: center;
             }
-            .newsletter-form {
-                max-width: 400px;
-                margin-left: auto;
-                margin-right: auto;
-            }
+            
             .footer-contact-info li {
                 justify-content: center;
             }
-            .footer-links li {
-                text-align: center;
-            }
-            .footer-links a {
-                padding-left: 0;
-            }
-            .footer-links a::before {
-                display: none;
-            }
-            .footer-links a:hover {
-                padding-left: 0;
-                transform: none;
-            }
-            .footer-links li:hover {
-                transform: none;
-            }
-            .flag-theme-btn {
-                width: 40px;
-                height: 40px;
-                top: -20px;
-                right: 10px;
-                font-size: 1rem;
-            }
-        }
-        @media (max-width: 575.98px) {
+            
             .footer-bottom-links {
                 gap: 10px;
             }
-            .footer-bottom-links a:not(:last-child)::before {
-                right: -8px;
+            
+            .footer-bottom-links a:not(:last-child)::after {
+                margin-left: 5px;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .footer-logo {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-logo img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .footer-bottom-links {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .footer-bottom-links a:not(:last-child)::after {
+                display: none;
             }
         }
     </style>
@@ -424,174 +301,91 @@
 <body>
     <!-- Footer Section -->
     <footer>
-        <!-- Floating decorative elements -->
-        <div class="floating-triangle" style="top: 10%; left: 5%; opacity: 0.3;"></div>
-        <div class="floating-circle" style="top: 30%; right: 8%; opacity: 0.2;"></div>
-        <div class="floating-triangle" style="bottom: 15%; right: 10%; opacity: 0.4; width: 60px; height: 60px;"></div>
-        
-        <div class="flag-theme-btn">
-            <i class="fas fa-flag"></i>
-        </div>
         <div class="container">
             <div class="row">
-            <div class="col-lg-4 col-md-6 footer-col animate__animated animate__fadeInUp">
-            <div class="footer-logo">
-            <img src="https://via.placeholder.com/60x60" alt="Footer Logo" class="logo-img">
-            <div class="footer-logo-text">
-                <span class="title">Karthika and Associates</span>
-                <span class="subtitle">Chartered Accountants</span>
+                <div class="col-lg-4 col-md-6 footer-col">
+                    <div class="footer-logo">
+                        <img src="https://via.placeholder.com/60x60" alt="Karthika and Associates Logo">
+                        <div class="footer-logo-text">
+                            <span class="title">Karthika and Associates</span>
+                            <span class="subtitle">Chartered Accountants</span>
+                        </div>
+                    </div>
+                    <p class="footer-about">
+                        We are a leading Chartered Accountancy firm providing comprehensive financial and business advisory services to clients across India with a commitment to excellence, integrity, and national values.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Publications</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Audit & Assurance</a></li>
+                        <li><a href="#">Tax Consultancy</a></li>
+                        <li><a href="#">GST Services</a></li>
+                        <li><a href="#">Company Formation</a></li>
+                        <li><a href="#">Financial Planning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Financial Street, Business District, Mumbai, Maharashtra 400001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@karthikaandassociates.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            </div>
-            <p class="footer-about">
-            We are a leading Chartered Accountancy firm providing comprehensive financial and business advisory services to clients across India with a commitment to excellence, integrity, and national values.
-            </p>
-            <div class="footer-social">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-            </div>
-            <div class="col-lg-2 col-md-6 footer-col animate__animated animate__fadeInUp animate-delay-1">
-            <h4 class="footer-heading">Quick Links</h4>
-            <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Publications</a></li>
-            <li><a href="#">Knowledge Center</a></li>
-            <li><a href="#">Contact</a></li>
-            </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 footer-col animate__animated animate__fadeInUp animate-delay-2">
-            <h4 class="footer-heading">Our Services</h4>
-            <ul class="footer-links">
-            <li><a href="#">Audit & Assurance</a></li>
-            <li><a href="#">Tax Consultancy</a></li>
-            <li><a href="#">GST Services</a></li>
-            <li><a href="#">Company Formation</a></li>
-            <li><a href="#">Financial Planning</a></li>
-            <li><a href="#">Business Advisory</a></li>
-            </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 footer-col animate__animated animate__fadeInUp animate-delay-3">
-            <h4 class="footer-heading">Contact Us</h4>
-            <ul class="footer-contact-info">
-            <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <span>123 Financial Street, Business District, Mumbai, Maharashtra 400001</span>
-            </li>
-            <li>
-                <i class="fas fa-phone-alt"></i>
-                <span>+91 98765 43210<br>+91 12345 67890</span>
-            </li>
-            <li>
-                <i class="fas fa-envelope"></i>
-                <span>info@karthikaandassociates.com<br>support@karthikaandassociates.com</span>
-            </li>
-            <li>
-                <i class="fas fa-clock"></i>
-                <span>Mon-Fri: 9:00 AM - 6:00 PM<br>Sat: 9:00 AM - 1:00 PM</span>
-            </li>
-            </ul>
-            <div class="footer-newsletter">
-            <h4 class="footer-heading">Newsletter</h4>
-            <p>Subscribe to our newsletter for the latest financial updates, tax news, and business insights relevant to Indian businesses.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your Email Address" required>
-                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-            </form>
-            </div>
-            </div>
-            </div>
-            <div class="footer-bottom">
-            <div class="row">
-            <div class="col-12">
-            <p>&copy; 2023 Karthika and Associates. All Rights Reserved. | Registered with Institute of Chartered Accountants of India</p>
-            <div class="footer-bottom-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Disclaimer</a>
-                <a href="#">Sitemap</a>
-                <a href="#">Careers</a>
-            </div>
-            <div class="designer-credit animate__animated animate__fadeInUp animate__delay-2s">
-                <span>Designed by</span>
-                <img src="images/IMG-20160317-WA0004-removebg-preview.png" alt="Saakra Enterprises Logo" class="designer-logo" style="height: 40px;">
-                <span style="font-weight:bold; color:#138808;">
-                <a href="https://saakra.com" target="_blank" style="color:#138808; text-decoration:none;">
-                    Saakra Enterprises Private Limited
-                </a>
-                </span>
-                <span style="margin-left:18px; display:inline-flex; align-items:center; gap:2px;">
-                <span class="flag-bar flag-bar-saffron"></span>
-                <span class="flag-bar flag-bar-white"></span>
-                <span class="flag-bar flag-bar-green"></span>
-                </span>
-            </div>
-            <style>
-            .flag-bar {
-                display: inline-block;
-                width: 18px;
-                height: 6px;
-                border-radius: 3px;
-                margin-right: 0;
-                animation: flag-bar-blink 1.5s infinite;
-                box-shadow: 0 0 6px rgba(0,0,0,0.08);
-            }
-            .flag-bar-saffron {
-                background: linear-gradient(90deg, #FF9933 70%, #e67c00 100%);
-                animation-delay: 0s;
-            }
-            .flag-bar-white {
-                background: linear-gradient(90deg, #fff 70%, #e0e0e0 100%);
-                border: 1px solid #ccc;
-                animation-delay: 0.5s;
-            }
-            .flag-bar-green {
-                background: linear-gradient(90deg, #138808 70%, #0b5c05 100%);
-                animation-delay: 1s;
-            }
-            @keyframes flag-bar-blink {
-                0%, 100% { opacity: 1; transform: scaleY(1);}
-                50% { opacity: 0.4; transform: scaleY(1.4);}
-            }
-            </style>
             
-            </style>
-            </div>
-            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Karthika and Associates. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+                <div class="designer-credit">
+                    Designed by 
+                    <a href="https://saakra.com" target="_blank">
+                        <img src="images/IMG-20160317-WA0004-removebg-preview.png" alt="Saakra Enterprises Logo" style="height:40px; vertical-align:middle; margin-right:8px;">
+                        Saakra Enterprises Private Limited
+                    </a>
+                </div></a>
             </div>
         </div>
     </footer>
+
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Simple animation trigger on scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add scroll animation class when footer comes into view
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate__fadeInUp');
-                    }
-                });
-            }, {threshold: 0.1});
-            
-            document.querySelectorAll('.footer-col').forEach(col => {
-                observer.observe(col);
-            });
-            
-            // Flag button animation
-            const flagBtn = document.querySelector('.flag-theme-btn');
-            flagBtn.addEventListener('click', function() {
-                this.classList.add('animate__tada');
-                setTimeout(() => {
-                    this.classList.remove('animate__tada');
-                }, 1000);
-            });
-        });
-    </script>
 </body>
 </html>
