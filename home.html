@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthika & Associates | Chartered Accountants</title>
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- Lenis for smooth scrolling -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script> 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 800px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            max-width: 600px;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+        }
+        
+        .hero-btn {
+            background-color: var(--accent);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .hero-btn:hover::after {
+            opacity: 1;
+        }
+        
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+            40% {transform: translateY(-20px) translateX(-50%);}
+            60% {transform: translateY(-10px) translateX(-50%);}
+        }
+        
+        /* Floating elements */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-video {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: var(--transition);
+        }
+        
+        .about-video:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .section-title {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            height: 100%;
+            border: 1px solid rgba(0,0,0,0.05);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover::before {
+            height: 100%;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 120px 0;
+            background-color: white;
+            position: relative;
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            height: 100%;
+            background: white;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            opacity: 0;
+            z-index: -1;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        
+        .service-card:hover::after {
+            opacity: 1;
+        }
+        
+        .service-card:hover .service-icon,
+        .service-card:hover .service-title,
+        .service-card:hover .card-text,
+        .service-card:hover .btn-link {
+            color: white !important;
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-item {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat-number {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, white, #e0e7ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 120px 0;
+            background-color: var(--light);
+        }
+        
+        .team-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            background: white;
+            position: relative;
+        }
+        
+        .team-img {
+            height: 300px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+        }
+        
+        .team-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .team-card:hover .team-overlay {
+            opacity: 1;
+        }
+        
+        .team-social {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        
+        .team-social li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .team-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .team-social a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 120px 0;
+            background-color: white;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 6rem;
+            color: rgba(37, 99, 235, 0.05);
+            font-family: Georgia, serif;
+            line-height: 1;
+            z-index: 0;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-text {
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-rating {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        /* Clients Section */
+        .clients-section {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .client-logo {
+            height: 60px;
+            filter: grayscale(100%) contrast(0.5);
+            opacity: 0.7;
+            transition: var(--transition);
+            margin: 20px;
+            object-fit: contain;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0) contrast(1);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        /* Contact CTA Section */
+        .contact-cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-title {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-btn {
+            background-color: white;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .cta-btn:hover::after {
+            opacity: 1;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .footer-links h5 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .footer-links h5::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 3rem;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+        
+        /* Video Modal */
+        .video-modal-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .video-modal-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        .video-modal-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        @keyframes pulse {
+            0% {transform: scale(1); opacity: 1;}
+            100% {transform: scale(1.5); opacity: 0;}
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) {
+            .hero-section {
+                min-height: 700px;
+            }
+            
+            .about-video {
+                transform: none;
+                margin-bottom: 3rem;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .hero-section {
+                min-height: 600px;
+                text-align: center;
+            }
+            
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .hero-section {
+                min-height: 500px;
+            }
+            
+            .hero-btn, .cta-btn {
+                padding: 0.75rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Floating animated elements -->
+        <div class="floating-element" style="width: 300px; height: 300px; top: -150px; left: -150px;"></div>
+        <div class="floating-element" style="width: 200px; height: 200px; bottom: -100px; right: -100px;"></div>
+        
+        <!-- Background video -->
+        <video autoplay muted loop class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-business-graph-49992-large.mp4" type="video/mp4">
+        </video>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <h1 class="hero-title text-gradient">Expert <span class="d-block">Chartered Accountancy</span> Services</h1>
+                        <p class="hero-subtitle">Karthika & Associates provides comprehensive financial solutions tailored to your business needs, helping you navigate India's complex regulatory environment with confidence.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <button class="hero-btn">Get a Free Consultation <i class="fas fa-arrow-right ms-2"></i></button>
+                            <button class="btn btn-outline-light rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#videoModal">
+                                <i class="fas fa-play me-2"></i> Watch Our Story
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Financial Analysis" class="img-fluid rounded-4 shadow-lg" data-aos="fade-left">
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                            <button class="video-modal-btn border-0" data-bs-toggle="modal" data-bs-target="#videoModal">
+                                <i class="fas fa-play fs-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-indicator">
+            <a href="#about" class="text-white fs-4"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="section-title">About <span class="text-gradient">Karthika & Associates</span></h2>
+                    <p class="lead mb-4">Trusted financial advisors serving businesses across India since 2010</p>
+                    
+                    <p>Founded by CA Karthika Menon, our firm has grown to become one of the most respected chartered accountancy practices in the region, known for our technical expertise, ethical standards, and client-focused approach.</p>
+                    
+                    <div class="feature-card mt-4">
+                        <p class="mb-0 fst-italic">"We believe in building long-term relationships with our clients by providing exceptional service and innovative solutions to complex financial challenges. Our team is committed to helping your business thrive in India's dynamic economic environment."</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-video">
+                        <video class="w-100" poster="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" controls>
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-businessman-analyzing-data-while-seated-at-his-desk-15645-large.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5 g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>Professional Excellence</h4>
+                        <p>Our team includes qualified CAs, MBAs, and financial experts with extensive industry experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Client-Centric Approach</h4>
+                        <p>We take time to understand your unique needs and provide personalized solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Innovative Solutions</h4>
+                        <p>We leverage technology and creative thinking to solve complex financial challenges.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4>Data Security</h4>
+                        <p>Your financial information is protected with enterprise-grade security measures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number counter" data-count="250">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="col-md-3 col-6 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number counter" data-count="15">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number counter" data-count="98">0</div>
+                    <div class="stat-label">Client Retention</div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-number counter" data-count="500">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Our <span class="text-gradient">Services</span></h2>
+                    <p class="lead">Comprehensive financial solutions for businesses of all sizes</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card service-card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-globe-asia"></i>
+                            </div>
+                            <h3 class="service-title">Foreign Direct Investment</h3>
+                            <p class="card-text">Comprehensive guidance on FDI regulations, compliance, and structuring investments in India. We help international companies navigate the complexities of doing business in India.</p>
+                            <a href="#" class="btn btn-link text-decoration-none ps-0">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card service-card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <h3 class="service-title">Taxation Services</h3>
+                            <p class="card-text">Strategic tax planning and compliance services for businesses and individuals. Our experts help minimize tax liabilities while ensuring full compliance with Indian tax laws.</p>
+                            <a href="#" class="btn btn-link text-decoration-none ps-0">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card service-card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-search-dollar"></i>
+                            </div>
+                            <h3 class="service-title">Audit & Assurance</h3>
+                            <p class="card-text">Independent audit services that enhance the reliability of financial information. We provide statutory audits, internal audits, and specialized audit services.</p>
+                            <a href="#" class="btn btn-link text-decoration-none ps-0">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card service-card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3 class="service-title">Transfer Pricing</h3>
+                            <p class="card-text">Expert advice on transfer pricing regulations and documentation requirements. We help multinational companies comply with Indian transfer pricing regulations.</p>
+                            <a href="#" class="btn btn-link text-decoration-none ps-0">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card service-card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3 class="service-title">Business Setup</h3>
+                            <p class="card-text">End-to-end assistance for establishing and structuring your business in India. From company registration to compliance management, we handle it all.</p>
+                            <a href="#" class="btn btn-link text-decoration-none ps-0">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card service-card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="service-title">Virtual CFO</h3>
+                            <p class="card-text">Strategic financial leadership on demand for growing businesses. Get access to experienced CFO services without the full-time executive cost.</p>
+                            <a href="#" class="btn btn-link text-decoration-none ps-0">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <a href="#" class="btn btn-primary rounded-pill px-4">View All Services <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Our <span class="text-gradient">Leadership</span> Team</h2>
+                    <p class="lead">Experienced professionals guiding your financial success</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="team-img w-100" alt="Karthika Menon">
+                        <div class="team-overlay">
+                            <h5 class="mb-1">CA Karthika Menon</h5>
+                            <p class="mb-3">Founder & Managing Partner</p>
+                            <ul class="team-social">
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">CA Karthika Menon</h5>
+                            <p class="text-muted mb-3">Founder & Managing Partner</p>
+                            <p class="card-text">With over 18 years of experience in chartered accountancy, Karthika specializes in international taxation and business advisory.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="team-img w-100" alt="Rahul Sharma">
+                        <div class="team-overlay">
+                            <h5 class="mb-1">CA Rahul Sharma</h5>
+                            <p class="mb-3">Partner - Audit & Assurance</p>
+                            <ul class="team-social">
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">CA Rahul Sharma</h5>
+                            <p class="text-muted mb-3">Partner - Audit & Assurance</p>
+                            <p class="card-text">Rahul leads our audit practice with expertise in statutory audits, internal controls, and risk management.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1573497019706-4e0b7f4e5b81?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="team-img w-100" alt="Priya Nair">
+                        <div class="team-overlay">
+                            <h5 class="mb-1">CA Priya Nair</h5>
+                            <p class="mb-3">Partner - Taxation</p>
+                            <ul class="team-social">
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">CA Priya Nair</h5>
+                            <p class="text-muted mb-3">Partner - Taxation</p>
+                            <p class="card-text">Priya heads our tax practice with specialized knowledge in GST, international taxation, and transfer pricing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title">What Our <span class="text-gradient">Clients</span> Say</h2>
+                    <p class="lead">Trusted by businesses across industries</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"Karthika & Associates provided exceptional guidance during our market entry into India. Their knowledge of local regulations saved us time and money. The team was always available to answer our questions and helped us navigate complex compliance requirements."</p>
+                        <p class="testimonial-author">Michael Johnson</p>
+                        <p class="text-muted testimonial-position">CEO, Global Tech Solutions</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"The team's expertise in transfer pricing helped us navigate complex regulations while optimizing our tax position. Their attention to detail and proactive approach to compliance gave us complete peace of mind. Highly recommended!"</p>
+                        <p class="testimonial-author">Sarah Williams</p>
+                        <p class="text-muted testimonial-position">CFO, International Manufacturing Co.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"Their virtual CFO service has been invaluable to our startup. We get executive-level financial guidance without the full-time cost. The team helped us secure funding, optimize cash flow, and implement financial controls as we scaled."</p>
+                        <p class="testimonial-author">Raj Patel</p>
+                        <p class="text-muted testimonial-position">Founder, Tech Innovations Pvt. Ltd.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="text-center mb-5" data-aos="fade-up">Trusted by leading organizations</h4>
+                    <div class="d-flex flex-wrap justify-content-center align-items-center">
+                        <img src="https://via.placeholder.com/150x60/2563eb/ffffff?text=Client+1" alt="Client Logo" class="client-logo" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://via.placeholder.com/150x60/2563eb/ffffff?text=Client+2" alt="Client Logo" class="client-logo" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://via.placeholder.com/150x60/2563eb/ffffff?text=Client+3" alt="Client Logo" class="client-logo" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://via.placeholder.com/150x60/2563eb/ffffff?text=Client+4" alt="Client Logo" class="client-logo" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://via.placeholder.com/150x60/2563eb/ffffff?text=Client+5" alt="Client Logo" class="client-logo" data-aos="fade-up" data-aos-delay="500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact" class="contact-cta">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center cta-content" data-aos="fade-up">
+                    <h2 class="cta-title">Ready to Discuss Your Financial Needs?</h2>
+                    <p class="mb-4 lead">Contact us today for a free initial consultation with one of our experts. We'll help you navigate India's financial landscape with confidence.</p>
+                    <button class="cta-btn mb-4">Get in Touch <i class="fas fa-arrow-right ms-2"></i></button>
+                    <div class="mt-4">
+                        <p class="mb-2"><i class="fas fa-phone-alt me-2"></i> +91 98765 43210</p>
+                        <p class="mb-2"><i class="fas fa-envelope me-2"></i> info@karthikaandassociates.com</p>
+                        <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i> 123 Financial District, Mumbai - 400001, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a href="#" class="footer-logo text-white text-decoration-none">Karthika & Associates</a>
+                    <p>Providing expert chartered accountancy services with integrity, professionalism, and a client-first approach since 2010.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h5>Services</h5>
+                        <ul>
+                            <li><a href="#">Taxation</a></li>
+                            <li><a href="#">Audit & Assurance</a></li>
+                            <li><a href="#">Business Setup</a></li>
+                            <li><a href="#">FDI Advisory</a></li>
+                            <li><a href="#">Virtual CFO</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">News & Insights</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer-links">
+                        <h5>Subscribe</h5>
+                        <p>Get the latest financial insights and updates delivered to your inbox.</p>
+                        <form class="mt-3">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control bg-dark border-dark text-white" placeholder="Your Email" aria-label="Your Email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-md-0">© 2023 Karthika & Associates. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> in India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="companyVideo" src="https://www.youtube.com/embed/VIDEO_ID?enablejsapi=1" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS for scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Initialize smooth scroll with Lenis
+        const lenis = new Lenis({
+            lerp: 0.1,
+            smooth: true
+        });
+        
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        
+        requestAnimationFrame(raf);
+        
+        // Counter animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+            
+            function animateCounters() {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-count');
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+                    
+                    if(count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(animateCounters, 1);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                });
+            }
+            
+            // Intersection Observer to trigger animation when element is in view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {threshold: 0.5});
+            
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+            
+            // GSAP animations
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Hero section animations
+            gsap.from(".hero-title", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: "power3.out"
+            });
+            
+            gsap.from(".hero-subtitle", {
+                duration: 1,
+                y: 30,
+                opacity: 0,
+                delay: 0.3,
+                ease: "power3.out"
+            });
+            
+            gsap.from(".hero-btn", {
+                duration: 1,
+                y: 30,
+                opacity: 0,
+                delay: 0.6,
+                ease: "power3.out"
+            });
+            
+            // Floating elements animation
+            gsap.to(".floating-element", {
+                duration: 10,
+                x: "random(-100, 100)",
+                y: "random(-100, 100)",
+                rotation: "random(-30, 30)",
+                ease: "none",
+                repeat: -1,
+                yoyo: true
+            });
+            
+            // Service card hover animation
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    gsap.to(card, {
+                        duration: 0.3,
+                        scale: 1.02,
+                        ease: "power1.out"
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    gsap.to(card, {
+                        duration: 0.3,
+                        scale: 1,
+                        ease: "power1.out"
+                    });
+                });
+            });
+            
+            // Video modal
+            const videoModal = document.getElementById('videoModal');
+            if(videoModal) {
+                videoModal.addEventListener('show.bs.modal', function (event) {
+                    const videoSrc = "https://www.youtube.com/embed/VIDEO_ID?autoplay=1";
+                    document.getElementById('companyVideo').setAttribute('src', videoSrc);
+                });
+                
+                videoModal.addEventListener('hide.bs.modal', function (event) {
+                    document.getElementById('companyVideo').setAttribute('src', '');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
