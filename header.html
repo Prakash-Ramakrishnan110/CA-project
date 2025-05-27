@@ -45,7 +45,7 @@
         .navbar-brand {
             display: flex;
             align-items: center;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 1.5rem;
             color: var(--primary-blue);
             transition: var(--transition);
@@ -73,14 +73,14 @@
         
         .brand-subtitle {
             font-size: 0.7rem;
-            font-weight: 400;
+            font-weight: 600;
             color: var(--dark-blue);
             letter-spacing: 1px;
         }
         
         .nav-link {
             color: var(--dark-blue);
-            font-weight: 500;
+            font-weight: 600;
             padding: 8px 15px;
             margin: 0 3px;
             border-radius: 4px;
@@ -123,6 +123,7 @@
             position: relative;
             padding-left: 15px;
             transition: var(--transition);
+            font-weight: 500;
         }
         
         .dropdown-menu .dropdown-item::before {
@@ -162,7 +163,7 @@
         .dropdown-item {
             padding: 8px 20px;
             color: var(--dark-blue);
-            font-weight: 400;
+            font-weight: 500;
             transition: var(--transition);
             position: relative;
         }
@@ -170,8 +171,6 @@
         .dropdown-item:hover {
             color: var(--primary-blue);
         }
-        
-       
         
         .dropdown-toggle::after {
             margin-left: 5px;
@@ -203,18 +202,21 @@
             margin-top: -0.5em;
         }
         
-        /* Contact button with Indian flag gradient */
+        /* Contact button with Indian flag gradient - Improved responsive version */
         .btn-contact {
             background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
             color: var(--navy-blue);
             border-radius: 6px;
             padding: 8px 20px;
-            font-weight: 600;
+            font-weight: 700;
             transition: var(--transition);
             border: 2px solid transparent;
             position: relative;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            text-align: center;
+            white-space: nowrap;
         }
         
         .btn-contact::before {
@@ -294,7 +296,7 @@
             top: 0;
         }
         
-        /* Responsive adjustments */
+        /* Enhanced Responsive adjustments */
         @media (max-width: 991.98px) {
             .navbar-collapse {
                 background-color: white;
@@ -302,34 +304,60 @@
                 border-radius: 8px;
                 box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
                 margin-top: 15px;
+                max-height: 80vh;
+                overflow-y: auto;
             }
             
             .nav-item {
-                margin-bottom: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .nav-link {
+                padding: 10px 15px;
+                font-size: 1rem;
             }
             
             .dropdown-menu {
                 box-shadow: none;
                 border: 1px solid rgba(0, 0, 0, 0.05);
-                margin-top: 0;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                width: 90%;
+                margin-left: auto;
             }
             
             .dropdown-submenu .dropdown-menu {
                 left: 15px;
                 margin-top: 5px;
+                width: 85%;
             }
             
+            /* Improved mobile contact button */
             .btn-contact {
-                display: block;
-                width: 100%;
-                margin-top: 10px;
-                background: linear-gradient(to bottom, var(--saffron), var(--white), var(--green));
+                display: inline-block;
+                width: auto;
+                margin-top: 15px;
+                margin-bottom: 5px;
+                padding: 10px 20px;
+                font-size: 1rem;
+                min-width: 140px;
+                white-space: nowrap;
+            }
+            
+            /* Make dropdown items more tappable on mobile */
+            .dropdown-item {
+                padding: 12px 20px;
+                font-size: 0.95rem;
             }
         }
         
         @media (max-width: 767.98px) {
+            body {
+                padding-top: 70px;
+            }
+            
             .navbar-brand {
-                font-size: 1.3rem;
+                font-size: 1.25rem;
             }
             
             .logo-img {
@@ -339,6 +367,60 @@
             
             .brand-subtitle {
                 font-size: 0.6rem;
+            }
+            
+            .navbar-collapse {
+                padding: 15px;
+                max-height: 75vh;
+            }
+            
+            .nav-link {
+                font-size: 0.95rem;
+            }
+            
+            .dropdown-menu {
+                font-size: 0.9rem;
+            }
+            
+            .btn-contact {
+                min-width: 130px;
+                padding: 8px 15px;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .navbar-brand {
+                font-size: 1.1rem;
+            }
+            
+            .logo-img {
+                height: 35px;
+            }
+            
+            .navbar-collapse {
+                padding: 10px;
+                max-height: 70vh;
+            }
+            
+            .nav-link, .dropdown-item {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            /* Small mobile contact button */
+            .btn-contact {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+                min-width: 110px;
+                margin-top: 10px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .btn-contact {
+                min-width: 100px;
+                padding: 7px 10px;
+                font-size: 0.85rem;
             }
         }
     </style>
