@@ -61,6 +61,15 @@
             overflow: hidden;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
             transition: transform 0.5s ease;
+            height: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        
+        .ceo-image-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
         }
         
         .ceo-image:hover {
@@ -238,14 +247,48 @@
             position: relative;
         }
         
+        /* Button styles */
+        .btn-glow {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Skill bars */
+        .skill-bar {
+            height: 8px;
+            background-color: #e6f0ff;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            border-radius: 4px;
+        }
+        
         /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .ceo-title {
+                font-size: 3rem;
+            }
+            
+            .ceo-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        
         @media (max-width: 992px) {
             .ceo-title {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             
             .ceo-hero {
-                padding: 150px 0 80px;
+                padding: 120px 0 80px;
             }
             
             .timeline::after {
@@ -272,25 +315,83 @@
             .right {
                 left: 0%;
             }
+            
+            section {
+                padding: 80px 0;
+            }
         }
         
         @media (max-width: 768px) {
             .ceo-title {
-                font-size: 2.2rem;
+                font-size: 2rem;
+                text-align: center;
             }
             
             .ceo-subtitle {
                 font-size: 1.1rem;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
             }
             
             .section-title {
                 font-size: 1.8rem;
+            }
+            
+            .hero-content {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+                margin-top: 20px;
+            }
+            
+            .ceo-image-container {
+                justify-content: center;
+            }
+            
+            section {
+                padding: 60px 0;
             }
         }
         
         @media (max-width: 576px) {
             .ceo-title {
                 font-size: 1.8rem;
+            }
+            
+            .ceo-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            section {
+                padding: 50px 0;
             }
         }
     </style>
@@ -306,10 +407,10 @@
     
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 hero-content">
                 <h1 class="ceo-title" data-aos="fade-up">CA Karthika Menon</h1>
                 <p class="ceo-subtitle" data-aos="fade-up" data-aos-delay="100">Founder & Managing Partner of Karthika and Associates, Chartered Accountants</p>
-                <div style="display: flex; gap: 15px; margin-bottom: 30px;">
+                <div class="hero-buttons d-flex" style="gap: 15px; margin-bottom: 30px;">
                     <a href="#" class="btn btn-glow" style="background-color: var(--accent-color); color: var(--dark-color); font-weight: 600; padding: 12px 30px; border-radius: 6px; border: none;">
                         Contact <i class="fas fa-envelope ms-2"></i>
                     </a>
@@ -317,20 +418,20 @@
                         LinkedIn <i class="fab fa-linkedin-in ms-2"></i>
                     </a>
                 </div>
-                <div style="display: flex; gap: 20px;">
-                    <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="hero-stats d-flex" style="gap: 20px;">
+                    <div class="d-flex align-items-center" style="gap: 10px;">
                         <i class="fas fa-award" style="color: var(--accent-color); font-size: 1.5rem;"></i>
                         <span>18+ Years Experience</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
+                    <div class="d-flex align-items-center" style="gap: 10px;">
                         <i class="fas fa-globe-asia" style="color: var(--accent-color); font-size: 1.5rem;"></i>
                         <span>International Expertise</span>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+            <div class="col-lg-6 mt-5 mt-lg-0 ceo-image-container" data-aos="fade-left">
                 <div class="ceo-image">
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="CA Karthika Menon" style="width: 100%; height: auto;">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="CA Karthika Menon" class="img-fluid rounded-lg shadow-lg" style="width: 100%; height: auto;">
                 </div>
             </div>
         </div>
@@ -338,7 +439,7 @@
   </section>
 
   <!-- About Section -->
-  <section class="about-section" style="background-color: #f9f9f9;">
+  <section class="about-section py-5" style="background-color: #f9f9f9;">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
@@ -354,14 +455,14 @@
                 
                 <div class="row mt-4">
                     <div class="col-md-6 mb-4">
-                        <div class="hover-float" style="background-color: white; border-radius: 15px; padding: 20px; height: 100%;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div style="width: 50px; height: 50px; background-color: #e6f0ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary-color); font-size: 1.2rem;">
+                        <div class="hover-float h-100 p-4 bg-white rounded-lg shadow-sm">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary-50 rounded-lg d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; color: var(--primary-color); font-size: 1.2rem;">
                                     <i class="fas fa-graduation-cap"></i>
                                 </div>
-                                <h4 style="color: var(--primary-color); font-weight: 600; margin-bottom: 0;">Education</h4>
+                                <h4 class="mb-0 ms-3" style="color: var(--primary-color); font-weight: 600;">Education</h4>
                             </div>
-                            <ul style="padding-left: 20px; color: #666;">
+                            <ul class="ps-3" style="color: #666;">
                                 <li>Chartered Accountant (CA)</li>
                                 <li>Bachelor of Commerce</li>
                                 <li>Diploma in International Taxation</li>
@@ -369,14 +470,14 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="hover-float" style="background-color: white; border-radius: 15px; padding: 20px; height: 100%;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div style="width: 50px; height: 50px; background-color: #e6f0ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary-color); font-size: 1.2rem;">
+                        <div class="hover-float h-100 p-4 bg-white rounded-lg shadow-sm">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary-50 rounded-lg d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; color: var(--primary-color); font-size: 1.2rem;">
                                     <i class="fas fa-trophy"></i>
                                 </div>
-                                <h4 style="color: var(--primary-color); font-weight: 600; margin-bottom: 0;">Certifications</h4>
+                                <h4 class="mb-0 ms-3" style="color: var(--primary-color); font-weight: 600;">Certifications</h4>
                             </div>
-                            <ul style="padding-left: 20px; color: #666;">
+                            <ul class="ps-3" style="color: #666;">
                                 <li>Certified Public Accountant (CPA USA)</li>
                                 <li>Certified Information Systems Auditor (CISA)</li>
                                 <li>Certified Fraud Examiner (CFE)</li>
@@ -389,67 +490,67 @@
                 <h3 style="color: var(--primary-color); font-weight: 600; margin-bottom: 20px;">Key Expertise</h3>
                 
                 <div class="skill-item mb-4">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <div class="d-flex justify-content-between mb-2">
                         <span style="font-weight: 500;">International Taxation</span>
                         <span>95%</span>
                     </div>
-                    <div style="height: 8px; background-color: #e6f0ff; border-radius: 4px;">
-                        <div style="width: 95%; height: 100%; background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%); border-radius: 4px;"></div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item mb-4">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <div class="d-flex justify-content-between mb-2">
                         <span style="font-weight: 500;">Transfer Pricing</span>
                         <span>90%</span>
                     </div>
-                    <div style="height: 8px; background-color: #e6f0ff; border-radius: 4px;">
-                        <div style="width: 90%; height: 100%; background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%); border-radius: 4px;"></div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item mb-4">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <div class="d-flex justify-content-between mb-2">
                         <span style="font-weight: 500;">Business Advisory</span>
                         <span>92%</span>
                     </div>
-                    <div style="height: 8px; background-color: #e6f0ff; border-radius: 4px;">
-                        <div style="width: 92%; height: 100%; background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%); border-radius: 4px;"></div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item mb-4">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <div class="d-flex justify-content-between mb-2">
                         <span style="font-weight: 500;">Foreign Direct Investment</span>
                         <span>88%</span>
                     </div>
-                    <div style="height: 8px; background-color: #e6f0ff; border-radius: 4px;">
-                        <div style="width: 88%; height: 100%; background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%); border-radius: 4px;"></div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%;"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item mb-4">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <div class="d-flex justify-content-between mb-2">
                         <span style="font-weight: 500;">Corporate Finance</span>
                         <span>85%</span>
                     </div>
-                    <div style="height: 8px; background-color: #e6f0ff; border-radius: 4px;">
-                        <div style="width: 85%; height: 100%; background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%); border-radius: 4px;"></div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
                     </div>
                 </div>
                 
                 <h3 style="color: var(--primary-color); font-weight: 600; margin-top: 40px; margin-bottom: 20px;">Professional Affiliations</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-                    <div style="padding: 10px 20px; background-color: white; border-radius: 8px; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
-                        <img src="https://via.placeholder.com/40x40?text=ICAI" alt="ICAI" style="width: 30px; height: 30px; border-radius: 50%;">
+                <div class="d-flex flex-wrap gap-3">
+                    <div class="d-flex align-items-center p-3 bg-white rounded-lg shadow-sm" style="gap: 10px;">
+                        <img src="https://via.placeholder.com/40x40?text=ICAI" alt="ICAI" class="rounded-circle" style="width: 30px; height: 30px;">
                         <span style="font-weight: 500;">ICAI Member</span>
                     </div>
-                    <div style="padding: 10px 20px; background-color: white; border-radius: 8px; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
-                        <img src="https://via.placeholder.com/40x40?text=ACFE" alt="ACFE" style="width: 30px; height: 30px; border-radius: 50%;">
+                    <div class="d-flex align-items-center p-3 bg-white rounded-lg shadow-sm" style="gap: 10px;">
+                        <img src="https://via.placeholder.com/40x40?text=ACFE" alt="ACFE" class="rounded-circle" style="width: 30px; height: 30px;">
                         <span style="font-weight: 500;">ACFE Member</span>
                     </div>
-                    <div style="padding: 10px 20px; background-color: white; border-radius: 8px; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
-                        <img src="https://via.placeholder.com/40x40?text=ISACA" alt="ISACA" style="width: 30px; height: 30px; border-radius: 50%;">
+                    <div class="d-flex align-items-center p-3 bg-white rounded-lg shadow-sm" style="gap: 10px;">
+                        <img src="https://via.placeholder.com/40x40?text=ISACA" alt="ISACA" class="rounded-circle" style="width: 30px; height: 30px;">
                         <span style="font-weight: 500;">ISACA Member</span>
                     </div>
                 </div>
@@ -459,12 +560,12 @@
   </section>
 
   <!-- Experience Section -->
-  <section class="experience-section" style="background-color: white;">
+  <section class="experience-section py-5" style="background-color: white;">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <h2 class="section-title" data-aos="fade-up">Professional Journey</h2>
-                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">A timeline of Karthika's distinguished career</p>
+                <p class="lead mx-auto" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px;">A timeline of Karthika's distinguished career</p>
             </div>
         </div>
         <div class="row">
@@ -509,19 +610,19 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="testimonials-section" style="background-color: #f9f9f9;">
+  <section class="testimonials-section py-5" style="background-color: #f9f9f9;">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <h2 class="section-title" data-aos="fade-up">Client Testimonials</h2>
-                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">What clients say about working with Karthika</p>
+                <p class="lead mx-auto" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px;">What clients say about working with Karthika</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="0">
-                <div class="testimonial-card hover-float" style="background-color: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); height: 100%;">
-                    <div style="margin-bottom: 20px;">
-                        <div style="display: flex; gap: 5px; color: var(--accent-color);">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial-card hover-float h-100 p-4 bg-white rounded-lg shadow-sm position-relative">
+                    <div class="mb-3">
+                        <div class="d-flex gap-1 text-warning">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -529,23 +630,23 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p style="font-style: italic; color: #555; margin-bottom: 25px; position: relative; padding-left: 20px;">
+                    <p class="fst-italic text-secondary mb-4 ps-3 position-relative">
                         Karthika's guidance during our market entry into India was invaluable. Her knowledge of local regulations saved us both time and money.
                     </p>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Johnson" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Johnson" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
                         <div>
                             <h5 style="color: var(--primary-color); font-weight: 600; margin-bottom: 5px;">Michael Johnson</h5>
-                            <p style="color: #666; font-size: 0.9rem;">CEO, Global Tech Solutions</p>
+                            <p class="text-muted small">CEO, Global Tech Solutions</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
-                <div class="testimonial-card hover-float" style="background-color: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); height: 100%;">
-                    <div style="margin-bottom: 20px;">
-                        <div style="display: flex; gap: 5px; color: var(--accent-color);">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-card hover-float h-100 p-4 bg-white rounded-lg shadow-sm position-relative">
+                    <div class="mb-3">
+                        <div class="d-flex gap-1 text-warning">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -553,23 +654,23 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p style="font-style: italic; color: #555; margin-bottom: 25px; position: relative; padding-left: 20px;">
+                    <p class="fst-italic text-secondary mb-4 ps-3 position-relative">
                         Karthika's expertise in transfer pricing helped us navigate complex regulations while optimizing our tax position. Highly recommended!
                     </p>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Williams" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Williams" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
                         <div>
                             <h5 style="color: var(--primary-color); font-weight: 600; margin-bottom: 5px;">Sarah Williams</h5>
-                            <p style="color: #666; font-size: 0.9rem;">CFO, International Manufacturing Co.</p>
+                            <p class="text-muted small">CFO, International Manufacturing Co.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="testimonial-card hover-float" style="background-color: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); height: 100%;">
-                    <div style="margin-bottom: 20px;">
-                        <div style="display: flex; gap: 5px; color: var(--accent-color);">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card hover-float h-100 p-4 bg-white rounded-lg shadow-sm position-relative">
+                    <div class="mb-3">
+                        <div class="d-flex gap-1 text-warning">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -577,14 +678,14 @@
                             <i class="fas fa-star-half-alt"></i>
                         </div>
                     </div>
-                    <p style="font-style: italic; color: #555; margin-bottom: 25px; position: relative; padding-left: 20px;">
+                    <p class="fst-italic text-secondary mb-4 ps-3 position-relative">
                         As a startup founder, Karthika's strategic advice has been crucial in helping us make sound financial decisions and secure funding.
                     </p>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Raj Patel" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Raj Patel" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
                         <div>
                             <h5 style="color: var(--primary-color); font-weight: 600; margin-bottom: 5px;">Raj Patel</h5>
-                            <p style="color: #666; font-size: 0.9rem;">Founder, Tech Innovations Pvt. Ltd.</p>
+                            <p class="text-muted small">Founder, Tech Innovations Pvt. Ltd.</p>
                         </div>
                     </div>
                 </div>
@@ -594,36 +695,36 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact-section">
-    <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.1; z-index: 1;">
+  <section class="contact-section py-5">
+    <video autoplay loop muted playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-10 z-1">
         <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-typing-on-a-computer-keyboard-3454-large.mp4" type="video/mp4">
     </video>
-    <div class="container">
+    <div class="container position-relative z-2">
         <div class="row justify-content-center">
-            <div class="col-lg-8 text-center" style="position: relative; z-index: 2;">
-                <h2 style="font-weight: 700; margin-bottom: 30px; font-size: 2.5rem; color: #000080;">Get in Touch with Karthika</h2>
-                <p style="margin-bottom: 40px; font-size: 1.2rem; color: #000080;">For strategic financial advice or to discuss how Karthika and Associates can support your business, reach out directly.</p>
-                <div class="row justify-content-center">
-                    <div class="col-md-6 mb-4">
-                        <div class="hover-float" style="background-color: white; border-radius: 15px; padding: 30px; height: 100%;">
-                            <div style="width: 60px; height: 60px; background-color: #e6f0ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary-color); font-size: 1.5rem;">
+            <div class="col-lg-8 text-center">
+                <h2 class="fw-bold mb-4 display-4" style="color: #000080;">Get in Touch with Karthika</h2>
+                <p class="mb-5 fs-5 mx-auto" style="color: #000080; max-width: 700px;">For strategic financial advice or to discuss how Karthika and Associates can support your business, reach out directly.</p>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-6">
+                        <div class="hover-float h-100 p-4 bg-white rounded-lg shadow-sm">
+                            <div class="mx-auto mb-4 rounded-circle d-flex align-items-center justify-content-center bg-primary-50" style="width: 60px; height: 60px; color: var(--primary-color); font-size: 1.5rem;">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <h4 style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">Email</h4>
-                            <p style="color: #666;">karthika@karthikaassociates.com</p>
-                            <a href="mailto:karthika@karthikaassociates.com" class="btn btn-primary" style="background-color: var(--primary-color); border: none; padding: 8px 20px; border-radius: 30px; font-weight: 500; margin-top: 10px;">
+                            <h4 class="text-primary fw-semibold mb-3">Email</h4>
+                            <p class="text-muted mb-4">karthika@karthikaassociates.com</p>
+                            <a href="mailto:karthika@karthikaassociates.com" class="btn btn-primary btn-glow fw-medium px-4 py-2 rounded-pill">
                                 Send Email
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="hover-float" style="background-color: white; border-radius: 15px; padding: 30px; height: 100%;">
-                            <div style="width: 60px; height: 60px; background-color: #e6f0ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary-color); font-size: 1.5rem;">
+                        <div class="hover-float h-100 p-4 bg-white rounded-lg shadow-sm">
+                            <div class="mx-auto mb-4 rounded-circle d-flex align-items-center justify-content-center bg-primary-50" style="width: 60px; height: 60px; color: var(--primary-color); font-size: 1.5rem;">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
-                            <h4 style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">Phone</h4>
-                            <p style="color: #666;">+91 98765 43210</p>
-                            <a href="tel:+919876543210" class="btn btn-primary" style="background-color: var(--primary-color); border: none; padding: 8px 20px; border-radius: 30px; font-weight: 500; margin-top: 10px;">
+                            <h4 class="text-primary fw-semibold mb-3">Phone</h4>
+                            <p class="text-muted mb-4">+91 98765 43210</p>
+                            <a href="tel:+919876543210" class="btn btn-primary btn-glow fw-medium px-4 py-2 rounded-pill">
                                 Call Now
                             </a>
                         </div>
@@ -664,19 +765,6 @@
               y: 50,
               duration: 0.8,
               ease: "power2.out"
-          });
-      });
-      
-      // Hover effects for buttons
-      const buttons = document.querySelectorAll('.btn-glow');
-      buttons.forEach(button => {
-          button.addEventListener('mouseenter', function() {
-              this.style.transform = 'translateY(-3px)';
-              this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
-          });
-          button.addEventListener('mouseleave', function() {
-              this.style.transform = 'translateY(0)';
-              this.style.boxShadow = 'none';
           });
       });
   </script>

@@ -32,14 +32,29 @@
         .team-hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
             color: white;
-            padding: 150px 0 100px;
+            padding: 120px 0 80px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.5;
         }
         
         .team-hero h1 {
             font-weight: 700;
             font-size: 3rem;
             margin-bottom: 20px;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         
         .team-hero p {
@@ -47,6 +62,7 @@
             max-width: 700px;
             margin: 0 auto;
             opacity: 0.9;
+            position: relative;
         }
         
         .section-title {
@@ -55,48 +71,50 @@
             margin-bottom: 40px;
             position: relative;
             display: inline-block;
+            padding-bottom: 15px;
         }
         
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
+            width: 60px;
+            height: 3px;
             background: var(--accent-color);
-            border-radius: 2px;
+            border-radius: 3px;
         }
         
         .team-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
             height: 100%;
             margin-bottom: 30px;
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
         
         .team-card img {
             width: 100%;
-            height: 300px;
+            height: 280px;
             object-fit: cover;
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.6s ease;
         }
         
         .team-card:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         
         .team-info {
-            padding: 25px;
+            padding: 20px;
             text-align: center;
         }
         
@@ -104,29 +122,32 @@
             color: var(--primary-color);
             font-weight: 600;
             margin-bottom: 5px;
+            font-size: 1.3rem;
         }
         
         .team-info .position {
             color: var(--secondary-color);
             font-weight: 500;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: block;
+            font-size: 0.95rem;
         }
         
         .team-info p {
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
         }
         
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
         }
         
         .social-links a {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background-color: #e6f0ff;
             display: flex;
@@ -134,11 +155,13 @@
             justify-content: center;
             color: var(--primary-color);
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
         
         .social-links a:hover {
             background-color: var(--primary-color);
             color: white;
+            transform: scale(1.1);
         }
         
         .team-overlay {
@@ -146,8 +169,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(10, 36, 99, 0.8), transparent);
-            padding: 20px;
+            background: linear-gradient(to top, rgba(10, 36, 99, 0.9), transparent);
+            padding: 15px;
             color: white;
         }
         
@@ -159,43 +182,144 @@
         /* Values Section */
         .values-section {
             background-color: var(--light-color);
-            padding: 100px 0;
+            padding: 80px 0;
         }
         
         .value-card {
             background: white;
-            border-radius: 15px;
-            padding: 40px 30px;
+            border-radius: 12px;
+            padding: 30px 25px;
             height: 100%;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            text-align: center;
         }
         
         .value-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
         
         .value-icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-            border-radius: 20px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
+            margin: 0 auto 20px;
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+        }
+        
+        /* Join Team Section */
+        .join-team {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            padding: 80px 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .join-team::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.5;
+        }
+        
+        .join-team-content {
+            position: relative;
+        }
+        
+        .join-team h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .join-team p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+        
+        .join-team .btn {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 6px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .join-team .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .benefits-box {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 25px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .benefits-box h4 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .benefits-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .benefits-box li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .benefits-box i {
+            color: var(--accent-color);
+            margin-right: 10px;
+            margin-top: 3px;
+            font-size: 0.9rem;
         }
         
         /* Responsive Adjustments */
         @media (max-width: 768px) {
+            .team-hero {
+                padding: 100px 0 60px;
+            }
+            
             .team-hero h1 {
                 font-size: 2.2rem;
             }
             
             .team-hero p {
                 font-size: 1rem;
+            }
+            
+            .team-card img {
+                height: 240px;
+            }
+            
+            .join-team {
+                text-align: center;
+            }
+            
+            .benefits-box {
+                margin-top: 30px;
             }
         }
     </style>
@@ -215,12 +339,12 @@
 </section>
 
 <!-- Leadership Team Section -->
-<section class="py-5" style="padding: 100px 0;">
+<section class="py-5" style="padding: 80px 0;">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <h2 class="section-title" data-aos="fade-up">Leadership Team</h2>
-                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">Our partners bring decades of combined experience in financial advisory services</p>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">Our partners bring decades of combined experience in financial advisory services</p>
             </div>
         </div>
         <div class="row">
@@ -294,12 +418,12 @@
 </section>
 
 <!-- Senior Team Section -->
-<section class="py-5" style="background-color: #f9f9f9; padding: 100px 0;">
+<section class="py-5" style="background-color: #f9f9f9; padding: 80px 0;">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <h2 class="section-title" data-aos="fade-up">Senior Associates</h2>
-                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">Our experienced team delivers exceptional service to every client</p>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">Our experienced team delivers exceptional service to every client</p>
             </div>
         </div>
         <div class="row">
@@ -400,7 +524,7 @@
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <h2 class="section-title" data-aos="fade-up">Our Values</h2>
-                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">The principles that guide our team's work</p>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">The principles that guide our team's work</p>
             </div>
         </div>
         <div class="row g-4">
@@ -437,34 +561,18 @@
     </div>
 </section>
 
-<!-- Join Our Team CTA -->
-<section class="py-5" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); padding: 100px 0; color: white;">
-    <div class="container">
+<!-- Join Our Team Section -->
+<section class="join-team py-5" style="background: linear-gradient(180deg, #FF9933 0%, #FFFFFF 50%, #138808 100%); position: relative;">
+    <div class="container position-relative z-2">
         <div class="row align-items-center">
-            <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-right">
-                <h2 style="font-weight: 700; margin-bottom: 20px;">Join Our Growing Team</h2>
-                <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px;">We're always looking for talented professionals who share our commitment to excellence in financial services.</p>
-                <button class="btn" style="background-color: var(--accent-color); color: var(--dark-color); font-weight: 600; padding: 12px 30px; border-radius: 6px; border: none;">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="fw-bold mb-4 display-4" style="color: #000080;">Join Our Growing Team</h2>
+                <p class="mb-4 fs-5" style="color: #000080;">We're always looking for talented professionals who share our commitment to excellence in financial services.</p>
+                <button class="btn btn-primary btn-glow fw-medium px-4 py-2 rounded-pill">
                     View Open Positions <i class="fas fa-arrow-right ms-2"></i>
                 </button>
             </div>
-            <div class="col-lg-4" data-aos="fade-left">
-                <div style="background-color: rgba(255,255,255,0.1); border-radius: 15px; padding: 30px; backdrop-filter: blur(5px);">
-                    <h4 style="font-weight: 600; margin-bottom: 20px;">Why Work With Us?</h4>
-                    <ul style="list-style-type: none; padding-left: 0;">
-                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-                            <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
-                            <span>Professional growth opportunities</span>
-                        </li>
-                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-                            <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
-                            <span>Collaborative work environment</span>
-                        </li>
-                        <li style="display: flex; align-items: flex-start;">
-                            <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
-                            <span>Competitive compensation</span>
-                        </li>
-                    </ul>
+            
                 </div>
             </div>
         </div>
