@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why India? | Investment Opportunities in India</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #fff;
+        }
+        
+        /* Hero Section */
+        .why-india-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 180px 0 120px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .white-title {
+            color: white;
+        }
+        
+        .white-title::after {
+            background: white;
+        }
+        
+        .hover-scale {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .hover-float {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+        }
+        
+        .hover-float:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Floating Elements */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(5px);
+            animation: float 8s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        /* Stats Cards */
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            height: 100%;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        /* Sector Cards */
+        .sector-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .sector-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .sector-card-body {
+            padding: 25px;
+        }
+        
+        /* Testimonial Cards */
+        .testimonial-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 120px;
+            font-family: Georgia, serif;
+            color: rgba(10, 36, 99, 0.05);
+            line-height: 1;
+            z-index: 0;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #FF9933 0%, #FFFFFF 50%, #138808 100%);
+            color: #000080;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Additional spacing */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .why-india-hero {
+                padding: 150px 0 80px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="why-india-hero">
+    <!-- Floating Elements -->
+    <div class="floating-element" style="top: 20%; left: 5%; width: 30px; height: 30px; background: rgba(255, 215, 0, 0.3); animation-delay: 0s;"></div>
+    <div class="floating-element" style="bottom: 15%; right: 10%; width: 50px; height: 50px; background: rgba(62, 146, 204, 0.3); animation-delay: 2s;"></div>
+    <div class="floating-element" style="top: 30%; right: 20%; width: 40px; height: 40px; background: rgba(255, 153, 51, 0.3); animation-delay: 1s;"></div>
+    
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Why Invest in India?</h1>
+                <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-1s" style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+                    Discover the compelling advantages of investing in the world's fastest-growing major economy with a thriving business ecosystem.
+                </p>
+                <div class="d-flex justify-content-center gap-3 animate__animated animate__fadeIn animate__delay-2s">
+                    <a href="#advantages" class="btn btn-lg" style="background-color: var(--accent-color); color: var(--dark-color); font-weight: 600; padding: 12px 30px; border-radius: 6px; border: none;">
+                        Explore Benefits <i class="fas fa-arrow-down ms-2"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-lg" style="background-color: transparent; color: white; font-weight: 600; padding: 12px 30px; border-radius: 6px; border: 2px solid rgba(255,255,255,0.3);">
+                        Contact Us <i class="fas fa-envelope ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Key Advantages Section -->
+  <section id="advantages" class="py-5" style="background-color: var(--light-color);">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">Key Investment Advantages</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">
+                    India offers unique benefits that make it an attractive destination for global investors
+                </p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="hover-float h-100">
+                    <div class="stat-card">
+                        <div class="mb-4" style="width: 70px; height: 70px; background-color: #e6f0ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: var(--primary-color); font-size: 1.8rem;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">Rapid Economic Growth</h3>
+                        <p style="color: #666;">
+                            India is the world's fastest-growing major economy with GDP growth consistently above 6%. Projected to become the 3rd largest economy by 2030.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="hover-float h-100">
+                    <div class="stat-card">
+                        <div class="mb-4" style="width: 70px; height: 70px; background-color: #e6f0ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: var(--primary-color); font-size: 1.8rem;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">Large Consumer Market</h3>
+                        <p style="color: #666;">
+                            1.4 billion population with a growing middle class. Young demographic with 65% of population below 35 years driving consumption.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="hover-float h-100">
+                    <div class="stat-card">
+                        <div class="mb-4" style="width: 70px; height: 70px; background-color: #e6f0ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: var(--primary-color); font-size: 1.8rem;">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">Skilled Workforce</h3>
+                        <p style="color: #666;">
+                            World's largest pool of STEM graduates. Highly skilled, English-speaking professionals available at competitive costs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="hover-float h-100">
+                    <div class="stat-card">
+                        <div class="mb-4" style="width: 70px; height: 70px; background-color: #e6f0ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: var(--primary-color); font-size: 1.8rem;">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">Business-Friendly Reforms</h3>
+                        <p style="color: #666;">
+                            Simplified tax regime (GST), improved ease of doing business rankings, and liberalized FDI policies across sectors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="hover-float h-100">
+                    <div class="stat-card">
+                        <div class="mb-4" style="width: 70px; height: 70px; background-color: #e6f0ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: var(--primary-color); font-size: 1.8rem;">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">Infrastructure Development</h3>
+                        <p style="color: #666;">
+                            $1.4 trillion National Infrastructure Pipeline. World-class digital infrastructure with 750+ million internet users.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="hover-float h-100">
+                    <div class="stat-card">
+                        <div class="mb-4" style="width: 70px; height: 70px; background-color: #e6f0ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: var(--primary-color); font-size: 1.8rem;">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">Strategic Location</h3>
+                        <p style="color: #666;">
+                            Gateway to South Asia and ASEAN markets. Favorable time zone for global business operations across US, Europe and Asia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Economic Indicators Section -->
+  <section class="py-5" style="background-color: white;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">India's Economic Indicators</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">
+                    Key metrics that demonstrate India's strong economic fundamentals
+                </p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="stat-card hover-float">
+                    <div class="stat-number" style="color: var(--primary-color);">$3.7T</div>
+                    <p style="color: #666; font-weight: 500;">GDP (Nominal)</p>
+                    <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0;">5th largest economy</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-card hover-float">
+                    <div class="stat-number" style="color: var(--primary-color);">6.7%</div>
+                    <p style="color: #666; font-weight: 500;">GDP Growth (2023)</p>
+                    <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0;">Fastest growing G20 economy</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-card hover-float">
+                    <div class="stat-number" style="color: var(--primary-color);">$636B</div>
+                    <p style="color: #666; font-weight: 500;">Foreign Exchange Reserves</p>
+                    <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0;">4th largest globally</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-card hover-float">
+                    <div class="stat-number" style="color: var(--primary-color);">$84B</div>
+                    <p style="color: #666; font-weight: 500;">FDI Inflows (2022-23)</p>
+                    <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0;">Record high</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Growth Sectors Section -->
+  <section class="py-5" style="background-color: var(--light-color);">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">High-Growth Sectors</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">
+                    Key industries offering significant investment opportunities
+                </p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="sector-card hover-float">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Technology">
+                    <div class="sector-card-body">
+                        <h4 style="color: var(--primary-color); font-weight: 600;">Technology & IT</h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            World's largest sourcing destination for IT services. $227 billion industry growing at 8-9% annually.
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 5px; color: var(--secondary-color);">
+                            <span style="font-weight: 500;">Growth:</span>
+                            <span>9% CAGR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="sector-card hover-float">
+                    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a7f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Manufacturing">
+                    <div class="sector-card-body">
+                        <h4 style="color: var(--primary-color); font-weight: 600;">Manufacturing</h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            PLI schemes attracting $25B+ investments. Aiming for $1T manufacturing GDP by 2025.
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 5px; color: var(--secondary-color);">
+                            <span style="font-weight: 500;">Growth:</span>
+                            <span>12% CAGR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="sector-card hover-float">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Renewable Energy">
+                    <div class="sector-card-body">
+                        <h4 style="color: var(--primary-color); font-weight: 600;">Renewable Energy</h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            Target of 500GW renewable capacity by 2030. $500B investment opportunity this decade.
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 5px; color: var(--secondary-color);">
+                            <span style="font-weight: 500;">Growth:</span>
+                            <span>15% CAGR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="sector-card hover-float">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Healthcare">
+                    <div class="sector-card-body">
+                        <h4 style="color: var(--primary-color); font-weight: 600;">Healthcare</h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            $372B sector expected to reach $610B by 2026. World's pharmacy with 60% global vaccine production.
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 5px; color: var(--secondary-color);">
+                            <span style="font-weight: 500;">Growth:</span>
+                            <span>22% CAGR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Government Initiatives Section -->
+  <section class="py-5" style="background-color: white;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">Government Initiatives</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">
+                    Pro-business policies and programs to support investors
+                </p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="hover-float h-100">
+                    <div style="background-color: var(--light-color); border-radius: 15px; padding: 30px; height: 100%;">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <div style="width: 60px; height: 60px; background-color: var(--primary-color); border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h3 style="color: var(--primary-color); font-weight: 600; margin-bottom: 0;">Make in India</h3>
+                        </div>
+                        <p style="color: #666; margin-bottom: 20px;">
+                            Flagship program to transform India into a global manufacturing hub. 100% FDI allowed in most sectors with simplified processes.
+                        </p>
+                        <ul style="color: #666; padding-left: 20px;">
+                            <li>25+ sectors covered including automobiles, aviation, and electronics</li>
+                            <li>Production Linked Incentive (PLI) schemes worth $26B</li>
+                            <li>Single window clearance for approvals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6" data-aos="fade-left">
+                <div class="hover-float h-100">
+                    <div style="background-color: var(--light-color); border-radius: 15px; padding: 30px; height: 100%;">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <div style="width: 60px; height: 60px; background-color: var(--primary-color); border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                <i class="fas fa-rupee-sign"></i>
+                            </div>
+                            <h3 style="color: var(--primary-color); font-weight: 600; margin-bottom: 0;">FDI Policy Reforms</h3>
+                        </div>
+                        <p style="color: #666; margin-bottom: 20px;">
+                            One of the most liberal FDI regimes globally with automatic approval routes for most sectors.
+                        </p>
+                        <ul style="color: #666; padding-left: 20px;">
+                            <li>100% FDI allowed in most sectors under automatic route</li>
+                            <li>Tax incentives for R&D and infrastructure investments</li>
+                            <li>Special economic zones with tax holidays</li>
+                            <li>Improved intellectual property rights protection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-5" style="background-color: var(--light-color);">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">What Investors Say</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">
+                    Experiences of global business leaders in India
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial-card hover-float" style="background-color: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); height: 100%;">
+                    <div style="margin-bottom: 20px;">
+                        <div style="display: flex; gap: 5px; color: var(--accent-color);">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: #555; margin-bottom: 25px; position: relative; padding-left: 20px;">
+                        India's digital infrastructure and skilled talent pool allowed us to scale our operations faster than any other market. The government's proactive policies were instrumental in our success.
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="David Müller" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h5 style="color: var(--primary-color); font-weight: 600; margin-bottom: 5px;">David Müller</h5>
+                            <p style="color: #666; font-size: 0.9rem;">CEO, European Tech Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-card hover-float" style="background-color: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); height: 100%;">
+                    <div style="margin-bottom: 20px;">
+                        <div style="display: flex; gap: 5px; color: var(--accent-color);">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: #555; margin-bottom: 25px; position: relative; padding-left: 20px;">
+                        The PLI scheme made India the obvious choice for our new manufacturing facility. We've been able to achieve cost efficiencies while accessing a growing domestic market.
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Yuki Tanaka" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h5 style="color: var(--primary-color); font-weight: 600; margin-bottom: 5px;">Yuki Tanaka</h5>
+                            <p style="color: #666; font-size: 0.9rem;">Director, Japanese Electronics Major</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card hover-float" style="background-color: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); height: 100%;">
+                    <div style="margin-bottom: 20px;">
+                        <div style="display: flex; gap: 5px; color: var(--accent-color);">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: #555; margin-bottom: 25px; position: relative; padding-left: 20px;">
+                        India's pharmaceutical ecosystem is unmatched. The combination of scientific talent, manufacturing capabilities, and cost efficiency makes it our preferred global hub.
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="James Wilson" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h5 style="color: var(--primary-color); font-weight: 600; margin-bottom: 5px;">James Wilson</h5>
+                            <p style="color: #666; font-size: 0.9rem;">VP Operations, US Pharma Company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.1; z-index: 1;">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-typing-on-a-computer-keyboard-3454-large.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center" style="position: relative; z-index: 2;">
+                <h2 style="font-weight: 700; margin-bottom: 30px; font-size: 2.5rem; color: #000080;">Ready to Explore Opportunities in India?</h2>
+                <p style="margin-bottom: 40px; font-size: 1.2rem; color: #000080;">Our team of experts can guide you through the investment process and help you establish successful operations in India.</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 mb-4">
+                        <div class="hover-float" style="background-color: white; border-radius: 15px; padding: 30px; height: 100%;">
+                            <div style="width: 60px; height: 60px; background-color: #e6f0ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary-color); font-size: 1.5rem;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4 style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">Email Us</h4>
+                            <p style="color: #666;">invest@karthikaassociates.com</p>
+                            <a href="mailto:invest@karthikaassociates.com" class="btn btn-primary" style="background-color: var(--primary-color); border: none; padding: 8px 20px; border-radius: 30px; font-weight: 500; margin-top: 10px;">
+                                Send Inquiry
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="hover-float" style="background-color: white; border-radius: 15px; padding: 30px; height: 100%;">
+                            <div style="width: 60px; height: 60px; background-color: #e6f0ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary-color); font-size: 1.5rem;">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h4 style="color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">Call Us</h4>
+                            <p style="color: #666;">+91 98765 43210</p>
+                            <a href="tel:+919876543210" class="btn btn-primary" style="background-color: var(--primary-color); border: none; padding: 8px 20px; border-radius: 30px; font-weight: 500; margin-top: 10px;">
+                                Schedule Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS (Animate On Scroll) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- GSAP for advanced animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script>
+      // Initialize AOS
+      AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+      });
+      
+      // GSAP Animations
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Animate elements on scroll
+      gsap.utils.toArray(".feature-item").forEach(item => {
+          gsap.from(item, {
+              scrollTrigger: {
+                  trigger: item,
+                  start: "top 80%",
+                  toggleActions: "play none none none"
+              },
+              opacity: 0,
+              y: 50,
+              duration: 0.8,
+              ease: "power2.out"
+          });
+      });
+      
+      // Hover effects for buttons
+      const buttons = document.querySelectorAll('.btn-glow');
+      buttons.forEach(button => {
+          button.addEventListener('mouseenter', function() {
+              this.style.transform = 'translateY(-3px)';
+              this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
+          });
+          button.addEventListener('mouseleave', function() {
+              this.style.transform = 'translateY(0)';
+              this.style.boxShadow = 'none';
+          });
+      });
+  </script>
+</body>
+</html>
