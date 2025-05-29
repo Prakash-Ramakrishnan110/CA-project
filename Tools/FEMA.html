@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEMA Compliance | Karthika and Associates</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #fff;
+        }
+        
+        /* Hero Section */
+        .fema-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .hover-float {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+        }
+        
+        .hover-float:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(10, 36, 99, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Calculator Styles */
+        .calculator-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .calculator-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .calculator-body {
+            padding: 30px;
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .form-control, .form-select {
+            border: 2px solid #e6f0ff;
+            border-radius: 8px;
+            padding: 12px 15px;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.25rem rgba(62, 146, 204, 0.25);
+        }
+        
+        .btn-calculate {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-calculate:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .result-container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .fema-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .calculator-body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <!-- FEMA Hero Section -->
+  <section class="fema-hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Foreign Exchange Management Act, 1999</h1>
+                <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-1s">Comprehensive guidance on FEMA regulations and compliance for businesses operating in India</p>
+                <div class="d-flex justify-content-center gap-3 animate__animated animate__fadeIn animate__delay-2s">
+                    <a href="#calculator" class="btn btn-lg" style="background-color: var(--accent-color); color: var(--dark-color); font-weight: 600;">
+                        FEMA Calculator <i class="fas fa-calculator ms-2"></i>
+                    </a>
+                    <a href="#overview" class="btn btn-lg" style="background-color: transparent; color: white; font-weight: 600; border: 2px solid rgba(255,255,255,0.3);">
+                        Learn More <i class="fas fa-arrow-down ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- FEMA Overview Section -->
+  <section id="overview" class="py-5" style="background-color: #f9f9f9;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">Understanding FEMA</h2>
+                <p class="lead mx-auto" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px;">Key aspects of the Foreign Exchange Management Act, 1999</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="h-100 p-4 bg-white rounded-lg shadow-sm hover-float">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="h4 text-center mb-3" style="color: var(--primary-color);">Regulatory Framework</h3>
+                    <p class="text-center text-muted">FEMA regulates all foreign exchange transactions in India, replacing the earlier FERA. It aims to facilitate external trade and payments while maintaining orderly foreign exchange markets.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-100 p-4 bg-white rounded-lg shadow-sm hover-float">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="h4 text-center mb-3" style="color: var(--primary-color);">Key Provisions</h3>
+                    <p class="text-center text-muted">FEMA governs various transactions including foreign investments, remittances, overseas investments by Indians, and foreign exchange derivative contracts.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-100 p-4 bg-white rounded-lg shadow-sm hover-float">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="h4 text-center mb-3" style="color: var(--primary-color);">Compliance</h3>
+                    <p class="text-center text-muted">Non-compliance with FEMA can result in significant penalties. Proper documentation and reporting are essential for all cross-border transactions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- FEMA Calculator Section -->
+  <section id="calculator" class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">FEMA Calculator</h2>
+                <p class="lead mx-auto" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px;">Calculate foreign exchange implications under FEMA regulations</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="calculator-container" data-aos="fade-up">
+                    <div class="calculator-header">
+                        <h3 class="mb-0">Foreign Exchange Calculator</h3>
+                    </div>
+                    <div class="calculator-body">
+                        <form id="femaCalculator">
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="transactionType" class="form-label">Transaction Type</label>
+                                    <select class="form-select" id="transactionType" required>
+                                        <option value="" selected disabled>Select transaction type</option>
+                                        <option value="inbound">Inbound Investment (FDI)</option>
+                                        <option value="outbound">Outbound Investment (ODI)</option>
+                                        <option value="remittance">Remittance Abroad</option>
+                                        <option value="trade">Import/Export</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="amount" class="form-label">Amount</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">₹</span>
+                                        <input type="number" class="form-control" id="amount" placeholder="Enter amount" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="currency" class="form-label">Foreign Currency</label>
+                                    <select class="form-select" id="currency" required>
+                                        <option value="" selected disabled>Select currency</option>
+                                        <option value="USD">US Dollar (USD)</option>
+                                        <option value="EUR">Euro (EUR)</option>
+                                        <option value="GBP">British Pound (GBP)</option>
+                                        <option value="JPY">Japanese Yen (JPY)</option>
+                                        <option value="AUD">Australian Dollar (AUD)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sector" class="form-label">Sector/Industry</label>
+                                    <select class="form-select" id="sector">
+                                        <option value="general" selected>General</option>
+                                        <option value="manufacturing">Manufacturing</option>
+                                        <option value="technology">Technology</option>
+                                        <option value="financial">Financial Services</option>
+                                        <option value="infrastructure">Infrastructure</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="route" class="form-label">Investment Route</label>
+                                    <select class="form-select" id="route">
+                                        <option value="automatic" selected>Automatic Route</option>
+                                        <option value="approval">Government Approval Route</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="entity" class="form-label">Entity Type</label>
+                                    <select class="form-select" id="entity">
+                                        <option value="company" selected>Company</option>
+                                        <option value="llp">LLP</option>
+                                        <option value="individual">Individual</option>
+                                        <option value="fpi">FPI</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-calculate">
+                                    Calculate <i class="fas fa-calculator ms-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div id="calculationResult" class="result-container" style="display: none;">
+                            <h4 class="mb-3" style="color: var(--primary-color);">Calculation Result</h4>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <p class="mb-1">Equivalent Foreign Currency:</p>
+                                    <p class="result-value" id="foreignAmount">$0.00</p>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <p class="mb-1">FEMA Compliance Fee:</p>
+                                    <p class="result-value" id="complianceFee">₹0.00</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <p class="mb-1">Approval Required:</p>
+                                    <p class="result-value" id="approvalRequired">No</p>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <p class="mb-1">Reporting Timeline:</p>
+                                    <p class="result-value" id="reportingTimeline">30 days</p>
+                                </div>
+                            </div>
+                            <div class="alert alert-warning mt-3" id="additionalInfo">
+                                <!-- Dynamic content will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- FEMA Regulations Section -->
+  <section class="py-5" style="background-color: #f9f9f9;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">FEMA Regulations</h2>
+                <p class="lead mx-auto" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px;">Key regulations under the Foreign Exchange Management Act</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                <div class="accordion" id="femaAccordion">
+                    <div class="accordion-item mb-3 border-0 shadow-sm hover-float">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <i class="fas fa-building me-3" style="color: var(--primary-color);"></i> FDI Regulations
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#femaAccordion">
+                            <div class="accordion-body">
+                                <p>Foreign Direct Investment (FDI) in India is regulated under FEMA and governed by the Foreign Exchange Management (Non-debt Instruments) Rules, 2019. Key aspects include:</p>
+                                <ul>
+                                    <li>Sectoral caps and entry routes (Automatic vs. Government approval)</li>
+                                    <li>Pricing guidelines for shares</li>
+                                    <li>Reporting requirements to RBI</li>
+                                    <li>Restrictions on certain sectors</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item mb-3 border-0 shadow-sm hover-float">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fas fa-plane me-3" style="color: var(--primary-color);"></i> ODI Regulations
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#femaAccordion">
+                            <div class="accordion-body">
+                                <p>Overseas Direct Investments (ODI) by Indian entities are governed by the Foreign Exchange Management (Overseas Investment) Regulations, 2022. Key provisions:</p>
+                                <ul>
+                                    <li>Financial commitment limits</li>
+                                    <li>Approval requirements for certain jurisdictions</li>
+                                    <li>Restrictions on investment in financial services abroad</li>
+                                    <li>Annual performance reporting requirements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item mb-3 border-0 shadow-sm hover-float">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="fas fa-exchange-alt me-3" style="color: var(--primary-color);"></i> Remittance Regulations
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#femaAccordion">
+                            <div class="accordion-body">
+                                <p>The Foreign Exchange Management (Current Account Transactions) Rules, 2000 govern remittances abroad. Key aspects include:</p>
+                                <ul>
+                                    <li>Liberalized Remittance Scheme (LRS) limits</li>
+                                    <li>Prohibited remittances (lotteries, sweepstakes, etc.)</li>
+                                    <li>Documentation requirements for various remittance purposes</li>
+                                    <li>Tax implications on foreign remittances</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="h-100 p-4 bg-white rounded-lg shadow-sm">
+                    <h3 style="color: var(--primary-color); font-weight: 600; margin-bottom: 20px;">Recent Updates in FEMA</h3>
+                    
+                    <div class="d-flex mb-4" style="gap: 15px;">
+                        <div class="bg-primary-50 rounded-lg d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; color: var(--primary-color); font-size: 1.2rem;">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div>
+                            <h5 style="color: var(--primary-color); font-weight: 600; margin-bottom: 5px;">Revised ODI Regulations (2022)</h5>
+                            <p class="text-muted">New framework for overseas investments with simplified structures and updated reporting requirements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4" style="gap: 15px;">
+                        <div class="bg-primary-50 rounded-lg d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; color: var(--primary-color); font-size: 1.2rem;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h5 style="color: var(--primary-color); font-weight: 600; margin-bottom: 5px;">LRS Limit Increased</h5>
+                            <p class="text-muted">Liberalized Remittance Scheme limit increased to $250,000 per financial year per individual.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4" style="gap: 15px;">
+                        <div class="bg-primary-50 rounded-lg d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; color: var(--primary-color); font-size: 1.2rem;">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h5 style="color: var(--primary-color); font-weight: 600; margin-bottom: 5px;">Stricter Enforcement</h5>
+                            <p class="text-muted">RBI increasing scrutiny of FEMA violations with higher penalties for non-compliance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-primary mt-4">
+                        <div class="d-flex align-items-center" style="gap: 10px;">
+                            <i class="fas fa-info-circle" style="font-size: 1.5rem;"></i>
+                            <div>
+                                <strong>Need FEMA Compliance Help?</strong> Our team specializes in navigating complex foreign exchange regulations for businesses of all sizes.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Compliance Process Section -->
+  <section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">FEMA Compliance Process</h2>
+                <p class="lead mx-auto" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px;">Our approach to ensuring your foreign exchange transactions are compliant</p>
+            </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="h-100 p-4 text-center bg-white rounded-lg shadow-sm hover-float">
+                    <div class="step-number mb-3 mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background-color: var(--primary-color); color: white; font-weight: 700;">1</div>
+                    <h4 style="color: var(--primary-color);">Assessment</h4>
+                    <p class="text-muted">Analyze your transaction to determine applicable FEMA regulations and compliance requirements.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-100 p-4 text-center bg-white rounded-lg shadow-sm hover-float">
+                    <div class="step-number mb-3 mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background-color: var(--primary-color); color: white; font-weight: 700;">2</div>
+                    <h4 style="color: var(--primary-color);">Documentation</h4>
+                    <p class="text-muted">Prepare all required forms, agreements, and supporting documents for the transaction.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-100 p-4 text-center bg-white rounded-lg shadow-sm hover-float">
+                    <div class="step-number mb-3 mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background-color: var(--primary-color); color: white; font-weight: 700;">3</div>
+                    <h4 style="color: var(--primary-color);">Approval</h4>
+                    <p class="text-muted">Liaise with RBI or other authorities for approvals if required under the approval route.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-100 p-4 text-center bg-white rounded-lg shadow-sm hover-float">
+                    <div class="step-number mb-3 mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background-color: var(--primary-color); color: white; font-weight: 700;">4</div>
+                    <h4 style="color: var(--primary-color);">Reporting</h4>
+                    <p class="text-muted">File all necessary reports with RBI through the appropriate channels within stipulated timelines.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS (Animate On Scroll) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      // Initialize AOS
+      AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+      });
+      
+      // FEMA Calculator Logic
+      document.getElementById('femaCalculator').addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form values
+          const transactionType = document.getElementById('transactionType').value;
+          const amount = parseFloat(document.getElementById('amount').value);
+          const currency = document.getElementById('currency').value;
+          const sector = document.getElementById('sector').value;
+          const route = document.getElementById('route').value;
+          const entity = document.getElementById('entity').value;
+          
+          // Validate amount
+          if (isNaN(amount) || amount <= 0) {
+              alert('Please enter a valid amount');
+              return;
+          }
+          
+          // Exchange rates (simplified for demo)
+          const exchangeRates = {
+              'USD': 83.50,
+              'EUR': 89.20,
+              'GBP': 102.30,
+              'JPY': 0.56,
+              'AUD': 54.80
+          };
+          
+          // Calculate foreign amount
+          const exchangeRate = exchangeRates[currency] || 1;
+          const foreignAmount = amount / exchangeRate;
+          
+          // Determine compliance fee (simplified for demo)
+          let complianceFee = 0;
+          if (transactionType === 'inbound') {
+              complianceFee = amount * 0.001; // 0.1% for FDI
+              if (route === 'approval') complianceFee += 50000; // Additional fee for approval route
+          } else if (transactionType === 'outbound') {
+              complianceFee = amount * 0.002; // 0.2% for ODI
+          } else if (transactionType === 'remittance') {
+              complianceFee = Math.min(amount * 0.0005, 10000); // 0.05% with max of ₹10,000
+          } else {
+              complianceFee = amount * 0.0003; // 0.03% for trade
+          }
+          
+          // Determine approval requirement
+          let approvalRequired = 'No';
+          if (route === 'approval') {
+              approvalRequired = 'Yes';
+          } else if (transactionType === 'remittance' && amount > 5000000) {
+              approvalRequired = 'Case by Case';
+          }
+          
+          // Determine reporting timeline
+          let reportingTimeline = '30 days';
+          if (transactionType === 'inbound') {
+              reportingTimeline = '30 days (FC-GPR)';
+          } else if (transactionType === 'outbound') {
+              reportingTimeline = '60 days (ODI Form)';
+          } else if (transactionType === 'remittance') {
+              reportingTimeline = 'None (Bank reports)';
+          }
+          
+          // Display results
+          document.getElementById('foreignAmount').textContent = `${currency} ${foreignAmount.toFixed(2)}`;
+          document.getElementById('complianceFee').textContent = `₹${complianceFee.toFixed(2)}`;
+          document.getElementById('approvalRequired').textContent = approvalRequired;
+          document.getElementById('reportingTimeline').textContent = reportingTimeline;
+          
+          // Additional information
+          let additionalInfo = '';
+          if (transactionType === 'inbound') {
+              additionalInfo = `<strong>Note:</strong> For FDI under automatic route, ensure the sector permits 100% FDI and valuation complies with FEMA guidelines.`;
+          } else if (transactionType === 'outbound') {
+              additionalInfo = `<strong>Note:</strong> ODI beyond 100% of net worth requires RBI approval. Financial services ODI has additional restrictions.`;
+          } else if (transactionType === 'remittance') {
+              additionalInfo = `<strong>Note:</strong> Remittances above LRS limit require special permission. Certain purposes (like gifts) have sub-limits.`;
+          } else {
+              additionalInfo = `<strong>Note:</strong> Import/export transactions must comply with FEMA guidelines on advance payments and trade credit.`;
+          }
+          
+          document.getElementById('additionalInfo').innerHTML = additionalInfo;
+          
+          // Show results
+          document.getElementById('calculationResult').style.display = 'block';
+          
+          // Scroll to results
+          document.getElementById('calculationResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miscellaneous Tools | Karthika and Associates</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #fff;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .tool-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .tool-card .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 15px 20px;
+        }
+        
+        .tool-card .card-body {
+            padding: 25px;
+        }
+        
+        .calculator-display {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: right;
+            font-size: 1.5rem;
+            font-weight: 500;
+            min-height: 60px;
+        }
+        
+        .calculator-btn {
+            width: 100%;
+            padding: 12px 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+        
+        .calculator-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .calculator-btn.number {
+            background-color: #e9ecef;
+            color: var(--dark-color);
+        }
+        
+        .calculator-btn.operator {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .calculator-btn.function {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+        
+        .calculator-btn.equals {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .converter-form .form-control {
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .converter-form .form-select {
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .converter-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .converter-btn:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-2px);
+        }
+        
+        .result-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tax-form .form-label {
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .tax-form .form-control {
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .tax-calculate-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        .tax-calculate-btn:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-2px);
+        }
+        
+        .tax-result {
+            background-color: rgba(62, 146, 204, 0.1);
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            border-radius: 0 5px 5px 0;
+            margin-top: 30px;
+        }
+        
+        .tax-result-item {
+            margin-bottom: 15px;
+        }
+        
+        .tax-result-label {
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .tax-result-value {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        .tool-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .misc-section {
+            padding: 80px 0;
+        }
+        
+        .currency-rates-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .currency-rates-table th, 
+        .currency-rates-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .currency-rates-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .currency-rates-table tr:hover {
+            background-color: #f1f5f9;
+        }
+        
+        .rate-change-up {
+            color: #28a745;
+        }
+        
+        .rate-change-down {
+            color: #dc3545;
+        }
+        
+        .rate-change-neutral {
+            color: #6c757d;
+        }
+        
+        .investment-form .form-label {
+            font-weight: 500;
+        }
+        
+        .investment-result {
+            background-color: rgba(40, 167, 69, 0.1);
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .loan-form .form-label {
+            font-weight: 500;
+        }
+        
+        .loan-result {
+            background-color: rgba(13, 110, 253, 0.1);
+            border-left: 4px solid #0d6efd;
+            padding: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .loan-schedule {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .misc-section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .currency-rates-table th, 
+            .currency-rates-table td {
+                padding: 8px 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Tools Section -->
+<section class="misc-section py-5" style="background-color: #f9f9f9;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">Financial Tools</h2>
+                <p class="lead mx-auto" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; color: #666; max-width: 700px;">Useful calculators and converters for your financial needs</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Calculator -->
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="tool-card">
+                    <div class="card-header">
+                        <i class="fas fa-calculator me-2"></i> Financial Calculator
+                    </div>
+                    <div class="card-body">
+                        <div class="calculator-display" id="calc-display">0</div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-3">
+                                <button class="calculator-btn function" onclick="clearDisplay()">C</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn function" onclick="backspace()">⌫</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn function" onclick="appendToDisplay('%')">%</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn operator" onclick="appendToDisplay('/')">÷</button>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-3">
+                                <button class="calculator-btn number" onclick="appendToDisplay('7')">7</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn number" onclick="appendToDisplay('8')">8</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn number" onclick="appendToDisplay('9')">9</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn operator" onclick="appendToDisplay('*')">×</button>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-3">
+                                <button class="calculator-btn number" onclick="appendToDisplay('4')">4</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn number" onclick="appendToDisplay('5')">5</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn number" onclick="appendToDisplay('6')">6</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn operator" onclick="appendToDisplay('-')">−</button>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-3">
+                                <button class="calculator-btn number" onclick="appendToDisplay('1')">1</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn number" onclick="appendToDisplay('2')">2</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn number" onclick="appendToDisplay('3')">3</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn operator" onclick="appendToDisplay('+')">+</button>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <button class="calculator-btn number" onclick="appendToDisplay('0')">0</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn number" onclick="appendToDisplay('.')">.</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="calculator-btn equals" onclick="calculate()">=</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Currency Converter -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="tool-card">
+                    <div class="card-header">
+                        <i class="fas fa-exchange-alt me-2"></i> Currency Converter
+                    </div>
+                    <div class="card-body">
+                        <form class="converter-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="amount" class="form-label">Amount</label>
+                                    <input type="number" class="form-control" id="amount" placeholder="Enter amount" value="1">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="from-currency" class="form-label">From</label>
+                                    <select class="form-select" id="from-currency">
+                                        <option value="USD">USD - US Dollar</option>
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - British Pound</option>
+                                        <option value="INR" selected>INR - Indian Rupee</option>
+                                        <option value="JPY">JPY - Japanese Yen</option>
+                                        <option value="AUD">AUD - Australian Dollar</option>
+                                        <option value="CAD">CAD - Canadian Dollar</option>
+                                        <option value="SGD">SGD - Singapore Dollar</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="to-currency" class="form-label">To</label>
+                                    <select class="form-select" id="to-currency">
+                                        <option value="USD" selected>USD - US Dollar</option>
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - British Pound</option>
+                                        <option value="INR">INR - Indian Rupee</option>
+                                        <option value="JPY">JPY - Japanese Yen</option>
+                                        <option value="AUD">AUD - Australian Dollar</option>
+                                        <option value="CAD">CAD - Canadian Dollar</option>
+                                        <option value="SGD">SGD - Singapore Dollar</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-end">
+                                    <button type="button" class="converter-btn w-100" onclick="convertCurrency()">
+                                        Convert <i class="fas fa-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="result-box" id="conversion-result">
+                            Enter amount and currencies to convert
+                        </div>
+                        <div class="mt-3 text-muted small">
+                            <i class="fas fa-info-circle me-2"></i> Rates update every 5 minutes
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- GST Calculator -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="tool-card">
+                    <div class="card-header">
+                        <i class="fas fa-receipt me-2"></i> GST Calculator
+                    </div>
+                    <div class="card-body">
+                        <form class="tax-form">
+                            <div class="mb-3">
+                                <label for="gst-amount" class="form-label">Amount (₹)</label>
+                                <input type="number" class="form-control" id="gst-amount" placeholder="Enter amount">
+                            </div>
+                            <div class="mb-3">
+                                <label for="gst-rate" class="form-label">GST Rate</label>
+                                <select class="form-select" id="gst-rate">
+                                    <option value="5">5%</option>
+                                    <option value="12">12%</option>
+                                    <option value="18" selected>18%</option>
+                                    <option value="28">28%</option>
+                                </select>
+                            </div>
+                            <button type="button" class="tax-calculate-btn" onclick="calculateGST()">
+                                Calculate GST <i class="fas fa-calculator ms-2"></i>
+                            </button>
+                        </form>
+                        <div class="tax-result" id="gst-result" style="display: none;">
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Original Amount:</div>
+                                <div class="tax-result-value" id="gst-original-amount">₹0.00</div>
+                            </div>
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">GST Amount:</div>
+                                <div class="tax-result-value" id="gst-tax-amount">₹0.00</div>
+                            </div>
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Total Amount:</div>
+                                <div class="tax-result-value" id="gst-total-amount">₹0.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Income Tax Calculator -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="tool-card">
+                    <div class="card-header">
+                        <i class="fas fa-file-invoice-dollar me-2"></i> Income Tax Calculator
+                    </div>
+                    <div class="card-body">
+                        <form class="tax-form">
+                            <div class="mb-3">
+                                <label for="income" class="form-label">Annual Income (₹)</label>
+                                <input type="number" class="form-control" id="income" placeholder="Enter annual income">
+                            </div>
+                            <div class="mb-3">
+                                <label for="regime" class="form-label">Tax Regime</label>
+                                <select class="form-select" id="regime">
+                                    <option value="new">New Tax Regime</option>
+                                    <option value="old" selected>Old Tax Regime</option>
+                                </select>
+                            </div>
+                            <div class="mb-3" id="deductions-section">
+                                <label for="deductions" class="form-label">Deductions (₹)</label>
+                                <input type="number" class="form-control" id="deductions" placeholder="Enter deductions" value="0">
+                            </div>
+                            <button type="button" class="tax-calculate-btn" onclick="calculateIncomeTax()">
+                                Calculate Tax <i class="fas fa-calculator ms-2"></i>
+                            </button>
+                        </form>
+                        <div class="tax-result" id="tax-result" style="display: none;">
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Taxable Income:</div>
+                                <div class="tax-result-value" id="taxable-income">₹0.00</div>
+                            </div>
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Income Tax:</div>
+                                <div class="tax-result-value" id="income-tax">₹0.00</div>
+                            </div>
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Cess (4%):</div>
+                                <div class="tax-result-value" id="tax-cess">₹0.00</div>
+                            </div>
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Total Tax:</div>
+                                <div class="tax-result-value" id="total-tax">₹0.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Tools -->
+        <div class="row mt-5">
+            <div class="col-12 text-center mb-5">
+                <h3 class="section-title" data-aos="fade-up">Other Useful Tools</h3>
+            </div>
+            
+            <!-- Investment Calculator -->
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="tool-card h-100">
+                    <div class="card-header">
+                        <i class="fas fa-chart-line me-2"></i> Investment Calculator
+                    </div>
+                    <div class="card-body">
+                        <form class="investment-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="principal" class="form-label">Principal Amount (₹)</label>
+                                    <input type="number" class="form-control" id="principal" placeholder="Enter amount">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="monthly-contribution" class="form-label">Monthly Contribution (₹)</label>
+                                    <input type="number" class="form-control" id="monthly-contribution" placeholder="Enter amount" value="0">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="interest-rate" class="form-label">Annual Interest Rate (%)</label>
+                                    <input type="number" step="0.01" class="form-control" id="interest-rate" placeholder="Enter rate">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="investment-years" class="form-label">Investment Period (Years)</label>
+                                    <input type="number" class="form-control" id="investment-years" placeholder="Enter years">
+                                </div>
+                                <div class="col-12">
+                                    <label for="compounding" class="form-label">Compounding Frequency</label>
+                                    <select class="form-select" id="compounding">
+                                        <option value="1">Annually</option>
+                                        <option value="2">Semi-Annually</option>
+                                        <option value="4">Quarterly</option>
+                                        <option value="12" selected>Monthly</option>
+                                        <option value="365">Daily</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="tax-calculate-btn" onclick="calculateInvestment()">
+                                        Calculate <i class="fas fa-calculator ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="investment-result" id="investment-result" style="display: none;">
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Total Contributions:</div>
+                                <div class="tax-result-value" id="total-contributions">₹0.00</div>
+                            </div>
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Interest Earned:</div>
+                                <div class="tax-result-value" id="interest-earned">₹0.00</div>
+                            </div>
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Total Value:</div>
+                                <div class="tax-result-value" id="total-value">₹0.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Loan Calculator -->
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="tool-card h-100">
+                    <div class="card-header">
+                        <i class="fas fa-home me-2"></i> Loan Calculator
+                    </div>
+                    <div class="card-body">
+                        <form class="loan-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="loan-amount" class="form-label">Loan Amount (₹)</label>
+                                    <input type="number" class="form-control" id="loan-amount" placeholder="Enter amount">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="loan-interest" class="form-label">Interest Rate (%)</label>
+                                    <input type="number" step="0.01" class="form-control" id="loan-interest" placeholder="Enter rate">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="loan-tenure" class="form-label">Loan Tenure (Years)</label>
+                                    <input type="number" class="form-control" id="loan-tenure" placeholder="Enter years">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="loan-type" class="form-label">Loan Type</label>
+                                    <select class="form-select" id="loan-type">
+                                        <option value="fixed">Fixed Rate</option>
+                                        <option value="reducing" selected>Reducing Balance</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="tax-calculate-btn" onclick="calculateLoan()">
+                                        Calculate EMI <i class="fas fa-calculator ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="loan-result" id="loan-result" style="display: none;">
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Monthly Payment (EMI):</div>
+                                <div class="tax-result-value" id="emi-amount">₹0.00</div>
+                            </div>
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Total Interest:</div>
+                                <div class="tax-result-value" id="total-interest">₹0.00</div>
+                            </div>
+                            <div class="tax-result-item">
+                                <div class="tax-result-label">Total Payment:</div>
+                                <div class="tax-result-value" id="total-payment">₹0.00</div>
+                            </div>
+                        </div>
+                        <div class="loan-schedule" id="loan-schedule" style="display: none;">
+                            <h6 class="mt-4 mb-3">Payment Schedule (First 12 Months)</h6>
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Month</th>
+                                            <th>Principal</th>
+                                            <th>Interest</th>
+                                            <th>Balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="schedule-body">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Currency Rates -->
+            <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="tool-card">
+                    <div class="card-header">
+                        <i class="fas fa-retweet me-2"></i> Live Currency Rates
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="currency-rates-table">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>Code</th>
+                                        <th>Rate (1 USD)</th>
+                                        <th>Change (24h)</th>
+                                        <th>Last Updated</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rates-body">
+                                    <tr>
+                                        <td colspan="5" class="text-center">Loading currency rates...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-3 text-muted small">
+                            <i class="fas fa-info-circle me-2"></i> Rates update every 5 minutes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS (Animate On Scroll) -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+    
+    // Calculator Functions
+    let currentDisplay = '0';
+    let calculationDone = false;
+    
+    function updateDisplay() {
+        document.getElementById('calc-display').textContent = currentDisplay;
+    }
+    
+    function appendToDisplay(value) {
+        if (calculationDone) {
+            currentDisplay = '0';
+            calculationDone = false;
+        }
+        
+        if (currentDisplay === '0' && value !== '.') {
+            currentDisplay = value;
+        } else {
+            currentDisplay += value;
+        }
+        updateDisplay();
+    }
+    
+    function clearDisplay() {
+        currentDisplay = '0';
+        updateDisplay();
+    }
+    
+    function backspace() {
+        if (currentDisplay.length === 1) {
+            currentDisplay = '0';
+        } else {
+            currentDisplay = currentDisplay.slice(0, -1);
+        }
+        updateDisplay();
+    }
+    
+    function calculate() {
+        try {
+            currentDisplay = eval(currentDisplay).toString();
+            calculationDone = true;
+            updateDisplay();
+        } catch (error) {
+            currentDisplay = 'Error';
+            updateDisplay();
+            setTimeout(clearDisplay, 1500);
+        }
+    }
+    
+    // Currency Converter Functions
+    let exchangeRates = {};
+    let lastUpdated = '';
+    
+    async function fetchExchangeRates() {
+        try {
+            // In a real application, you would fetch from a live API
+            // For demo purposes, we're using simulated data with random fluctuations
+            
+            // Base rates (simulated)
+            const baseRates = {
+                USD: 1,
+                EUR: 0.85,
+                GBP: 0.73,
+                INR: 74.50,
+                JPY: 110.25,
+                AUD: 1.30,
+                CAD: 1.25,
+                SGD: 1.35
+            };
+            
+            // Simulate small fluctuations
+            Object.keys(baseRates).forEach(currency => {
+                if (currency !== 'USD') {
+                    const fluctuation = (Math.random() * 0.02 - 0.01); // -1% to +1%
+                    exchangeRates[currency] = baseRates[currency] * (1 + fluctuation);
+                } else {
+                    exchangeRates[currency] = 1;
+                }
+            });
+            
+            // Generate cross rates
+            const currencies = Object.keys(baseRates);
+            for (let i = 0; i < currencies.length; i++) {
+                const from = currencies[i];
+                if (!exchangeRates[from]) exchangeRates[from] = {};
+                
+                for (let j = 0; j < currencies.length; j++) {
+                    const to = currencies[j];
+                    if (from === to) {
+                        exchangeRates[from][to] = 1;
+                    } else {
+                        exchangeRates[from][to] = exchangeRates[to] / exchangeRates[from];
+                    }
+                }
+            }
+            
+            lastUpdated = new Date().toLocaleString();
+            updateCurrencyRatesTable();
+            
+            // Auto-convert if there's already an amount entered
+            const amount = document.getElementById('amount').value;
+            if (amount && !isNaN(amount)) {
+                convertCurrency();
+            }
+            
+            // Schedule next update in 5 minutes
+            setTimeout(fetchExchangeRates, 5 * 60 * 1000);
+        } catch (error) {
+            console.error('Error fetching exchange rates:', error);
+            // Retry after 1 minute if there's an error
+            setTimeout(fetchExchangeRates, 60 * 1000);
+        }
+    }
+    
+    function updateCurrencyRatesTable() {
+        const ratesBody = document.getElementById('rates-body');
+        ratesBody.innerHTML = '';
+        
+        const currencies = [
+            { code: 'USD', name: 'US Dollar' },
+            { code: 'EUR', name: 'Euro' },
+            { code: 'GBP', name: 'British Pound' },
+            { code: 'INR', name: 'Indian Rupee' },
+            { code: 'JPY', name: 'Japanese Yen' },
+            { code: 'AUD', name: 'Australian Dollar' },
+            { code: 'CAD', name: 'Canadian Dollar' },
+            { code: 'SGD', name: 'Singapore Dollar' }
+        ];
+        
+        currencies.forEach(currency => {
+            if (currency.code === 'USD') return;
+            
+            const rate = exchangeRates.USD[currency.code];
+            const prevRate = rate * (1 + (Math.random() * 0.02 - 0.01)); // Simulate change
+            
+            const change = rate - prevRate;
+            const changePercent = (change / prevRate) * 100;
+            
+            let changeClass = 'rate-change-neutral';
+            let changeIcon = '';
+            
+            if (change > 0) {
+                changeClass = 'rate-change-up';
+                changeIcon = '<i class="fas fa-caret-up ms-1"></i>';
+            } else if (change < 0) {
+                changeClass = 'rate-change-down';
+                changeIcon = '<i class="fas fa-caret-down ms-1"></i>';
+            }
+            
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${currency.name}</td>
+                <td>${currency.code}</td>
+                <td>${rate.toFixed(4)}</td>
+                <td class="${changeClass}">${changePercent.toFixed(2)}% ${changeIcon}</td>
+                <td>${lastUpdated}</td>
+            `;
+            ratesBody.appendChild(row);
+        });
+    }
+    
+    function convertCurrency() {
+        const amount = parseFloat(document.getElementById('amount').value);
+        const fromCurrency = document.getElementById('from-currency').value;
+        const toCurrency = document.getElementById('to-currency').value;
+        
+        if (isNaN(amount)) {
+            document.getElementById('conversion-result').textContent = 'Please enter a valid amount';
+            return;
+        }
+        
+        if (fromCurrency === toCurrency) {
+            document.getElementById('conversion-result').textContent = `${amount.toFixed(2)} ${fromCurrency} = ${amount.toFixed(2)} ${toCurrency}`;
+            return;
+        }
+        
+        if (!exchangeRates[fromCurrency] || !exchangeRates[fromCurrency][toCurrency]) {
+            document.getElementById('conversion-result').textContent = 'Exchange rate not available';
+            return;
+        }
+        
+        const result = amount * exchangeRates[fromCurrency][toCurrency];
+        
+        document.getElementById('conversion-result').textContent = 
+            `${amount.toFixed(2)} ${fromCurrency} = ${result.toFixed(2)} ${toCurrency}`;
+    }
+    
+    // GST Calculator Functions
+    function calculateGST() {
+        const amount = parseFloat(document.getElementById('gst-amount').value);
+        const rate = parseFloat(document.getElementById('gst-rate').value);
+        
+        if (isNaN(amount)) {
+            alert('Please enter a valid amount');
+            return;
+        }
+        
+        const gstAmount = (amount * rate) / 100;
+        const totalAmount = amount + gstAmount;
+        
+        document.getElementById('gst-original-amount').textContent = `₹${amount.toFixed(2)}`;
+        document.getElementById('gst-tax-amount').textContent = `₹${gstAmount.toFixed(2)}`;
+        document.getElementById('gst-total-amount').textContent = `₹${totalAmount.toFixed(2)}`;
+        document.getElementById('gst-result').style.display = 'block';
+    }
+    
+    // Income Tax Calculator Functions
+    function calculateIncomeTax() {
+        const income = parseFloat(document.getElementById('income').value);
+        const regime = document.getElementById('regime').value;
+        const deductions = parseFloat(document.getElementById('deductions').value) || 0;
+        
+        if (isNaN(income)) {
+            alert('Please enter a valid income amount');
+            return;
+        }
+        
+        let tax = 0;
+        let taxableIncome = income;
+        
+        if (regime === 'old') {
+            // Old regime calculation with standard deduction
+            taxableIncome = Math.max(0, income - 50000); // Standard deduction
+            taxableIncome = Math.max(0, taxableIncome - deductions); // Additional deductions
+            
+            if (taxableIncome <= 250000) {
+                tax = 0;
+            } else if (taxableIncome <= 500000) {
+                tax = (taxableIncome - 250000) * 0.05;
+            } else if (taxableIncome <= 1000000) {
+                tax = 12500 + (taxableIncome - 500000) * 0.2;
+            } else {
+                tax = 112500 + (taxableIncome - 1000000) * 0.3;
+            }
+            
+            // Rebate under section 87A
+            if (taxableIncome <= 500000) {
+                tax = Math.max(0, tax - Math.min(tax, 12500));
+            }
+        } else {
+            // New regime calculation (no deductions except standard deduction)
+            taxableIncome = Math.max(0, income - 50000); // Standard deduction
+            
+            if (taxableIncome <= 250000) {
+                tax = 0;
+            } else if (taxableIncome <= 500000) {
+                tax = (taxableIncome - 250000) * 0.05;
+            } else if (taxableIncome <= 750000) {
+                tax = 12500 + (taxableIncome - 500000) * 0.1;
+            } else if (taxableIncome <= 1000000) {
+                tax = 37500 + (taxableIncome - 750000) * 0.15;
+            } else if (taxableIncome <= 1250000) {
+                tax = 75000 + (taxableIncome - 1000000) * 0.2;
+            } else if (taxableIncome <= 1500000) {
+                tax = 125000 + (taxableIncome - 1250000) * 0.25;
+            } else {
+                tax = 187500 + (taxableIncome - 1500000) * 0.3;
+            }
+        }
+        
+        const cess = tax * 0.04;
+        const totalTax = tax + cess;
+        
+        document.getElementById('taxable-income').textContent = `₹${taxableIncome.toFixed(2)}`;
+        document.getElementById('income-tax').textContent = `₹${tax.toFixed(2)}`;
+        document.getElementById('tax-cess').textContent = `₹${cess.toFixed(2)}`;
+        document.getElementById('total-tax').textContent = `₹${totalTax.toFixed(2)}`;
+        document.getElementById('tax-result').style.display = 'block';
+    }
+    
+    // Toggle deductions field based on tax regime
+    document.getElementById('regime').addEventListener('change', function() {
+        const deductionsSection = document.getElementById('deductions-section');
+        if (this.value === 'old') {
+            deductionsSection.style.display = 'block';
+        } else {
+            deductionsSection.style.display = 'none';
+        }
+    });
+    
+    // Investment Calculator Functions
+    function calculateInvestment() {
+        const principal = parseFloat(document.getElementById('principal').value);
+        const monthlyContribution = parseFloat(document.getElementById('monthly-contribution').value) || 0;
+        const annualRate = parseFloat(document.getElementById('interest-rate').value);
+        const years = parseFloat(document.getElementById('investment-years').value);
+        const compounding = parseInt(document.getElementById('compounding').value);
+        
+        if (isNaN(principal) || isNaN(annualRate) || isNaN(years)) {
+            alert('Please enter valid values for principal, interest rate, and years');
+            return;
+        }
+        
+        const rate = annualRate / 100;
+        const periods = years * compounding;
+        const periodicRate = rate / compounding;
+        
+        // Future value of initial investment
+        const fvPrincipal = principal * Math.pow(1 + periodicRate, periods);
+        
+        // Future value of contributions (annuity)
+        let fvContributions = 0;
+        if (monthlyContribution > 0) {
+            const contributionsPerPeriod = monthlyContribution * (12 / compounding);
+            fvContributions = contributionsPerPeriod * 
+                ((Math.pow(1 + periodicRate, periods) - 1) / periodicRate);
+        }
+        
+        const totalValue = fvPrincipal + fvContributions;
+        const totalContributions = principal + (monthlyContribution * 12 * years);
+        const interestEarned = totalValue - totalContributions;
+        
+        document.getElementById('total-contributions').textContent = `₹${totalContributions.toFixed(2)}`;
+        document.getElementById('interest-earned').textContent = `₹${interestEarned.toFixed(2)}`;
+        document.getElementById('total-value').textContent = `₹${totalValue.toFixed(2)}`;
+        document.getElementById('investment-result').style.display = 'block';
+    }
+    
+    // Loan Calculator Functions
+    function calculateLoan() {
+        const amount = parseFloat(document.getElementById('loan-amount').value);
+        const annualRate = parseFloat(document.getElementById('loan-interest').value);
+        const years = parseFloat(document.getElementById('loan-tenure').value);
+        const loanType = document.getElementById('loan-type').value;
+        
+        if (isNaN(amount) || isNaN(annualRate) || isNaN(years)) {
+            alert('Please enter valid values for loan amount, interest rate, and tenure');
+            return;
+        }
+        
+        const monthlyRate = annualRate / 100 / 12;
+        const months = years * 12;
+        
+        let emi, totalInterest, totalPayment;
+        
+        if (loanType === 'reducing') {
+            // Reducing balance EMI calculation
+            emi = amount * monthlyRate * Math.pow(1 + monthlyRate, months) / 
+                  (Math.pow(1 + monthlyRate, months) - 1);
+            totalPayment = emi * months;
+            totalInterest = totalPayment - amount;
+        } else {
+            // Fixed rate (simple interest) calculation
+            totalInterest = amount * (annualRate / 100) * years;
+            totalPayment = amount + totalInterest;
+            emi = totalPayment / months;
+        }
+        
+        document.getElementById('emi-amount').textContent = `₹${emi.toFixed(2)}`;
+        document.getElementById('total-interest').textContent = `₹${totalInterest.toFixed(2)}`;
+        document.getElementById('total-payment').textContent = `₹${totalPayment.toFixed(2)}`;
+        document.getElementById('loan-result').style.display = 'block';
+        
+        // Generate payment schedule (first 12 months)
+        if (loanType === 'reducing') {
+            generatePaymentSchedule(amount, monthlyRate, emi);
+        } else {
+            document.getElementById('loan-schedule').style.display = 'none';
+        }
+    }
+    
+    function generatePaymentSchedule(principal, monthlyRate, emi) {
+        const scheduleBody = document.getElementById('schedule-body');
+        scheduleBody.innerHTML = '';
+        
+        let balance = principal;
+        
+        for (let month = 1; month <= 12; month++) {
+            const interest = balance * monthlyRate;
+            const principalPayment = emi - interest;
+            balance -= principalPayment;
+            
+            if (balance < 0) balance = 0;
+            
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${month}</td>
+                <td>₹${principalPayment.toFixed(2)}</td>
+                <td>₹${interest.toFixed(2)}</td>
+                <td>₹${balance.toFixed(2)}</td>
+            `;
+            scheduleBody.appendChild(row);
+        }
+        
+        document.getElementById('loan-schedule').style.display = 'block';
+    }
+    
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', function() {
+        fetchExchangeRates();
+        
+        // Set up event listeners for auto-calculation
+        document.getElementById('gst-amount').addEventListener('input', function() {
+            if (this.value && !isNaN(this.value)) {
+                calculateGST();
+            }
+        });
+        
+        document.getElementById('gst-rate').addEventListener('change', calculateGST);
+        
+        document.getElementById('income').addEventListener('input', function() {
+            if (this.value && !isNaN(this.value)) {
+                calculateIncomeTax();
+            }
+        });
+        
+        document.getElementById('regime').addEventListener('change', calculateIncomeTax);
+        document.getElementById('deductions').addEventListener('input', calculateIncomeTax);
+        
+        document.getElementById('amount').addEventListener('input', function() {
+            if (this.value && !isNaN(this.value)) {
+                convertCurrency();
+            }
+        });
+        
+        document.getElementById('from-currency').addEventListener('change', convertCurrency);
+        document.getElementById('to-currency').addEventListener('change', convertCurrency);
+    });
+</script>
+</body>
+</html>

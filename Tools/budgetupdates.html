@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Updates | Karthika and Associates</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .budget-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1);
+        }
+        .sector-card {
+            transition: all 0.3s;
+        }
+        .sector-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .resource-card {
+            transition: all 0.3s;
+        }
+        .resource-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.15) !important;
+        }
+    </style>
+</head>
+<body style="font-family:'Poppins',sans-serif;color:#333;line-height:1.6;background-color:#fff;overflow-x:hidden;">
+
+<!-- Hero Section -->
+<section style="background:linear-gradient(135deg,#0a2463 0%,#001845 100%);color:white;padding:150px 0 100px;position:relative;overflow:hidden;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 style="font-weight:700;font-size:3.5rem;margin-bottom:20px;line-height:1.2;text-shadow:0 2px 4px rgba(0,0,0,0.3);">Budget Updates 2023-24</h1>
+                <p style="font-weight:400;font-size:1.3rem;margin-bottom:30px;opacity:0.9;">Comprehensive analysis of fiscal policies, tax reforms, and economic measures</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#current-budget" class="btn btn-warning btn-lg fw-bold px-4">Current Budget</a>
+                    <a href="#archives" class="btn btn-outline-light btn-lg px-4">Past Budgets</a>
+                    <a href="#key-changes" class="btn btn-outline-light btn-lg px-4">Key Changes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Changes Section -->
+<section id="key-changes" style="padding:80px 0;background-color:#fff;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 style="color:#0a2463;font-weight:700;margin-bottom:20px;position:relative;display:inline-block;">
+                    Key Budget Changes 2023-24
+                    <span style="content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:#ffd700;border-radius:2px;"></span>
+                </h2>
+                <p class="mx-auto" style="max-width:800px;">The Union Budget 2023-24 focuses on seven priorities dubbed 'Saptarishi' that will guide the country towards Amrit Kaal. Here are the major highlights:</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="budget-card" style="background:white;border-radius:10px;padding:30px;height:100%;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);transition:transform 0.3s;border-top:4px solid #0a2463;">
+                    <h3 style="color:#0a2463;font-weight:600;margin-bottom:20px;"><i class="fas fa-money-bill-wave me-2"></i> Direct Tax Changes</h3>
+                    <ul>
+                        <li class="mb-2">New tax regime made default with revised tax slabs (0-3L: 0%, 3-6L: 5%, 6-9L: 10%, 9-12L: 15%, 12-15L: 20%, >15L: 30%)</li>
+                        <li class="mb-2">Rebate limit increased to ₹7 lakh (from ₹5 lakh) under new tax regime</li>
+                        <li class="mb-2">Highest surcharge rate reduced from 37% to 25% for incomes above ₹5 crore</li>
+                        <li class="mb-2">Leave encashment limit for non-government employees increased to ₹25 lakh</li>
+                    </ul>
+                    <a href="https://www.incometaxindia.gov.in/Pages/budget/budget-2023-24.aspx" target="_blank" class="btn btn-primary mt-3">Read More on Income Tax</a>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="budget-card" style="background:white;border-radius:10px;padding:30px;height:100%;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);transition:transform 0.3s;border-top:4px solid #0a2463;">
+                    <h3 style="color:#0a2463;font-weight:600;margin-bottom:20px;"><i class="fas fa-receipt me-2"></i> Indirect Tax Changes</h3>
+                    <ul>
+                        <li class="mb-2">Customs duty reduced on mobile phone camera lenses and other parts to boost manufacturing</li>
+                        <li class="mb-2">Basic customs duty (BCD) on compounded rubber increased from 10% to 25%</li>
+                        <li class="mb-2">Excise duty on cigarettes increased by about 16%</li>
+                        <li class="mb-2">GST compensation cess on certain vehicles extended till March 2024</li>
+                    </ul>
+                    <a href="https://www.cbic.gov.in/htdocs-cbec/budget2023-24" target="_blank" class="btn btn-primary mt-3">CBIC Notifications</a>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="budget-card" style="background:white;border-radius:10px;padding:30px;height:100%;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);transition:transform 0.3s;border-top:4px solid #0a2463;">
+                    <h3 style="color:#0a2463;font-weight:600;margin-bottom:20px;"><i class="fas fa-building me-2"></i> Corporate Tax Updates</h3>
+                    <ul>
+                        <li class="mb-2">Extension of period of incorporation for eligible startups for income tax benefits by 1 year (till 31.03.2024)</li>
+                        <li class="mb-2">Deduction for expenditure on notified skill development projects extended till 31.03.2024</li>
+                        <li class="mb-2">New co-operatives to get lower 15% tax rate (similar to new manufacturing companies)</li>
+                        <li class="mb-2">Limit increased from ₹10,000 to ₹25,000 for TDS on cash withdrawal for co-operative societies</li>
+                    </ul>
+                    <a href="https://www.mca.gov.in/MinistryV2/unionbudget2023.html" target="_blank" class="btn btn-primary mt-3">MCA Updates</a>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="budget-card" style="background:white;border-radius:10px;padding:30px;height:100%;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);transition:transform 0.3s;border-top:4px solid #0a2463;">
+                    <h3 style="color:#0a2463;font-weight:600;margin-bottom:20px;"><i class="fas fa-chart-line me-2"></i> Economic Measures</h3>
+                    <ul>
+                        <li class="mb-2">Capital expenditure outlay increased by 33% to ₹10 lakh crore (3.3% of GDP)</li>
+                        <li class="mb-2">Fiscal deficit target for FY24 set at 5.9% of GDP</li>
+                        <li class="mb-2">50-year interest-free loans to states continued for one more year (₹1.3 lakh crore outlay)</li>
+                        <li class="mb-2">₹35,000 crore allocated for energy transition and net zero objectives</li>
+                    </ul>
+                    <a href="https://www.indiabudget.gov.in/economicsurvey/" target="_blank" class="btn btn-primary mt-3">Economic Survey</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Current Budget Section -->
+<section id="current-budget" style="padding:80px 0;background-color:#f9f9f9;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 style="color:#0a2463;font-weight:700;margin-bottom:20px;position:relative;display:inline-block;">
+                    Union Budget 2023-24 Resources
+                    <span style="content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:#ffd700;border-radius:2px;"></span>
+                </h2>
+                <p class="mx-auto" style="max-width:800px;">Access official documents, budget speeches, and detailed analysis from government sources</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Official Documents -->
+            <div class="col-md-6">
+                <div class="budget-card" style="background:white;border-radius:10px;padding:30px;height:100%;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);transition:transform 0.3s;">
+                    <div class="d-flex align-items-center mb-4">
+                        <div style="width:50px;height:50px;background-color:#e6f0ff;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0a2463;font-size:1.5rem;">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 style="color:#0a2463;font-weight:600;margin-left:15px;margin-bottom:0;">Official Documents</h3>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <a href="https://www.indiabudget.gov.in" target="_blank" style="text-decoration:none;color:#333;display:flex;align-items:center;padding:10px;border-radius:5px;transition:all 0.3s;background-color:#f8f9fa;">
+                                <i class="fas fa-external-link-alt me-3" style="color:#3e92cc;"></i>
+                                <div>
+                                    <strong>Budget 2023-24 Full Document</strong>
+                                    <small class="d-block text-muted">Ministry of Finance, Government of India</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="https://www.indiabudget.gov.in/budget_2023-24/ub.asp" target="_blank" style="text-decoration:none;color:#333;display:flex;align-items:center;padding:10px;border-radius:5px;transition:all 0.3s;background-color:#f8f9fa;">
+                                <i class="fas fa-external-link-alt me-3" style="color:#3e92cc;"></i>
+                                <div>
+                                    <strong>Budget Highlights</strong>
+                                    <small class="d-block text-muted">Key announcements and summary</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="https://www.indiabudget.gov.in/budget_2023-24/bs.asp" target="_blank" style="text-decoration:none;color:#333;display:flex;align-items:center;padding:10px;border-radius:5px;transition:all 0.3s;background-color:#f8f9fa;">
+                                <i class="fas fa-external-link-alt me-3" style="color:#3e92cc;"></i>
+                                <div>
+                                    <strong>Budget Speech</strong>
+                                    <small class="d-block text-muted">Finance Minister's complete address</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="https://www.indiabudget.gov.in/doc/Budget_at_Glance/bag1.pdf" target="_blank" style="text-decoration:none;color:#333;display:flex;align-items:center;padding:10px;border-radius:5px;transition:all 0.3s;background-color:#f8f9fa;">
+                                <i class="fas fa-file-pdf me-3" style="color:#3e92cc;"></i>
+                                <div>
+                                    <strong>Budget at a Glance (PDF)</strong>
+                                    <small class="d-block text-muted">Quick overview of allocations</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Tax Updates -->
+            <div class="col-md-6">
+                <div class="budget-card" style="background:white;border-radius:10px;padding:30px;height:100%;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);transition:transform 0.3s;">
+                    <div class="d-flex align-items-center mb-4">
+                        <div style="width:50px;height:50px;background-color:#e6f0ff;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0a2463;font-size:1.5rem;">
+                            <i class="fas fa-percent"></i>
+                        </div>
+                        <h3 style="color:#0a2463;font-weight:600;margin-left:15px;margin-bottom:0;">Tax Reforms</h3>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <a href="https://www.incometaxindia.gov.in/Pages/budget/budget-2023-24.aspx" target="_blank" style="text-decoration:none;color:#333;display:flex;align-items:center;padding:10px;border-radius:5px;transition:all 0.3s;background-color:#f8f9fa;">
+                                <i class="fas fa-external-link-alt me-3" style="color:#3e92cc;"></i>
+                                <div>
+                                    <strong>Income Tax Changes</strong>
+                                    <small class="d-block text-muted">New tax slabs and deductions</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="https://www.cbic.gov.in/htdocs-cbec/budget2023-24" target="_blank" style="text-decoration:none;color:#333;display:flex;align-items:center;padding:10px;border-radius:5px;transition:all 0.3s;background-color:#f8f9fa;">
+                                <i class="fas fa-external-link-alt me-3" style="color:#3e92cc;"></i>
+                                <div>
+                                    <strong>Customs & GST Updates</strong>
+                                    <small class="d-block text-muted">CBIC notifications</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="https://www.rbi.org.in/Scripts/Annualpolicy.aspx" target="_blank" style="text-decoration:none;color:#333;display:flex;align-items:center;padding:10px;border-radius:5px;transition:all 0.3s;background-color:#f8f9fa;">
+                                <i class="fas fa-external-link-alt me-3" style="color:#3e92cc;"></i>
+                                <div>
+                                    <strong>RBI Monetary Policy</strong>
+                                    <small class="d-block text-muted">Interest rate changes</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="https://dor.gov.in/sites/default/files/2023-02/Notification_No_03_2023_English.pdf" target="_blank" style="text-decoration:none;color:#333;display:flex;align-items:center;padding:10px;border-radius:5px;transition:all 0.3s;background-color:#f8f9fa;">
+                                <i class="fas fa-file-pdf me-3" style="color:#3e92cc;"></i>
+                                <div>
+                                    <strong>Income Tax Notification (PDF)</strong>
+                                    <small class="d-block text-muted">Official notification of tax changes</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sector-wise Analysis -->
+<section style="padding:80px 0;background-color:white;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 style="color:#0a2463;font-weight:700;margin-bottom:20px;position:relative;display:inline-block;">
+                    Sector-wise Impact Analysis
+                    <span style="content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:#ffd700;border-radius:2px;"></span>
+                </h2>
+                <p class="mx-auto" style="max-width:800px;">Detailed analysis of budget allocations and policy changes across key sectors of the economy</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="sector-card" style="background:#f9f9f9;border-radius:10px;padding:25px;height:100%;transition:all 0.3s;border-left:4px solid #0a2463;">
+                    <h4 style="color:#0a2463;font-weight:600;"><i class="fas fa-building me-2"></i> Corporate Sector</h4>
+                    <ul style="padding-left:20px;">
+                        <li>New tax regime benefits for corporates</li>
+                        <li>Startup incentives extended till March 2024</li>
+                        <li>MSME benefits including credit guarantee</li>
+                        <li>Reduction in 37 surcharges for high-income individuals</li>
+                    </ul>
+                    <a href="https://www.mca.gov.in/MinistryV2/unionbudget2023.html" target="_blank" class="btn btn-sm btn-outline-primary mt-2">MCA Updates</a>
+                    <a href="https://www.startupindia.gov.in/content/sih/en/government-budgets/union-budget-2023-24.html" target="_blank" class="btn btn-sm btn-outline-primary mt-2 ms-2">Startup Initiatives</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="sector-card" style="background:#f9f9f9;border-radius:10px;padding:25px;height:100%;transition:all 0.3s;border-left:4px solid #0a2463;">
+                    <h4 style="color:#0a2463;font-weight:600;"><i class="fas fa-road me-2"></i> Infrastructure</h4>
+                    <ul style="padding-left:20px;">
+                        <li>Record capital expenditure of ₹10 lakh crore</li>
+                        <li>50-year interest-free loans to states for infrastructure</li>
+                        <li>100 critical transport infrastructure projects</li>
+                        <li>Urban infrastructure fund with ₹10,000 crore allocation</li>
+                    </ul>
+                    <a href="https://www.pppinindia.gov.in/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">PPP Portal</a>
+                    <a href="https://morth.nic.in/" target="_blank" class="btn btn-sm btn-outline-primary mt-2 ms-2">Road Ministry</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="sector-card" style="background:#f9f9f9;border-radius:10px;padding:25px;height:100%;transition:all 0.3s;border-left:4px solid #0a2463;">
+                    <h4 style="color:#0a2463;font-weight:600;"><i class="fas fa-heartbeat me-2"></i> Healthcare</h4>
+                    <ul style="padding-left:20px;">
+                        <li>New mission to eliminate sickle cell anemia by 2047</li>
+                        <li>157 new nursing colleges to be established</li>
+                        <li>Pharmaceutical research gets ₹5,000 crore promotion</li>
+                        <li>Focus on ICMR labs for research collaboration</li>
+                    </ul>
+                    <a href="https://main.mohfw.gov.in/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Health Ministry</a>
+                    <a href="https://www.icmr.gov.in/" target="_blank" class="btn btn-sm btn-outline-primary mt-2 ms-2">ICMR</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="sector-card" style="background:#f9f9f9;border-radius:10px;padding:25px;height:100%;transition:all 0.3s;border-left:4px solid #0a2463;">
+                    <h4 style="color:#0a2463;font-weight:600;"><i class="fas fa-graduation-cap me-2"></i> Education</h4>
+                    <ul style="padding-left:20px;">
+                        <li>National Digital Library for children and adolescents</li>
+                        <li>Recruitment of 38,800 teachers for Eklavya schools</li>
+                        <li>Teacher training through innovative pedagogy</li>
+                        <li>Centers of Excellence for AI in top institutions</li>
+                    </ul>
+                    <a href="https://www.education.gov.in/en" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Education Ministry</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="sector-card" style="background:#f9f9f9;border-radius:10px;padding:25px;height:100%;transition:all 0.3s;border-left:4px solid #0a2463;">
+                    <h4 style="color:#0a2463;font-weight:600;"><i class="fas fa-leaf me-2"></i> Agriculture</h4>
+                    <ul style="padding-left:20px;">
+                        <li>Agriculture credit target increased to ₹20 lakh crore</li>
+                        <li>Digital public infrastructure for agriculture</li>
+                        <li>10,000 Bio-Input Resource Centers</li>
+                        <li>Enhanced focus on cotton productivity</li>
+                    </ul>
+                    <a href="https://agricoop.nic.in/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Agriculture Ministry</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="sector-card" style="background:#f9f9f9;border-radius:10px;padding:25px;height:100%;transition:all 0.3s;border-left:4px solid #0a2463;">
+                    <h4 style="color:#0a2463;font-weight:600;"><i class="fas fa-bolt me-2"></i> Energy</h4>
+                    <ul style="padding-left:20px;">
+                        <li>₹35,000 crore for energy transition</li>
+                        <li>Battery storage system with 4,000 MWH capacity</li>
+                        <li>Inter-state transmission system for renewable energy</li>
+                        <li>Green Credit Programme for sustainable actions</li>
+                    </ul>
+                    <a href="https://mnre.gov.in/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Renewable Energy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Budget Archives -->
+<section id="archives" style="padding:80px 0;background-color:#f9f9f9;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 style="color:#0a2463;font-weight:700;margin-bottom:20px;position:relative;display:inline-block;">
+                    Previous Budgets & Archives
+                    <span style="content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:#ffd700;border-radius:2px;"></span>
+                </h2>
+                <p class="mx-auto" style="max-width:800px;">Access historical budget documents and compare policy changes over the years</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-hover" style="background-color:white;">
+                        <thead style="background-color:#0a2463;color:white;">
+                            <tr>
+                                <th>Year</th>
+                                <th>Budget</th>
+                                <th>Highlights</th>
+                                <th>Documents</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2022-23</td>
+                                <td>Union Budget</td>
+                                <td>Focus on PM Gati Shakti, inclusive development, productivity enhancement</td>
+                                <td>
+                                    <a href="https://www.indiabudget.gov.in/budget2022-23/" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+                                    <a href="https://www.indiabudget.gov.in/doc/rec/bs.pdf" target="_blank" class="btn btn-sm btn-outline-secondary ms-1">Speech</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2021-22</td>
+                                <td>Union Budget</td>
+                                <td>COVID recovery, healthcare focus, infrastructure push</td>
+                                <td>
+                                    <a href="https://www.indiabudget.gov.in/budget2021-22/" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+                                    <a href="https://www.indiabudget.gov.in/doc/rec_bs.pdf" target="_blank" class="btn btn-sm btn-outline-secondary ms-1">Speech</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2020-21</td>
+                                <td>Union Budget</td>
+                                <td>Atmanirbhar Bharat initiatives, new agriculture reforms</td>
+                                <td>
+                                    <a href="https://www.indiabudget.gov.in/budget2020-21/" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+                                    <a href="https://www.indiabudget.gov.in/doc/rec_bs.pdf" target="_blank" class="btn btn-sm btn-outline-secondary ms-1">Speech</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2019-20</td>
+                                <td>Union Budget</td>
+                                <td>Focus on $5 trillion economy, digital India, ease of living</td>
+                                <td>
+                                    <a href="https://www.indiabudget.gov.in/budget2019-20/" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+                                    <a href="https://www.indiabudget.gov.in/doc/rec_bs.pdf" target="_blank" class="btn btn-sm btn-outline-secondary ms-1">Speech</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2018-19</td>
+                                <td>Union Budget</td>
+                                <td>Focus on agriculture, rural economy, healthcare</td>
+                                <td>
+                                    <a href="https://www.indiabudget.gov.in/budget2018-19/" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+                                    <a href="https://www.indiabudget.gov.in/ub2018-19/bs/bs.pdf" target="_blank" class="btn btn-sm btn-outline-secondary ms-1">Speech</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <a href="https://www.indiabudget.gov.in/previousbudget.aspx" target="_blank" class="btn btn-primary">View All Previous Budgets (2005 onwards)</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resources Section -->
+<section style="padding:80px 0;background:linear-gradient(135deg,#0a2463 0%,#001845 100%);color:white;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 style="font-weight:700;margin-bottom:20px;position:relative;display:inline-block;">
+                    Additional Resources
+                    <span style="content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:#ffd700;border-radius:2px;"></span>
+                </h2>
+                <p class="mx-auto" style="max-width:800px;opacity:0.8;">Explore more budget-related resources and tools for deeper analysis</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="resource-card" style="background:rgba(255,255,255,0.1);border-radius:10px;padding:25px;height:100%;border:1px solid rgba(255,255,255,0.2);">
+                    <h4 style="font-weight:600;margin-bottom:15px;"><i class="fas fa-chart-pie me-2"></i> Economic Survey</h4>
+                    <p>Detailed pre-budget economic analysis, statistics, and policy recommendations</p>
+                    <a href="https://www.indiabudget.gov.in/economicsurvey/" target="_blank" class="btn btn-warning btn-sm">Access Survey</a>
+                    <a href="https://www.indiabudget.gov.in/economicsurvey/doc/echapter.pdf" target="_blank" class="btn btn-outline-light btn-sm ms-2">PDF</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="resource-card" style="background:rgba(255,255,255,0.1);border-radius:10px;padding:25px;height:100%;border:1px solid rgba(255,255,255,0.2);">
+                    <h4 style="font-weight:600;margin-bottom:15px;"><i class="fas fa-video me-2"></i> Budget Webcast</h4>
+                    <p>Live and archived budget sessions, press conferences, and expert analysis</p>
+                    <a href="https://www.youtube.com/user/indiabudget" target="_blank" class="btn btn-warning btn-sm">Watch Now</a>
+                    <a href="https://www.pib.gov.in/webcast.htm" target="_blank" class="btn btn-outline-light btn-sm ms-2">PIB Webcast</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="resource-card" style="background:rgba(255,255,255,0.1);border-radius:10px;padding:25px;height:100%;border:1px solid rgba(255,255,255,0.2);">
+                    <h4 style="font-weight:600;margin-bottom:15px;"><i class="fas fa-mobile-alt me-2"></i> Budget Apps</h4>
+                    <p>Mobile applications for budget access, tracking, and analysis</p>
+                    <a href="https://www.mygov.in/apps/" target="_blank" class="btn btn-warning btn-sm">MyGov Apps</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.ibmobile" target="_blank" class="btn btn-outline-light btn-sm ms-2">Android</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="resource-card" style="background:rgba(255,255,255,0.1);border-radius:10px;padding:25px;height:100%;border:1px solid rgba(255,255,255,0.2);">
+                    <h4 style="font-weight:600;margin-bottom:15px;"><i class="fas fa-database me-2"></i> Open Budget Data</h4>
+                    <p>Machine-readable budget datasets for analysis and visualization</p>
+                    <a href="https://www.indiabudget.gov.in/data.asp" target="_blank" class="btn btn-warning btn-sm">Budget Data</a>
+                    <a href="https://data.gov.in/" target="_blank" class="btn btn-outline-light btn-sm ms-2">Data.gov.in</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="resource-card" style="background:rgba(255,255,255,0.1);border-radius:10px;padding:25px;height:100%;border:1px solid rgba(255,255,255,0.2);">
+                    <h4 style="font-weight:600;margin-bottom:15px;"><i class="fas fa-book me-2"></i> Glossary</h4>
+                    <p>Budget terminology and definitions for better understanding</p>
+                    <a href="https://www.indiabudget.gov.in/glance.asp" target="_blank" class="btn btn-warning btn-sm">Budget Glossary</a>
+                    <a href="https://dor.gov.in/tax-glossary" target="_blank" class="btn btn-outline-light btn-sm ms-2">Tax Terms</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="resource-card" style="background:rgba(255,255,255,0.1);border-radius:10px;padding:25px;height:100%;border:1px solid rgba(255,255,255,0.2);">
+                    <h4 style="font-weight:600;margin-bottom:15px;"><i class="fas fa-question-circle me-2"></i> FAQs</h4>
+                    <p>Frequently asked questions about budget process and documents</p>
+                    <a href="https://www.indiabudget.gov.in/faq.asp" target="_blank" class="btn btn-warning btn-sm">Budget FAQs</a>
+                    <a href="https://www.incometaxindia.gov.in/Pages/faqs.aspx" target="_blank" class="btn btn-outline-light btn-sm ms-2">Tax FAQs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Expert Analysis Section -->
+<section style="padding:80px 0;background-color:#fff;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 style="color:#0a2463;font-weight:700;margin-bottom:20px;position:relative;display:inline-block;">
+                    Expert Analysis & Commentary
+                    <span style="content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:#ffd700;border-radius:2px;"></span>
+                </h2>
+                <p class="mx-auto" style="max-width:800px;">Professional insights and detailed breakdowns of budget implications</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div style="background:#f9f9f9;border-radius:10px;padding:25px;height:100%;">
+                    <h4 style="color:#0a2463;font-weight:600;margin-bottom:15px;">Tax Implications Analysis</h4>
+                    <p>Detailed breakdown of how the new tax regime changes affect different income groups, with comparison calculators and scenario analysis.</p>
+                    <div class="mt-3">
+                        <a href="https://taxcalculator.incometaxindia.gov.in/" target="_blank" class="btn btn-sm btn-outline-primary">Tax Calculator</a>
+                        <a href="https://www.incometaxindia.gov.in/Pages/tools/income-tax-calculator.aspx" target="_blank" class="btn btn-sm btn-outline-primary ms-2">IT Dept Calculator</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div style="background:#f9f9f9;border-radius:10px;padding:25px;height:100%;">
+                    <h4 style="color:#0a2463;font-weight:600;margin-bottom:15px;">Sector Impact Reports</h4>
+                    <p>Industry-specific impact analysis reports covering automotive, IT, pharmaceuticals, real estate, and other key sectors.</p>
+                    <div class="mt-3">
+                        <a href="https://www.pwc.in/budget-2023.html" target="_blank" class="btn btn-sm btn-outline-primary">PwC Analysis</a>
+                        <a href="https://www2.deloitte.com/in/en/pages/tax/topics/union-budget.html" target="_blank" class="btn btn-sm btn-outline-primary ms-2">Deloitte</a>
+                        <a href="https://home.kpmg/in/en/home/insights/2023/02/union-budget-2023-24.html" target="_blank" class="btn btn-sm btn-outline-primary ms-2">KPMG</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div style="background:#f9f9f9;border-radius:10px;padding:25px;height:100%;">
+                    <h4 style="color:#0a2463;font-weight:600;margin-bottom:15px;">Webinars & Workshops</h4>
+                    <p>Upcoming professional sessions to understand budget implications for businesses and individuals.</p>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Register for Our Webinar</a>
+                        <a href="#" class="btn btn-sm btn-outline-primary ms-2">Consult Our Experts</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div style="background:#f9f9f9;border-radius:10px;padding:25px;height:100%;">
+                    <h4 style="color:#0a2463;font-weight:600;margin-bottom:15px;">Budget Implementation Updates</h4>
+                    <p>Track notifications, circulars, and implementation updates as budget provisions are rolled out.</p>
+                    <div class="mt-3">
+                        <a href="https://www.incometaxindia.gov.in/Pages/notification.aspx" target="_blank" class="btn btn-sm btn-outline-primary">IT Notifications</a>
+                        <a href="https://www.cbic.gov.in/htdocs-cbec/gst/index" target="_blank" class="btn btn-sm btn-outline-primary ms-2">GST Updates</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

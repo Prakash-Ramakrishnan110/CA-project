@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Services | Karthika and Associates</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #fff;
+        }
+        
+        /* Hero Section */
+        .gst-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        /* GST Calculator */
+        .calculator-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .calculator-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .form-label {
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form-control, .form-select {
+            border: 2px solid #e6f0ff;
+            border-radius: 8px;
+            padding: 12px 15px;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.25rem rgba(62, 146, 204, 0.25);
+        }
+        
+        .btn-calculate {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        .btn-calculate:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .result-container {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 5px solid var(--accent-color);
+        }
+        
+        .result-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .result-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        /* GST Services Cards */
+        .service-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        
+        .service-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* FAQ Section */
+        .accordion-button {
+            font-weight: 500;
+            color: var(--primary-color);
+            background-color: rgba(10, 36, 99, 0.05);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(10, 36, 99, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(10, 36, 99, 0.1);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .gst-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .calculator-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <!-- GST Hero Section -->
+  <section class="gst-hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">GST Services & Solutions</h1>
+                <p class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">Expert GST compliance, filing, and advisory services tailored for your business needs</p>
+                <div class="d-flex justify-content-center gap-3 animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#calculator" class="btn btn-lg" style="background-color: var(--accent-color); color: var(--dark-color); font-weight: 600;">
+                        GST Calculator <i class="fas fa-calculator ms-2"></i>
+                    </a>
+                    <a href="#services" class="btn btn-lg" style="background-color: transparent; color: white; font-weight: 600; border: 2px solid rgba(255,255,255,0.3);">
+                        Our Services <i class="fas fa-briefcase ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- GST Calculator Section -->
+  <section id="calculator" class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">GST Calculator</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">Calculate your GST liability quickly and accurately</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="calculator-container" data-aos="fade-up">
+                    <h3 class="calculator-title">GST Calculation Tool</h3>
+                    <form id="gstCalculatorForm">
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label for="amount" class="form-label">Amount (₹)</label>
+                                <input type="number" class="form-control" id="amount" placeholder="Enter amount" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="gstType" class="form-label">Calculation Type</label>
+                                <select class="form-select" id="gstType" required>
+                                    <option value="exclusive">Exclusive of GST</option>
+                                    <option value="inclusive">Inclusive of GST</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label for="gstRate" class="form-label">GST Rate (%)</label>
+                                <select class="form-select" id="gstRate" required>
+                                    <option value="5">5%</option>
+                                    <option value="12">12%</option>
+                                    <option value="18" selected>18%</option>
+                                    <option value="28">28%</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="gstCategory" class="form-label">GST Category</label>
+                                <select class="form-select" id="gstCategory" required>
+                                    <option value="cgst_sgst">CGST + SGST</option>
+                                    <option value="igst">IGST</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-calculate">Calculate GST</button>
+                    </form>
+                    
+                    <div id="result" class="result-container" style="display: none;">
+                        <h4 class="result-title">GST Calculation Results</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <p class="mb-1">Original Amount:</p>
+                                <p class="result-value" id="originalAmount">₹0.00</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <p class="mb-1">GST Amount:</p>
+                                <p class="result-value" id="gstAmount">₹0.00</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <p class="mb-1">Total Amount:</p>
+                                <p class="result-value" id="totalAmount">₹0.00</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-1">Breakdown:</p>
+                                <p class="result-value" id="breakdown">CGST: ₹0.00, SGST: ₹0.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- GST Services Section -->
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">Our GST Services</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">Comprehensive GST solutions for businesses of all sizes</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="service-card card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3 class="service-title">GST Registration</h3>
+                        <p class="text-muted">End-to-end assistance with GST registration for new businesses, including document preparation and liaison with authorities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="service-title">GST Return Filing</h3>
+                        <p class="text-muted">Timely and accurate filing of all GST returns (GSTR-1, GSTR-3B, GSTR-9, etc.) to ensure compliance with regulations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <h3 class="service-title">GST Audit</h3>
+                        <p class="text-muted">Comprehensive GST audit services to verify compliance, identify risks, and optimize your tax position.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="service-card card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3 class="service-title">GST Refund</h3>
+                        <p class="text-muted">Assistance with GST refund claims, including documentation, application filing, and follow-up with authorities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="service-title">GST Compliance</h3>
+                        <p class="text-muted">Ongoing compliance monitoring to ensure your business meets all GST requirements and avoids penalties.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="service-title">GST Advisory</h3>
+                        <p class="text-muted">Strategic advice on GST matters including rate classification, input tax credit optimization, and transaction structuring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- GST FAQ Section -->
+  <section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title" data-aos="fade-up">GST FAQs</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">Common questions about Goods and Services Tax</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="gstFaqAccordion">
+                    <div class="accordion-item mb-3 border-0 rounded overflow-hidden shadow-sm" data-aos="fade-up">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What is GST and how does it work?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#gstFaqAccordion">
+                            <div class="accordion-body">
+                                GST (Goods and Services Tax) is a comprehensive indirect tax levied on the supply of goods and services across India. It replaced multiple cascading taxes levied by the central and state governments. GST is a value-added tax collected at each stage of the supply chain, with credit available for taxes paid at previous stages.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item mb-3 border-0 rounded overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Who needs to register for GST?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#gstFaqAccordion">
+                            <div class="accordion-body">
+                                Businesses with an annual turnover exceeding ₹40 lakh (₹20 lakh for special category states) must register for GST. Certain businesses like e-commerce operators, casual taxable persons, and those making inter-state supplies must register regardless of turnover. Voluntary registration is also allowed.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item mb-3 border-0 rounded overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                What are the different GST return forms?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#gstFaqAccordion">
+                            <div class="accordion-body">
+                                The main GST return forms include:
+                                <ul>
+                                    <li>GSTR-1: Details of outward supplies (monthly/quarterly)</li>
+                                    <li>GSTR-3B: Summary return with tax payment (monthly)</li>
+                                    <li>GSTR-9: Annual return</li>
+                                    <li>GSTR-4: For composition dealers (quarterly)</li>
+                                    <li>GSTR-5: For non-resident taxable persons</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item mb-3 border-0 rounded overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                What is the difference between CGST, SGST and IGST?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#gstFaqAccordion">
+                            <div class="accordion-body">
+                                <strong>CGST (Central GST):</strong> Collected by the Central Government on intra-state supplies<br>
+                                <strong>SGST (State GST):</strong> Collected by the State Government on intra-state supplies<br>
+                                <strong>IGST (Integrated GST):</strong> Collected by the Central Government on inter-state supplies and imports<br><br>
+                                For example, on an intra-state supply with 18% GST rate: 9% CGST + 9% SGST. For inter-state supply: 18% IGST.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item mb-3 border-0 rounded overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                How can I claim Input Tax Credit (ITC) under GST?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#gstFaqAccordion">
+                            <div class="accordion-body">
+                                To claim ITC, you must:
+                                <ul>
+                                    <li>Possess a valid tax invoice or other prescribed document</li>
+                                    <li>Have received the goods/services</li>
+                                    <li>The supplier must have filed their returns and paid the tax to government</li>
+                                    <li>ITC must be claimed within specified time limits</li>
+                                    <li>The goods/services must be used for business purposes</li>
+                                </ul>
+                                ITC cannot be claimed for certain items like personal use, exempt supplies, and blocked credits.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS (Animate On Scroll) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      // Initialize AOS
+      AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+      });
+      
+      // GST Calculator Functionality
+      document.getElementById('gstCalculatorForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Get input values
+          const amount = parseFloat(document.getElementById('amount').value);
+          const gstType = document.getElementById('gstType').value;
+          const gstRate = parseFloat(document.getElementById('gstRate').value);
+          const gstCategory = document.getElementById('gstCategory').value;
+          
+          // Calculate GST
+          let originalAmount, gstAmount, totalAmount;
+          
+          if (gstType === 'exclusive') {
+              originalAmount = amount;
+              gstAmount = (amount * gstRate) / 100;
+              totalAmount = originalAmount + gstAmount;
+          } else {
+              totalAmount = amount;
+              originalAmount = (100 * amount) / (100 + gstRate);
+              gstAmount = totalAmount - originalAmount;
+          }
+          
+          // Calculate breakdown
+          let breakdown;
+          if (gstCategory === 'cgst_sgst') {
+              const cgst = gstAmount / 2;
+              const sgst = gstAmount / 2;
+              breakdown = `CGST: ₹${cgst.toFixed(2)}, SGST: ₹${sgst.toFixed(2)}`;
+          } else {
+              breakdown = `IGST: ₹${gstAmount.toFixed(2)}`;
+          }
+          
+          // Display results
+          document.getElementById('originalAmount').textContent = `₹${originalAmount.toFixed(2)}`;
+          document.getElementById('gstAmount').textContent = `₹${gstAmount.toFixed(2)}`;
+          document.getElementById('totalAmount').textContent = `₹${totalAmount.toFixed(2)}`;
+          document.getElementById('breakdown').textContent = breakdown;
+          
+          // Show result container
+          document.getElementById('result').style.display = 'block';
+      });
+  </script>
+</body>
+</html>

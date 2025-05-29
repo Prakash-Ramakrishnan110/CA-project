@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Karthika Menon | Income Tax Specialist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+     
+        .hero-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-content h1 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 3rem;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .btn-primary {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #1e3c72;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #ffca28;
+            border-color: #ffca28;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .calculator-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+        .calculator-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 30px;
+        }
+        .calculator-title {
+            color: #1e3c72;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .form-label {
+            font-weight: 600;
+            color: #555;
+        }
+        .form-control {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .form-control:focus {
+            border-color: #1e3c72;
+            box-shadow: 0 0 0 0.25rem rgba(30, 60, 114, 0.25);
+        }
+        .result-box {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .result-value {
+            font-weight: 700;
+            color: #1e3c72;
+            font-size: 1.2rem;
+        }
+       
+    </style>
+</head>
+<body style="font-family: 'Arial', sans-serif; color: #333; line-height: 1.6; background-color: #f8f9fa;">
+
+ 
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1>Expert Tax Solutions for Individuals & Businesses</h1>
+                    <p>CA Karthika Menon provides comprehensive tax planning, compliance, and litigation services to help you navigate complex tax regulations and maximize your savings.</p>
+                    <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://via.placeholder.com/600x400?text=Tax+Expert" alt="CA Karthika Menon" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="padding: 80px 0; background-color: #fff;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 style="color: #1e3c72; font-weight: 700; margin-bottom: 40px; position: relative; display: inline-block;">Tax Expertise Profile</h2>
+                <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: #ffc107; border-radius: 2px;"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h3 style="color: #1e3c72; font-weight: 600; margin-bottom: 20px;">About Karthika</h3>
+                <p style="margin-bottom: 20px; font-size: 1.1rem;">CA Karthika Menon is a renowned Income Tax Specialist with extensive experience in tax planning, compliance, and litigation. She has successfully represented clients in complex tax matters before various authorities.</p>
+                <p style="margin-bottom: 20px; font-size: 1.1rem;">Her expertise spans personal taxation, corporate tax strategies, international taxation, and tax dispute resolution. Karthika is known for her meticulous approach to tax planning that maximizes benefits while ensuring full compliance.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-4">
+                        <div style="height: 100%; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="background-color: rgba(30, 60, 114, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; color: #1e3c72; font-size: 1.2rem;">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4 style="margin-bottom: 0; margin-left: 15px; color: #1e3c72; font-weight: 600;">Education</h4>
+                            </div>
+                            <ul style="padding-left: 20px; color: #666;">
+                                <li>Chartered Accountant (CA)</li>
+                                <li>Bachelor of Commerce</li>
+                                <li>Diploma in Tax Laws</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="height: 100%; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="background-color: rgba(30, 60, 114, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; color: #1e3c72; font-size: 1.2rem;">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h4 style="margin-bottom: 0; margin-left: 15px; color: #1e3c72; font-weight: 600;">Certifications</h4>
+                            </div>
+                            <ul style="padding-left: 20px; color: #666;">
+                                <li>Certified Tax Planner</li>
+                                <li>International Tax Specialist</li>
+                                <li>GST Practitioner</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 style="color: #1e3c72; font-weight: 600; margin-bottom: 20px;">Tax Specializations</h3>
+                
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="font-weight: 500;">Income Tax Planning</span>
+                        <span>98%</span>
+                    </div>
+                    <div style="height: 8px; background-color: #e6f0ff; border-radius: 4px; overflow: hidden;">
+                        <div style="height: 100%; width: 98%; background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%); border-radius: 4px;"></div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="font-weight: 500;">Tax Litigation</span>
+                        <span>95%</span>
+                    </div>
+                    <div style="height: 8px; background-color: #e6f0ff; border-radius: 4px; overflow: hidden;">
+                        <div style="height: 100%; width: 95%; background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%); border-radius: 4px;"></div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="font-weight: 500;">International Taxation</span>
+                        <span>90%</span>
+                    </div>
+                    <div style="height: 8px; background-color: #e6f0ff; border-radius: 4px; overflow: hidden;">
+                        <div style="height: 100%; width: 90%; background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%); border-radius: 4px;"></div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="font-weight: 500;">Tax Audit</span>
+                        <span>92%</span>
+                    </div>
+                    <div style="height: 8px; background-color: #e6f0ff; border-radius: 4px; overflow: hidden;">
+                        <div style="height: 100%; width: 92%; background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%); border-radius: 4px;"></div>
+                    </div>
+                </div>
+                
+                <h3 style="color: #1e3c72; font-weight: 600; margin-top: 40px; margin-bottom: 20px;">Professional Affiliations</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                    <div style="display: flex; align-items: center; padding: 12px 20px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); gap: 10px;">
+                        <img src="https://via.placeholder.com/40x40?text=ICAI" alt="ICAI" style="width: 30px; height: 30px; border-radius: 50%;">
+                        <span style="font-weight: 500;">ICAI Member</span>
+                    </div>
+                    <div style="display: flex; align-items: center; padding: 12px 20px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); gap: 10px;">
+                        <img src="https://via.placeholder.com/40x40?text=ITP" alt="ITP" style="width: 30px; height: 30px; border-radius: 50%;">
+                        <span style="font-weight: 500;">Income Tax Panel</span>
+                    </div>
+                    <div style="display: flex; align-items: center; padding: 12px 20px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); gap: 10px;">
+                        <img src="https://via.placeholder.com/40x40?text=GST" alt="GST" style="width: 30px; height: 30px; border-radius: 50%;">
+                        <span style="font-weight: 500;">GST Practitioner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" style="padding: 80px 0; background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 style="color: #1e3c72; font-weight: 700; margin-bottom: 40px; position: relative; display: inline-block;">Tax Services Offered</h2>
+                <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: #ffc107; border-radius: 2px;"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div style="height: 100%; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; border-top: 4px solid #1e3c72;">
+                    <div style="width: 60px; height: 60px; background-color: rgba(30, 60, 114, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #1e3c72; font-size: 1.5rem;">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 style="color: #1e3c72; font-weight: 600; margin-bottom: 15px;">Tax Planning</h3>
+                    <p style="color: #666;">Strategic tax planning for individuals and businesses to minimize tax liability while ensuring full compliance with tax laws.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div style="height: 100%; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; border-top: 4px solid #1e3c72;">
+                    <div style="width: 60px; height: 60px; background-color: rgba(30, 60, 114, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #1e3c72; font-size: 1.5rem;">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 style="color: #1e3c72; font-weight: 600; margin-bottom: 15px;">Tax Litigation</h3>
+                    <p style="color: #666;">Representation before Income Tax authorities, appellate tribunals, and courts for tax disputes and appeals.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div style="height: 100%; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; border-top: 4px solid #1e3c72;">
+                    <div style="width: 60px; height: 60px; background-color: rgba(30, 60, 114, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #1e3c72; font-size: 1.5rem;">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 style="color: #1e3c72; font-weight: 600; margin-bottom: 15px;">International Tax</h3>
+                    <p style="color: #666;">Expert guidance on cross-border taxation, DTAA, transfer pricing, and foreign income reporting.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div style="height: 100%; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; border-top: 4px solid #1e3c72;">
+                    <div style="width: 60px; height: 60px; background-color: rgba(30, 60, 114, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #1e3c72; font-size: 1.5rem;">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 style="color: #1e3c72; font-weight: 600; margin-bottom: 15px;">Tax Audits</h3>
+                    <p style="color: #666;">Comprehensive tax audit services under various sections of the Income Tax Act for businesses and professionals.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div style="height: 100%; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; border-top: 4px solid #1e3c72;">
+                    <div style="width: 60px; height: 60px; background-color: rgba(30, 60, 114, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #1e3c72; font-size: 1.5rem;">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 style="color: #1e3c72; font-weight: 600; margin-bottom: 15px;">Capital Gains</h3>
+                    <p style="color: #666;">Specialized advice on capital gains taxation, exemptions, and planning for property and securities transactions.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div style="height: 100%; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; border-top: 4px solid #1e3c72;">
+                    <div style="width: 60px; height: 60px; background-color: rgba(30, 60, 114, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #1e3c72; font-size: 1.5rem;">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 style="color: #1e3c72; font-weight: 600; margin-bottom: 15px;">Tax Savings</h3>
+                    <p style="color: #666;">Guidance on tax-saving investments, deductions, and exemptions to optimize your tax savings legally.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- GST Calculator Section -->
+  <section id="calculator" class="calculator-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="calculator-card">
+                    <h2 class="calculator-title">GST Calculator</h2>
+                    <form id="gstCalculatorForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="amount" class="form-label">Amount (₹)</label>
+                                <input type="number" class="form-control" id="amount" placeholder="Enter amount" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="gstRate" class="form-label">GST Rate (%)</label>
+                                <select class="form-control" id="gstRate" required>
+                                    <option value="">Select GST Rate</option>
+                                    <option value="5">5%</option>
+                                    <option value="12">12%</option>
+                                    <option value="18">18%</option>
+                                    <option value="28">28%</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Calculation Type</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="calculationType" id="exclusive" value="exclusive" checked>
+                                    <label class="form-check-label" for="exclusive">
+                                        Exclusive of GST
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="calculationType" id="inclusive" value="inclusive">
+                                    <label class="form-check-label" for="inclusive">
+                                        Inclusive of GST
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Calculate GST</button>
+                        </div>
+                    </form>
+                    
+                    <div id="result" style="display: none;">
+                        <div class="row mt-4">
+                            <div class="col-md-4 mb-3">
+                                <div class="result-box">
+                                    <h5>Original Amount</h5>
+                                    <p class="result-value" id="originalAmount">₹0.00</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="result-box">
+                                    <h5>GST Amount</h5>
+                                    <p class="result-value" id="gstAmount">₹0.00</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="result-box">
+                                    <h5>Total Amount</h5>
+                                    <p class="result-value" id="totalAmount">₹0.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" style="padding: 80px 0; background-color: #fff;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 style="color: #1e3c72; font-weight: 700; margin-bottom: 40px; position: relative; display: inline-block;">Client Testimonials</h2>
+                <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: #ffc107; border-radius: 2px;"></div>
+                <p style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 20px auto 0;">What clients say about Karthika's tax expertise</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div style="height: 100%; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative;">
+                    <div style="position: absolute; top: 20px; left: 20px; font-size: 80px; font-family: Georgia, serif; color: rgba(30, 60, 114, 0.05); line-height: 1; z-index: 0;">"</div>
+                    <div style="margin-bottom: 20px; position: relative; z-index: 1;">
+                        <div style="display: flex; gap: 3px; color: #ffc107;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: #666; margin-bottom: 25px; position: relative; z-index: 1;">Karthika saved me over ₹5 lakhs in taxes with her strategic planning. Her knowledge of tax laws is exceptional and she explains complex concepts in simple terms.</p>
+                    <div style="display: flex; align-items: center; gap: 15px; position: relative; z-index: 1;">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h5 style="color: #1e3c72; font-weight: 600; margin-bottom: 5px;">Rahul Sharma</h5>
+                            <p style="color: #888; font-size: 0.9rem;">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div style="height: 100%; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative;">
+                    <div style="position: absolute; top: 20px; left: 20px; font-size: 80px; font-family: Georgia, serif; color: rgba(30, 60, 114, 0.05); line-height: 1; z-index: 0;">"</div>
+                    <div style="margin-bottom: 20px; position: relative; z-index: 1;">
+                        <div style="display: flex; gap: 3px; color: #ffc107;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: #666; margin-bottom: 25px; position: relative; z-index: 1;">Our company faced a complex tax dispute. Karthika's thorough understanding of tax laws and persuasive representation helped us win the case with significant savings.</p>
+                    <div style="display: flex; align-items: center; gap: 15px; position: relative; z-index: 1;">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h5 style="color: #1e3c72; font-weight: 600; margin-bottom: 5px;">Priya Nair</h5>
+                            <p style="color: #888; font-size: 0.9rem;">CFO, Tech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div style="height: 100%; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative;">
+                    <div style="position: absolute; top: 20px; left: 20px; font-size: 80px; font-family: Georgia, serif; color: rgba(30, 60, 114, 0.05); line-height: 1; z-index: 0;">"</div>
+                    <div style="margin-bottom: 20px; position: relative; z-index: 1;">
+                        <div style="display: flex; gap: 3px; color: #ffc107;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: #666; margin-bottom: 25px; position: relative; z-index: 1;">As an NRI, I was confused about my tax obligations in India. Karthika provided clear guidance and helped me optimize my tax position across both countries.</p>
+                    <div style="display: flex; align-items: center; gap: 15px; position: relative; z-index: 1;">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Client" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h5 style="color: #1e3c72; font-weight: 600; margin-bottom: 5px;">Arjun Patel</h5>
+                            <p style="color: #888; font-size: 0.9rem;">NRI Investor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="padding: 80px 0; background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 style="color: #1e3c72; font-weight: 700; margin-bottom: 40px; position: relative; display: inline-block;">Contact Us</h2>
+                <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: #ffc107; border-radius: 2px;"></div>
+                <p style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 20px auto 0;">Get in touch for expert tax consultation</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div style="height: 100%; padding: 40px; background-color: white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: #1e3c72; font-weight: 600; margin-bottom: 30px;">Contact Information</h3>
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 25px;">
+                        <div style="background-color: rgba(30, 60, 114, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; color: #1e3c72; font-size: 1.2rem; flex-shrink: 0;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <h5 style="color: #1e3c72; font-weight: 600; margin-bottom: 5px;">Office Address</h5>
+                            <p style="color: #666; margin-bottom: 0;">Tax Plaza, 12th Floor, Business District, Mumbai - 400001</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 25px;">
+                        <div style="background-color: rgba(30, 60, 114, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; color: #1e3c72; font-size: 1.2rem; flex-shrink: 0;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <h5 style="color: #1e3c72; font-weight: 600; margin-bottom: 5px;">Email Address</h5>
+                            <p style="color: #666; margin-bottom: 0;">info@karthikamenonca.com</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 25px;">
+                        <div style="background-color: rgba(30, 60, 114, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; color: #1e3c72; font-size: 1.2rem; flex-shrink: 0;">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <h5 style="color: #1e3c72; font-weight: 600; margin-bottom: 5px;">Phone Number</h5>
+                            <p style="color: #666; margin-bottom: 0;">+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start;">
+                        <div style="background-color: rgba(30, 60, 114, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; color: #1e3c72; font-size: 1.2rem; flex-shrink: 0;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <h5 style="color: #1e3c72; font-weight: 600; margin-bottom: 5px;">Working Hours</h5>
+                            <p style="color: #666; margin-bottom: 0;">Monday to Friday: 9:00 AM - 6:00 PM</p>
+                            <p style="color: #666; margin-bottom: 0;">Saturday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div style="height: 100%; padding: 40px; background-color: white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: #1e3c72; font-weight: 600; margin-bottom: 30px;">Send Us a Message</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // GST Calculator Functionality
+    document.getElementById('gstCalculatorForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const amount = parseFloat(document.getElementById('amount').value);
+        const gstRate = parseFloat(document.getElementById('gstRate').value);
+        const calculationType = document.querySelector('input[name="calculationType"]:checked').value;
+        
+        let originalAmount, gstAmount, totalAmount;
+        
+        if (calculationType === 'exclusive') {
+            originalAmount = amount;
+            gstAmount = (amount * gstRate) / 100;
+            totalAmount = originalAmount + gstAmount;
+        } else {
+            totalAmount = amount;
+            originalAmount = (amount * 100) / (100 + gstRate);
+            gstAmount = totalAmount - originalAmount;
+        }
+        
+        document.getElementById('originalAmount').textContent = '₹' + originalAmount.toFixed(2);
+        document.getElementById('gstAmount').textContent = '₹' + gstAmount.toFixed(2);
+        document.getElementById('totalAmount').textContent = '₹' + totalAmount.toFixed(2);
+        
+        document.getElementById('result').style.display = 'block';
+    });
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+  </script>
+</body>
+</html>
