@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Karthika Menon | Professional Insights</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #fff;
+        }
+        
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-title {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .blog-subtitle {
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            opacity: 0.9;
+        }
+        
+        /* Floating Elements */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(5px);
+            animation: float 8s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        /* Blog Content */
+        .blog-container {
+            padding: 80px 0;
+        }
+        
+        .blog-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .blog-card-img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .blog-card-body {
+            padding: 25px;
+        }
+        
+        .blog-card-category {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .blog-card-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .blog-card-text {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .blog-card-meta {
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .blog-card-meta i {
+            margin-right: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .blog-card-meta span {
+            margin-right: 15px;
+        }
+        
+        /* Featured Post */
+        .featured-post {
+            margin-bottom: 60px;
+        }
+        
+        .featured-post-img {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            width: 100%;
+        }
+        
+        .featured-post-body {
+            padding: 30px;
+        }
+        
+        .featured-post-category {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .featured-post-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            line-height: 1.3;
+        }
+        
+        .featured-post-text {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        
+        .read-more-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more-btn:hover {
+            background-color: var(--dark-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .widget-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .category-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .category-list li {
+            margin-bottom: 10px;
+        }
+        
+        .category-list a {
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 6px;
+        }
+        
+        .category-list a:hover {
+            color: var(--primary-color);
+            background-color: rgba(10, 36, 99, 0.05);
+            transform: translateX(5px);
+        }
+        
+        .category-list a i {
+            margin-right: 8px;
+            color: var(--secondary-color);
+        }
+        
+        .recent-post-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .recent-post-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        
+        .recent-post-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .recent-post-title a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .recent-post-title a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .recent-post-date {
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        /* Newsletter */
+        .newsletter-form {
+            margin-top: 20px;
+        }
+        
+        .newsletter-input {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 12px 15px;
+            width: 100%;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(62, 146, 204, 0.2);
+        }
+        
+        .newsletter-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-btn:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Pagination */
+        .pagination {
+            justify-content: center;
+            margin-top: 50px;
+        }
+        
+        .page-item.active .page-link {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .page-link {
+            color: var(--primary-color);
+            border: 1px solid #ddd;
+            margin: 0 5px;
+            border-radius: 6px !important;
+            padding: 8px 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .page-link:hover {
+            color: var(--dark-color);
+            background-color: #f8f9fa;
+            border-color: #ddd;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .blog-title {
+                font-size: 2.5rem;
+            }
+            
+            .featured-post-img {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+                text-align: center;
+            }
+            
+            .blog-subtitle {
+                font-size: 1.1rem;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .featured-post-img {
+                height: 250px;
+            }
+            
+            .featured-post-title {
+                font-size: 1.7rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .blog-title {
+                font-size: 1.8rem;
+            }
+            
+            .blog-subtitle {
+                font-size: 1rem;
+            }
+            
+            .featured-post-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Blog Header Section -->
+  <section class="blog-header">
+    <!-- Floating Elements -->
+    <div class="floating-element" style="top: 20%; left: 5%; width: 30px; height: 30px; background: rgba(255, 215, 0, 0.3); animation-delay: 0s;"></div>
+    <div class="floating-element" style="bottom: 15%; right: 10%; width: 50px; height: 50px; background: rgba(62, 146, 204, 0.3); animation-delay: 2s;"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="blog-title" data-aos="fade-up">Professional Insights</h1>
+                <p class="blog-subtitle" data-aos="fade-up" data-aos-delay="100">Expert analysis and commentary on taxation, finance, and business strategy by CA Karthika Menon</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Blog Content Section -->
+  <section class="blog-container">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Featured Post -->
+                <div class="featured-post" data-aos="fade-up">
+                    <div class="row g-0 bg-white rounded-lg overflow-hidden shadow-sm">
+                        <div class="col-md-6">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Featured Post" class="featured-post-img">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="featured-post-body">
+                                <span class="featured-post-category">TAXATION</span>
+                                <h2 class="featured-post-title">Navigating India's New Transfer Pricing Regulations</h2>
+                                <p class="featured-post-text">An in-depth analysis of the latest transfer pricing guidelines and how multinational corporations can ensure compliance while optimizing their tax positions.</p>
+                                <button class="read-more-btn">Read Article</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Posts Grid -->
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Blog Post" class="blog-card-img">
+                            <div class="blog-card-body">
+                                <span class="blog-card-category">FDI</span>
+                                <h3 class="blog-card-title">Foreign Direct Investment in India: 2023 Trends</h3>
+                                <p class="blog-card-text">Key insights into the changing landscape of FDI in India and what foreign investors need to know about the latest policy changes.</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar-alt"></i> June 15, 2023</span>
+                                    <span><i class="far fa-clock"></i> 8 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Blog Post" class="blog-card-img">
+                            <div class="blog-card-body">
+                                <span class="blog-card-category">FINANCE</span>
+                                <h3 class="blog-card-title">Startup Funding: Financial Planning Essentials</h3>
+                                <p class="blog-card-text">Critical financial planning strategies for startups looking to secure funding and manage their capital efficiently in the early stages.</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar-alt"></i> May 28, 2023</span>
+                                    <span><i class="far fa-clock"></i> 6 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Blog Post" class="blog-card-img">
+                            <div class="blog-card-body">
+                                <span class="blog-card-category">AUDIT</span>
+                                <h3 class="blog-card-title">The Future of Digital Auditing in India</h3>
+                                <p class="blog-card-text">How emerging technologies like AI and blockchain are transforming the audit process and what it means for Indian businesses.</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar-alt"></i> April 12, 2023</span>
+                                    <span><i class="far fa-clock"></i> 10 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Blog Post" class="blog-card-img">
+                            <div class="blog-card-body">
+                                <span class="blog-card-category">TAXATION</span>
+                                <h3 class="blog-card-title">GST Updates: What Changed in April 2023</h3>
+                                <p class="blog-card-text">A comprehensive breakdown of the latest GST amendments and their implications for businesses of all sizes in India.</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar-alt"></i> March 30, 2023</span>
+                                    <span><i class="far fa-clock"></i> 7 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Blog Post" class="blog-card-img">
+                            <div class="blog-card-body">
+                                <span class="blog-card-category">BUSINESS</span>
+                                <h3 class="blog-card-title">Strategic Financial Planning for SMEs</h3>
+                                <p class="blog-card-text">Practical financial planning strategies that small and medium enterprises can implement to drive growth and stability.</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar-alt"></i> March 15, 2023</span>
+                                    <span><i class="far fa-clock"></i> 9 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Blog Post" class="blog-card-img">
+                            <div class="blog-card-body">
+                                <span class="blog-card-category">TECHNOLOGY</span>
+                                <h3 class="blog-card-title">FinTech and Accounting: The New Frontier</h3>
+                                <p class="blog-card-text">How financial technology is revolutionizing accounting practices and what professionals need to know to stay ahead.</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar-alt"></i> February 22, 2023</span>
+                                    <span><i class="far fa-clock"></i> 8 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Current Blog Post (Added at 24-25) -->
+                <div class="row mt-4" data-aos="fade-up">
+                    <div class="col-12">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Current Blog Post" class="blog-card-img">
+                            <div class="blog-card-body">
+                                <span class="blog-card-category">COMPLIANCE</span>
+                                <h3 class="blog-card-title">Corporate Compliance Updates: Key Changes for Q3 2023</h3>
+                                <p class="blog-card-text">A detailed overview of the most important regulatory changes affecting Indian businesses in the third quarter of 2023, with practical guidance for ensuring compliance.</p>
+                                <div class="blog-card-meta">
+                                    <span><i class="far fa-calendar-alt"></i> July 24, 2023</span>
+                                    <span><i class="far fa-clock"></i> 12 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <nav aria-label="Blog pagination">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- About Widget -->
+                <div class="sidebar-widget" data-aos="fade-left">
+                    <div class="text-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="CA Karthika Menon" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid var(--accent-color);">
+                    </div>
+                    <h4 class="widget-title">About The Author</h4>
+                    <p style="color: #666;">CA Karthika Menon is the Founder and Managing Partner of Karthika and Associates, with over 18 years of experience in international taxation, business advisory, and financial consulting.</p>
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <a href="#" class="text-secondary"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-secondary"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-secondary"><i class="fas fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Categories Widget -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="100">
+                    <h4 class="widget-title">Categories</h4>
+                    <ul class="category-list">
+                        <li><a href="#"><i class="fas fa-file-invoice-dollar"></i> Taxation</a></li>
+                        <li><a href="#"><i class="fas fa-chart-line"></i> Finance</a></li>
+                        <li><a href="#"><i class="fas fa-search-dollar"></i> Audit</a></li>
+                        <li><a href="#"><i class="fas fa-globe-asia"></i> FDI</a></li>
+                        <li><a href="#"><i class="fas fa-briefcase"></i> Business</a></li>
+                        <li><a href="#"><i class="fas fa-laptop-code"></i> Technology</a></li>
+                        <li><a href="#"><i class="fas fa-gavel"></i> Compliance</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Recent Posts Widget -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="200">
+                    <h4 class="widget-title">Recent Posts</h4>
+                    <div class="recent-post-item">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Recent Post" class="recent-post-img">
+                        <div>
+                            <h5 class="recent-post-title"><a href="#">Corporate Compliance Updates: Key Changes for Q3 2023</a></h5>
+                            <p class="recent-post-date">July 24, 2023</p>
+                        </div>
+                    </div>
+                    <div class="recent-post-item">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Recent Post" class="recent-post-img">
+                        <div>
+                            <h5 class="recent-post-title"><a href="#">Foreign Direct Investment in India: 2023 Trends</a></h5>
+                            <p class="recent-post-date">June 15, 2023</p>
+                        </div>
+                    </div>
+                    <div class="recent-post-item">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Recent Post" class="recent-post-img">
+                        <div>
+                            <h5 class="recent-post-title"><a href="#">Startup Funding: Financial Planning Essentials</a></h5>
+                            <p class="recent-post-date">May 28, 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter Widget -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="300">
+                    <h4 class="widget-title">Newsletter</h4>
+                    <p style="color: #666;">Subscribe to receive the latest insights and updates directly to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="text" class="newsletter-input" placeholder="Your Name">
+                        <input type="email" class="newsletter-input" placeholder="Your Email">
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS (Animate On Scroll) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      // Initialize AOS
+      AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+      });
+  </script>
+</body>
+</html>
