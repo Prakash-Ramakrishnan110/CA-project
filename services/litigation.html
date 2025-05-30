@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Litigation Services | Expert Legal Dispute Resolution</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lottie Animations -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .litigation-hero {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-gavel {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            position: relative;
+        }
+        
+        .hero-title {
+            font-weight: 700;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+             color: var(--accent-color);
+        }
+        
+        .hero-subtitle {
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+        
+        .btn-litigation {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .btn-litigation:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .lottie-legal {
+            width: 100%;
+            max-width: 500px;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        @media (max-width: 992px) {
+            .litigation-hero {
+                text-align: center;
+                padding: 100px 0 60px;
+            }
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-badge {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="litigation-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-content">
+                        <span class="hero-badge animate__animated animate__fadeIn">
+                            <i class="fas fa-gavel me-2"></i>Expert Legal Representation
+                        </span>
+                        <h1 class="hero-title animate__animated animate__fadeInDown">
+                            Strategic <span class="text-accent">Litigation</span> Solutions
+                        </h1>
+                        <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s">
+                            Protecting your rights with aggressive yet calculated legal strategies. 
+                            Our seasoned litigators handle complex disputes across civil, commercial, 
+                            and constitutional matters.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 animate__animated animate__fadeInUp animate__delay-2s">
+                            <a href="#contact" class="btn btn-litigation">
+                                <i class="fas fa-calendar-check me-2"></i>Schedule Consultation
+                            </a>
+                            <a href="#practice-areas" class="btn btn-outline-light">
+                                <i class="fas fa-scale-balanced me-2"></i>View Practice Areas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <lottie-player 
+                        src="https://assets1.lottiefiles.com/packages/lf20_vybwn7df.json" 
+                        background="transparent" 
+                        speed="0.8" 
+                        loop 
+                        autoplay
+                        class="lottie-legal mx-auto">
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <i class="fas fa-gavel hero-gavel animate__animated animate__pulse animate__infinite" style="font-size: 300px;"></i>
+    </section>
+
+    <!-- 2nd -->
+<!-- Overview Section -->
+<section id="overview" style="padding: 80px 0; background-color: var(--light-color);">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-lg-6" style="margin-bottom: 30px;" data-aos="fade-right">
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--dark-color); margin-bottom: 20px;">
+                    Understanding <span style="color: var(--primary-color);">Litigation</span>
+                </h2>
+                <div style="height: 4px; width: 80px; background: var(--accent-color); margin-bottom: 25px;"></div>
+                <p style="color: #555; line-height: 1.8; margin-bottom: 20px;">
+                    Litigation refers to the process of taking legal action through the court system to resolve disputes. 
+                    It involves a series of steps from pleadings to trial, where parties present evidence and arguments 
+                    before a judge or jury.
+                </p>
+                <ul style="list-style: none; padding-left: 0; margin-bottom: 30px;">
+                    <li style="padding: 8px 0; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--accent-color);"></i>
+                        Formal dispute resolution process through courts
+                    </li>
+                    <li style="padding: 8px 0; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--accent-color);"></i>
+                        Governed by procedural rules and evidence laws
+                    </li>
+                    <li style="padding: 8px 0; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--accent-color);"></i>
+                        Can involve individuals, businesses, or government entities
+                    </li>
+                    <li style="padding: 8px 0; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--accent-color);"></i>
+                        May result in judgments, injunctions, or settlements
+                    </li>
+                </ul>
+                <a href="#process" class="btn" style="
+                    background-color: var(--primary-color);
+                    color: white;
+                    padding: 12px 30px;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    border: 2px solid var(--primary-color);
+                    transition: all 0.3s;
+                " onmouseover="this.style.backgroundColor='transparent'; this.style.color='var(--primary-color)'" 
+                onmouseout="this.style.backgroundColor='var(--primary-color)'; this.style.color='white'">
+                    <i class="fas fa-scroll me-2"></i>Learn About the Litigation Process
+                </a>
+            </div>
+
+            <!-- Infographic -->
+            <div class="col-lg-6" data-aos="fade-left">
+                <div style="background-color: white; border-radius: 12px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px; font-weight: 600;">
+                        <i class="fas fa-chart-pie me-2" style="color: var(--accent-color);"></i>
+                        Litigation Statistics
+                    </h3>
+                    <div class="row text-center">
+                        <div class="col-6 mb-4">
+                            <div style="background-color: rgba(10, 36, 99, 0.05); padding: 20px; border-radius: 10px;">
+                                <h3 style="color: var(--primary-color); font-weight: 700; margin-bottom: 5px;">75%</h3>
+                                <p style="color: #666; font-size: 0.9rem; margin-bottom: 0;">Cases settled before trial</p>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div style="background-color: rgba(10, 36, 99, 0.05); padding: 20px; border-radius: 10px;">
+                                <h3 style="color: var(--primary-color); font-weight: 700; margin-bottom: 5px;">12-24 Mos</h3>
+                                <p style="color: #666; font-size: 0.9rem; margin-bottom: 0;">Average duration</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div style="background-color: rgba(10, 36, 99, 0.05); padding: 20px; border-radius: 10px;">
+                                <h3 style="color: var(--primary-color); font-weight: 700; margin-bottom: 5px;">85%</h3>
+                                <p style="color: #666; font-size: 0.9rem; margin-bottom: 0;">Success rate with counsel</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div style="background-color: rgba(10, 36, 99, 0.05); padding: 20px; border-radius: 10px;">
+                                <h3 style="color: var(--primary-color); font-weight: 700; margin-bottom: 5px;">3X</h3>
+                                <p style="color: #666; font-size: 0.9rem; margin-bottom: 0;">Higher compensation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 25px; padding: 15px; background-color: rgba(255, 215, 0, 0.1); border-left: 4px solid var(--accent-color); border-radius: 0 8px 8px 0;">
+                        <p style="color: #555; margin-bottom: 0; font-size: 0.95rem;">
+                            <i class="fas fa-lightbulb me-2" style="color: var(--accent-color);"></i>
+                            <strong>Did You Know?</strong> Early legal consultation increases favorable outcomes by 40%.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 3rd -->
+ <!-- Tax Section -->
+<section id="tax" style="padding: 80px 0; background-color: white; border-top: 1px solid rgba(0,0,0,0.05);">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: 60px;" data-aos="fade-up">
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--dark-color);">
+                Understanding <span style="color: var(--primary-color);">Taxation</span>
+            </h2>
+            <div style="height: 4px; width: 80px; background: var(--accent-color); margin: 15px auto 20px;"></div>
+            <p style="color: #555; max-width: 700px; margin: 0 auto; line-height: 1.7;">
+                Taxation is the legal framework through which governments finance public expenditures by imposing charges on citizens and businesses.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Direct Tax Card -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div style="height: 100%; background-color: var(--light-color); border-radius: 12px; padding: 30px; border-bottom: 4px solid var(--primary-color); transition: all 0.3s;" 
+                     onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(10, 36, 99, 0.1)'"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div style="width: 60px; height: 60px; background-color: rgba(10, 36, 99, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="fas fa-user-tie" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 style="color: var(--dark-color); margin-bottom: 15px; font-weight: 600;">Direct Tax</h3>
+                    <ul style="list-style: none; padding-left: 0; margin-bottom: 20px;">
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Income Tax
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Corporate Tax
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Capital Gains Tax
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Wealth Tax
+                        </li>
+                    </ul>
+                    <a href="#direct-tax" style="color: var(--primary-color); font-weight: 500; text-decoration: none;">
+                        Learn More <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Indirect Tax Card -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div style="height: 100%; background-color: var(--light-color); border-radius: 12px; padding: 30px; border-bottom: 4px solid #3e92cc; transition: all 0.3s;" 
+                     onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(62, 146, 204, 0.1)'"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div style="width: 60px; height: 60px; background-color: rgba(62, 146, 204, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="fas fa-receipt" style="font-size: 1.5rem; color: #3e92cc;"></i>
+                    </div>
+                    <h3 style="color: var(--dark-color); margin-bottom: 15px; font-weight: 600;">Indirect Tax</h3>
+                    <ul style="list-style: none; padding-left: 0; margin-bottom: 20px;">
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            GST (Goods & Services Tax)
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            VAT (Value Added Tax)
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Customs Duty
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Excise Duty
+                        </li>
+                    </ul>
+                    <a href="#indirect-tax" style="color: #3e92cc; font-weight: 500; text-decoration: none;">
+                        Learn More <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Property Tax Card -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div style="height: 100%; background-color: var(--light-color); border-radius: 12px; padding: 30px; border-bottom: 4px solid #5cb85c; transition: all 0.3s;" 
+                     onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(92, 184, 92, 0.1)'"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div style="width: 60px; height: 60px; background-color: rgba(92, 184, 92, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="fas fa-home" style="font-size: 1.5rem; color: #5cb85c;"></i>
+                    </div>
+                    <h3 style="color: var(--dark-color); margin-bottom: 15px; font-weight: 600;">Property Tax</h3>
+                    <ul style="list-style: none; padding-left: 0; margin-bottom: 20px;">
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Municipal Tax
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Stamp Duty
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Land Revenue
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            House Tax
+                        </li>
+                    </ul>
+                    <a href="#property-tax" style="color: #5cb85c; font-weight: 500; text-decoration: none;">
+                        Learn More <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Other Taxes Card -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div style="height: 100%; background-color: var(--light-color); border-radius: 12px; padding: 30px; border-bottom: 4px solid #f0ad4e; transition: all 0.3s;" 
+                     onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(240, 173, 78, 0.1)'"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div style="width: 60px; height: 60px; background-color: rgba(240, 173, 78, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="fas fa-random" style="font-size: 1.5rem; color: #f0ad4e;"></i>
+                    </div>
+                    <h3 style="color: var(--dark-color); margin-bottom: 15px; font-weight: 600;">Other Taxes</h3>
+                    <ul style="list-style: none; padding-left: 0; margin-bottom: 20px;">
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Professional Tax
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Entertainment Tax
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            Road Tax
+                        </li>
+                        <li style="padding: 5px 0; padding-left: 25px; position: relative;">
+                            <i class="fas fa-circle" style="position: absolute; left: 0; top: 12px; font-size: 6px; color: var(--accent-color);"></i>
+                            TDS (Tax Deducted at Source)
+                        </li>
+                    </ul>
+                    <a href="#other-taxes" style="color: #f0ad4e; font-weight: 500; text-decoration: none;">
+                        Learn More <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- last -->
+ <!-- Our Process Section -->
+<section style="padding: 80px 0; background-color: #fff;">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #0a2463; margin-bottom: 15px;">Our Business Setup Process</h2>
+            <div style="width: 80px; height: 4px; background: linear-gradient(to right, #0a2463, #3e92cc); margin: 0 auto 20px;"></div>
+            <p style="font-size: 1.1rem; color: #555; max-width: 700px; margin: 0 auto;">A streamlined 5-step process to establish your business quickly and compliantly</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Process Timeline -->
+                <div style="position: relative; padding-left: 50px;">
+                    <!-- Timeline Vertical Line -->
+                    <div style="position: absolute; left: 25px; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, #0a2463, #3e92cc);"></div>
+                    
+                    <!-- Step 1 -->
+                    <div style="position: relative; margin-bottom: 40px;" data-aos="fade-right">
+                        <div style="position: absolute; left: -50px; top: 0; width: 50px; height: 50px; border-radius: 50%; background-color: white; border: 3px solid #0a2463; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #0a2463; font-size: 1.2rem; z-index: 2;">01</div>
+                        <div style="background-color: white; border-radius: 12px; padding: 30px; box-shadow: 0 5px 25px rgba(10, 36, 99, 0.08); border-left: 4px solid #0a2463;">
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="width: 60px; height: 60px; background-color: rgba(10, 36, 99, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
+                                    <i class="fas fa-search" style="font-size: 1.5rem; color: #0a2463;"></i>
+                                </div>
+                                <div>
+                                    <h3 style="color: #0a2463; margin-bottom: 15px;">Initial Consultation</h3>
+                                    <p style="color: #666; margin-bottom: 15px;">We analyze your business requirements, target market, and operational needs to recommend the optimal setup structure.</p>
+                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Free 30-minute discovery call</span>
+                                        </li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Business activity analysis</span>
+                                        </li>
+                                        <li style="display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Jurisdiction recommendation</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div style="position: relative; margin-bottom: 40px;" data-aos="fade-left">
+                        <div style="position: absolute; left: -50px; top: 0; width: 50px; height: 50px; border-radius: 50%; background-color: white; border: 3px solid #3e92cc; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #3e92cc; font-size: 1.2rem; z-index: 2;">02</div>
+                        <div style="background-color: white; border-radius: 12px; padding: 30px; box-shadow: 0 5px 25px rgba(10, 36, 99, 0.08); border-left: 4px solid #3e92cc;">
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="width: 60px; height: 60px; background-color: rgba(62, 146, 204, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
+                                    <i class="fas fa-file-signature" style="font-size: 1.5rem; color: #3e92cc;"></i>
+                                </div>
+                                <div>
+                                    <h3 style="color: #0a2463; margin-bottom: 15px;">Document Preparation</h3>
+                                    <p style="color: #666; margin-bottom: 15px;">Our experts prepare and review all required legal documents and application forms for your business registration.</p>
+                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Articles of Association</span>
+                                        </li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Shareholder agreements</span>
+                                        </li>
+                                        <li style="display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>License application forms</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div style="position: relative; margin-bottom: 40px;" data-aos="fade-right">
+                        <div style="position: absolute; left: -50px; top: 0; width: 50px; height: 50px; border-radius: 50%; background-color: white; border: 3px solid #ffd700; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #ffd700; font-size: 1.2rem; z-index: 2;">03</div>
+                        <div style="background-color: white; border-radius: 12px; padding: 30px; box-shadow: 0 5px 25px rgba(10, 36, 99, 0.08); border-left: 4px solid #ffd700;">
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="width: 60px; height: 60px; background-color: rgba(255, 215, 0, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
+                                    <i class="fas fa-tasks" style="font-size: 1.5rem; color: #ffd700;"></i>
+                                </div>
+                                <div>
+                                    <h3 style="color: #0a2463; margin-bottom: 15px;">Government Approvals</h3>
+                                    <p style="color: #666; margin-bottom: 15px;">We handle all government submissions and follow-ups to secure your trade license and registrations.</p>
+                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Department of Economic Development</span>
+                                        </li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Chamber of Commerce</span>
+                                        </li>
+                                        <li style="display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Municipality approvals</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div style="position: relative; margin-bottom: 40px;" data-aos="fade-left">
+                        <div style="position: absolute; left: -50px; top: 0; width: 50px; height: 50px; border-radius: 50%; background-color: white; border: 3px solid #0a2463; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #0a2463; font-size: 1.2rem; z-index: 2;">04</div>
+                        <div style="background-color: white; border-radius: 12px; padding: 30px; box-shadow: 0 5px 25px rgba(10, 36, 99, 0.08); border-left: 4px solid #0a2463;">
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="width: 60px; height: 60px; background-color: rgba(10, 36, 99, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
+                                    <i class="fas fa-university" style="font-size: 1.5rem; color: #0a2463;"></i>
+                                </div>
+                                <div>
+                                    <h3 style="color: #0a2463; margin-bottom: 15px;">Banking & Financial Setup</h3>
+                                    <p style="color: #666; margin-bottom: 15px;">We facilitate corporate bank account opening and establish your financial infrastructure.</p>
+                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Corporate bank account</span>
+                                        </li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Merchant account setup</span>
+                                        </li>
+                                        <li style="display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Tax registration (VAT, Corporate Tax)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div style="position: relative;" data-aos="fade-right">
+                        <div style="position: absolute; left: -50px; top: 0; width: 50px; height: 50px; border-radius: 50%; background-color: white; border: 3px solid #3e92cc; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #3e92cc; font-size: 1.2rem; z-index: 2;">05</div>
+                        <div style="background-color: white; border-radius: 12px; padding: 30px; box-shadow: 0 5px 25px rgba(10, 36, 99, 0.08); border-left: 4px solid #3e92cc;">
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="width: 60px; height: 60px; background-color: rgba(62, 146, 204, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
+                                    <i class="fas fa-rocket" style="font-size: 1.5rem; color: #3e92cc;"></i>
+                                </div>
+                                <div>
+                                    <h3 style="color: #0a2463; margin-bottom: 15px;">Operational Launch</h3>
+                                    <p style="color: #666; margin-bottom: 15px;">We ensure your business is fully operational with all necessary permits and support systems in place.</p>
+                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Employee visa processing</span>
+                                        </li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Office space solutions</span>
+                                        </li>
+                                        <li style="display: flex; align-items: flex-start;">
+                                            <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 10px; margin-top: 3px;"></i>
+                                            <span>Ongoing compliance support</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-5 pt-4" data-aos="fade-up">
+            <a href="#contact" class="btn" style="background: linear-gradient(to right, #0a2463, #3e92cc); color: white; font-weight: 600; padding: 14px 35px; border-radius: 50px; border: none; transition: all 0.3s; display: inline-flex; align-items: center;">
+                <i class="fas fa-calendar-alt me-2"></i> Start Your Business Setup Today
+            </a>
+        </div>
+    </div>
+</section>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

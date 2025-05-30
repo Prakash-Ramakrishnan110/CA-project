@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Gains Taxation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lottie Animations -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(to right, white, var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color:#ffd700 ;
+            display: inline-block;
+        }
+        
+        .hero-subtitle {
+            font-weight: 300;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+        
+        .hero-btn {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-btn:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .hero-btn:hover:after {
+            opacity: 1;
+        }
+        
+        .hero-animation {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+        
+        .gain-pill {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .gain-pill:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-2px);
+        }
+        
+        .gain-pill i {
+            margin-right: 5px;
+        }
+        
+        /* Fallback styling if Lottie doesn't load */
+        .animation-fallback {
+            display: none;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .animation-fallback img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 100px 0 60px;
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-animation {
+                position: relative;
+                width: 100%;
+                margin: 40px auto 0;
+                transform: none;
+                top: auto;
+                right: auto;
+                max-width: 400px;
+            }
+            
+            .gain-pills-container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
+                    <h1 class="hero-title animate__animated animate__fadeInDown">Capital Gains Taxation</h1>
+                    <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s">
+                        Strategic planning and compliance solutions for profits earned from sale of capital assets in India.
+                    </p>
+                    
+                    <div class="gain-pills-container d-flex flex-wrap animate__animated animate__fadeIn animate__delay-2s">
+                        <span class="gain-pill"><i class="fas fa-chart-line"></i>Short-term</span>
+                        <span class="gain-pill"><i class="fas fa-calendar-check"></i>Long-term</span>
+                        <span class="gain-pill"><i class="fas fa-home"></i>Real Estate</span>
+                        <span class="gain-pill"><i class="fas fa-coins"></i>Securities</span>
+                    </div>
+                    
+                    <div class="d-flex gap-3 mt-4">
+                        <button class="hero-btn animate__animated animate__fadeInUp animate__delay-3s">
+                            <i class="fas fa-calculator me-2"></i> Calculate Gains
+                        </button>
+                        <button class="hero-btn animate__animated animate__fadeInUp animate__delay-3s" style="
+                            background-color: transparent;
+                            border: 2px solid var(--accent-color);
+                            color: white;
+                        ">
+                            <i class="fas fa-book me-2"></i> Tax Guide
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <!-- Primary Lottie Animation -->
+                    <lottie-player class="hero-animation" 
+                        src="https://assets5.lottiefiles.com/packages/lf20_uwWgICKCxj.json" 
+                        background="transparent" 
+                        speed="1" 
+                        style="width: 100%; height: auto;"
+                        loop 
+                        autoplay>
+                    </lottie-player>
+                    
+                    <!-- Fallback content if Lottie doesn't load -->
+                    <div class="animation-fallback">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Financial Growth Illustration">
+                        <p class="text-white mt-3">Financial growth visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2nd -->
+     <!-- Capital Assets Section -->
+<section style="
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    padding: 80px 0;
+    font-family: 'Poppins', sans-serif;
+">
+    <div class="container">
+        <div style="
+            text-align: center;
+            margin-bottom: 60px;
+        ">
+            <h2 style="
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: #0a2463;
+                margin-bottom: 15px;
+                position: relative;
+                display: inline-block;
+            ">
+                Capital Assets
+                <span style="
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 80px;
+                    height: 4px;
+                    background: #ffd700;
+                    border-radius: 2px;
+                "></span>
+            </h2>
+            <p style="
+                color: #6c757d;
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: 0 auto;
+            ">
+                Understand how different types of capital assets are classified and taxed under Indian tax laws
+            </p>
+        </div>
+
+        <div class="row" style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        ">
+            <!-- Asset Card 1 -->
+            <div style="
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                padding: 30px;
+                width: 100%;
+                max-width: 350px;
+                transition: all 0.3s ease;
+                border-top: 4px solid #3e92cc;
+            " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <div style="
+                    background: #e6f2ff;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                ">
+                    <i class="fas fa-home" style="font-size: 1.8rem; color: #3e92cc;"></i>
+                </div>
+                <h3 style="
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: #0a2463;
+                    margin-bottom: 15px;
+                ">Real Estate</h3>
+                <p style="
+                    color: #6c757d;
+                    margin-bottom: 20px;
+                    line-height: 1.6;
+                ">
+                    Residential & commercial properties held as investments. Special rules apply for inherited property.
+                </p>
+                <div style="
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                ">
+                    <span style="
+                        background: #f0f7ff;
+                        color: #0a2463;
+                        padding: 6px 12px;
+                        border-radius: 20px;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    ">Long-term: 24+ months</span>
+                    <span style="
+                        background: #fff0f0;
+                        color: #d32f2f;
+                        padding: 6px 12px;
+                        border-radius: 20px;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    ">Indexation benefit</span>
+                </div>
+            </div>
+
+            <!-- Asset Card 2 -->
+            <div style="
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                padding: 30px;
+                width: 100%;
+                max-width: 350px;
+                transition: all 0.3s ease;
+                border-top: 4px solid #4caf50;
+            " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <div style="
+                    background: #e8f5e9;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                ">
+                    <i class="fas fa-chart-line" style="font-size: 1.8rem; color: #4caf50;"></i>
+                </div>
+                <h3 style="
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: #0a2463;
+                    margin-bottom: 15px;
+                ">Equity Shares</h3>
+                <p style="
+                    color: #6c757d;
+                    margin-bottom: 20px;
+                    line-height: 1.6;
+                ">
+                    Shares listed on recognized stock exchanges. Different tax treatment for STCG and LTCG.
+                </p>
+                <div style="
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                ">
+                    <span style="
+                        background: #f0fff4;
+                        color: #2e7d32;
+                        padding: 6px 12px;
+                        border-radius: 20px;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    ">Long-term: 12+ months</span>
+                    <span style="
+                        background: #fff8e1;
+                        color: #ff8f00;
+                        padding: 6px 12px;
+                        border-radius: 20px;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    ">10% tax over ₹1L</span>
+                </div>
+            </div>
+
+            <!-- Asset Card 3 -->
+            <div style="
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                padding: 30px;
+                width: 100%;
+                max-width: 350px;
+                transition: all 0.3s ease;
+                border-top: 4px solid #9c27b0;
+            " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <div style="
+                    background: #f3e5f5;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                ">
+                    <i class="fas fa-gem" style="font-size: 1.8rem; color: #9c27b0;"></i>
+                </div>
+                <h3 style="
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: #0a2463;
+                    margin-bottom: 15px;
+                ">Jewelry & Art</h3>
+                <p style="
+                    color: #6c757d;
+                    margin-bottom: 20px;
+                    line-height: 1.6;
+                ">
+                    Precious metals, stones, paintings and other collectibles with special valuation rules.
+                </p>
+                <div style="
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                ">
+                    <span style="
+                        background: #f5f0ff;
+                        color: #7b1fa2;
+                        padding: 6px 12px;
+                        border-radius: 20px;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    ">Long-term: 36+ months</span>
+                    <span style="
+                        background: #fff0f6;
+                        color: #c2185b;
+                        padding: 6px 12px;
+                        border-radius: 20px;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    ">20% with indexation</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="
+            text-align: center;
+            margin-top: 60px;
+        ">
+            <button style="
+                background: linear-gradient(to right, #0a2463, #3e92cc);
+                color: white;
+                border: none;
+                padding: 12px 30px;
+                border-radius: 30px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 15px rgba(10, 36, 99, 0.2);
+            " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(10, 36, 99, 0.3)'" 
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(10, 36, 99, 0.2)'">
+                <i class="fas fa-book-open me-2"></i> View Complete Asset List
+            </button>
+        </div>
+    </div>
+</section>
+<!-- 3rd -->
+ <!-- Long-Term vs Short-Term Capital Gains Section -->
+<section style="
+    background-color: #001845;
+    padding: 80px 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+">
+    <!-- Decorative elements -->
+    <div style="
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(62, 146, 204, 0.1);
+    "></div>
+    <div style="
+        position: absolute;
+        bottom: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: rgba(255, 215, 0, 0.1);
+    "></div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 15px;
+                color: #ffd700;
+            ">
+                Long-Term vs Short-Term Capital Gains
+            </h2>
+            <p style="
+                color: rgba(255,255,255,0.8);
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: 0 auto;
+            ">
+                Key differences in tax treatment based on holding period of your assets
+            </p>
+        </div>
+
+        <div style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        ">
+            <!-- Short-Term Card -->
+            <div style="
+                background: rgba(255,255,255,0.05);
+                border-radius: 12px;
+                padding: 40px 30px;
+                width: 100%;
+                max-width: 500px;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255,215,0,0.2);
+                position: relative;
+                overflow: hidden;
+            ">
+                <div style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background: #ff5252;
+                "></div>
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 25px;
+                ">
+                    <div style="
+                        background: rgba(255, 82, 82, 0.1);
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 20px;
+                        flex-shrink: 0;
+                    ">
+                        <i class="fas fa-bolt" style="font-size: 1.8rem; color: #ff5252;"></i>
+                    </div>
+                    <h3 style="
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        margin: 0;
+                    ">
+                        Short-Term Capital Gains
+                    </h3>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <div style="
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 15px;
+                    ">
+                        <i class="fas fa-calendar-alt" style="width: 25px; color: #ffd700; margin-right: 10px;"></i>
+                        <span style="font-weight: 500;">Holding Period:</span>
+                        <span style="margin-left: auto; color: #ff5252;">
+                            Less than 12 months (24/36 months for certain assets)
+                        </span>
+                    </div>
+                    <div style="
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 15px;
+                    ">
+                        <i class="fas fa-percentage" style="width: 25px; color: #ffd700; margin-right: 10px;"></i>
+                        <span style="font-weight: 500;">Tax Rate:</span>
+                        <span style="margin-left: auto; color: #ff5252;">
+                            15% (equities) to normal slab rates (other assets)
+                        </span>
+                    </div>
+                    <div style="
+                        display: flex;
+                        align-items: center;
+                    ">
+                        <i class="fas fa-exchange-alt" style="width: 25px; color: #ffd700; margin-right: 10px;"></i>
+                        <span style="font-weight: 500;">Indexation:</span>
+                        <span style="margin-left: auto; color: #ff5252;">
+                            Not allowed
+                        </span>
+                    </div>
+                </div>
+                
+                <div style="
+                    background: rgba(255, 82, 82, 0.1);
+                    padding: 15px;
+                    border-radius: 8px;
+                    border-left: 3px solid #ff5252;
+                ">
+                    <p style="
+                        margin: 0;
+                        font-size: 0.95rem;
+                        color: rgba(255,255,255,0.8);
+                    ">
+                        <i class="fas fa-exclamation-circle" style="color: #ffd700; margin-right: 8px;"></i>
+                        STCG is added to your income and taxed as per your applicable slab rate for most assets.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Long-Term Card -->
+            <div style="
+                background: rgba(255,255,255,0.05);
+                border-radius: 12px;
+                padding: 40px 30px;
+                width: 100%;
+                max-width: 500px;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255,215,0,0.2);
+                position: relative;
+                overflow: hidden;
+            ">
+                <div style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background: #4caf50;
+                "></div>
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 25px;
+                ">
+                    <div style="
+                        background: rgba(76, 175, 80, 0.1);
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 20px;
+                        flex-shrink: 0;
+                    ">
+                        <i class="fas fa-seedling" style="font-size: 1.8rem; color: #4caf50;"></i>
+                    </div>
+                    <h3 style="
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        margin: 0;
+                    ">
+                        Long-Term Capital Gains
+                    </h3>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <div style="
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 15px;
+                    ">
+                        <i class="fas fa-calendar-alt" style="width: 25px; color: #ffd700; margin-right: 10px;"></i>
+                        <span style="font-weight: 500;">Holding Period:</span>
+                        <span style="margin-left: auto; color: #4caf50;">
+                            12+ months (24/36 months for certain assets)
+                        </span>
+                    </div>
+                    <div style="
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 15px;
+                    ">
+                        <i class="fas fa-percentage" style="width: 25px; color: #ffd700; margin-right: 10px;"></i>
+                        <span style="font-weight: 500;">Tax Rate:</span>
+                        <span style="margin-left: auto; color: #4caf50;">
+                            10%-20% (with indexation benefits)
+                        </span>
+                    </div>
+                    <div style="
+                        display: flex;
+                        align-items: center;
+                    ">
+                        <i class="fas fa-exchange-alt" style="width: 25px; color: #ffd700; margin-right: 10px;"></i>
+                        <span style="font-weight: 500;">Indexation:</span>
+                        <span style="margin-left: auto; color: #4caf50;">
+                            Allowed (for non-equity assets)
+                        </span>
+                    </div>
+                </div>
+                
+                <div style="
+                    background: rgba(76, 175, 80, 0.1);
+                    padding: 15px;
+                    border-radius: 8px;
+                    border-left: 3px solid #4caf50;
+                ">
+                    <p style="
+                        margin: 0;
+                        font-size: 0.95rem;
+                        color: rgba(255,255,255,0.8);
+                    ">
+                        <i class="fas fa-check-circle" style="color: #ffd700; margin-right: 8px;"></i>
+                        LTCG on equities up to ₹1 lakh is tax-free annually. Special rates apply for different assets.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="
+            background: rgba(255,215,0,0.1);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 50px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgba(255,215,0,0.3);
+        ">
+            <h4 style="
+                font-size: 1.2rem;
+                color: #ffd700;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+            ">
+                <i class="fas fa-lightbulb" style="margin-right: 10px;"></i>
+                Tax-Saving Tip
+            </h4>
+            <p style="
+                margin: 0;
+                color: rgba(255,255,255,0.8);
+                line-height: 1.6;
+            ">
+                Consider holding assets for the long-term to benefit from lower tax rates and indexation. For equities, 
+                the tax rate drops from 15% (STCG) to 10% (LTCG) after 12 months, and you get ₹1 lakh annual exemption.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- 3rd -->
+ <!-- Tax Calculation & Exemptions Section -->
+<section style="
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    padding: 80px 0;
+    font-family: 'Poppins', sans-serif;
+">
+    <div class="container">
+        <!-- Section Header -->
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: #0a2463;
+                margin-bottom: 15px;
+                position: relative;
+                display: inline-block;
+            ">
+                Tax Calculation & Exemptions
+                <span style="
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 80px;
+                    height: 4px;
+                    background: #ffd700;
+                    border-radius: 2px;
+                "></span>
+            </h2>
+            <p style="
+                color: #6c757d;
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: 0 auto;
+            ">
+                Learn how to calculate your capital gains tax and explore exemptions under Sections 54, 54EC, and 54F
+            </p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+            <!-- Calculator Card -->
+            
+
+            <!-- Exemptions Card -->
+            <div style="
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                width: 100%;
+                max-width: 400px;
+                box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+                border-top: 4px solid #4caf50;
+            ">
+                <div style="
+                    background: #e8f5e9;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                ">
+                    <i class="fas fa-shield-alt" style="font-size: 1.8rem; color: #4caf50;"></i>
+                </div>
+                <h3 style="
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: #0a2463;
+                    margin-bottom: 20px;
+                ">Common Exemptions</h3>
+                
+                <div style="margin-bottom: 25px;">
+                    <div style="
+                        background: #f5f5f5;
+                        padding: 15px;
+                        border-radius: 8px;
+                        margin-bottom: 15px;
+                    ">
+                        <h4 style="
+                            font-size: 1.1rem;
+                            color: #0a2463;
+                            margin-bottom: 10px;
+                            display: flex;
+                            align-items: center;
+                        ">
+                            <i class="fas fa-home" style="color: #4caf50; margin-right: 10px;"></i>
+                            Section 54
+                        </h4>
+                        <p style="
+                            color: #6c757d;
+                            margin: 0;
+                            font-size: 0.95rem;
+                            line-height: 1.5;
+                        ">
+                            Reinvest capital gains from property sale into another residential property to claim exemption.
+                        </p>
+                    </div>
+                    
+                    <div style="
+                        background: #f5f5f5;
+                        padding: 15px;
+                        border-radius: 8px;
+                        margin-bottom: 15px;
+                    ">
+                        <h4 style="
+                            font-size: 1.1rem;
+                            color: #0a2463;
+                            margin-bottom: 10px;
+                            display: flex;
+                            align-items: center;
+                        ">
+                            <i class="fas fa-bonds" style="color: #4caf50; margin-right: 10px;"></i>
+                            Section 54EC
+                        </h4>
+                        <p style="
+                            color: #6c757d;
+                            margin: 0;
+                            font-size: 0.95rem;
+                            line-height: 1.5;
+                        ">
+                            Invest in specified bonds (REC, NHAI) within 6 months to save tax on property sale gains.
+                        </p>
+                    </div>
+                    
+                    <div style="
+                        background: #f5f5f5;
+                        padding: 15px;
+                        border-radius: 8px;
+                    ">
+                        <h4 style="
+                            font-size: 1.1rem;
+                            color: #0a2463;
+                            margin-bottom: 10px;
+                            display: flex;
+                            align-items: center;
+                        ">
+                            <i class="fas fa-rupee-sign" style="color: #4caf50; margin-right: 10px;"></i>
+                            Section 54F
+                        </h4>
+                        <p style="
+                            color: #6c757d;
+                            margin: 0;
+                            font-size: 0.95rem;
+                            line-height: 1.5;
+                        ">
+                            Exemption when selling any asset (not house) and buying residential property with proceeds.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tax Rates Card -->
+            <div style="
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                width: 100%;
+                max-width: 400px;
+                box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+                border-top: 4px solid #ff9800;
+            ">
+                <div style="
+                    background: #fff3e0;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                ">
+                    <i class="fas fa-percentage" style="font-size: 1.8rem; color: #ff9800;"></i>
+                </div>
+                <h3 style="
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: #0a2463;
+                    margin-bottom: 20px;
+                ">Current Tax Rates</h3>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4 style="
+                        font-size: 1.1rem;
+                        color: #0a2463;
+                        margin-bottom: 15px;
+                        padding-bottom: 8px;
+                        border-bottom: 1px dashed #ddd;
+                    ">
+                        Equity Shares & Funds
+                    </h4>
+                    <div style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 12px;
+                    ">
+                        <span style="color: #6c757d;">STCG (Under 12 months)</span>
+                        <span style="font-weight: 600; color: #0a2463;">15%</span>
+                    </div>
+                    <div style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 20px;
+                    ">
+                        <span style="color: #6c757d;">LTCG (Over 12 months)</span>
+                        <span style="font-weight: 600; color: #0a2463;">10% over ₹1 lakh</span>
+                    </div>
+                    
+                    <h4 style="
+                        font-size: 1.1rem;
+                        color: #0a2463;
+                        margin-bottom: 15px;
+                        padding-bottom: 8px;
+                        border-bottom: 1px dashed #ddd;
+                    ">
+                        Other Assets
+                    </h4>
+                    <div style="
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 12px;
+                    ">
+                        <span style="color: #6c757d;">STCG</span>
+                        <span style="font-weight: 600; color: #0a2463;">As per income slab</span>
+                    </div>
+                    <div style="
+                        display: flex;
+                        justify-content: space-between;
+                    ">
+                        <span style="color: #6c757d;">LTCG (with indexation)</span>
+                        <span style="font-weight: 600; color: #0a2463;">20%</span>
+                    </div>
+                </div>
+                
+                <div style="
+                    background: #fff8e1;
+                    padding: 15px;
+                    border-radius: 8px;
+                    border-left: 3px solid #ff9800;
+                ">
+                    <p style="
+                        margin: 0;
+                        font-size: 0.9rem;
+                        color: #5d4037;
+                        line-height: 1.5;
+                    ">
+                        <i class="fas fa-info-circle" style="margin-right: 8px; color: #ff9800;"></i>
+                        Rates are for FY 2023-24. Surcharge and cess may apply. Always consult a CA for specific cases.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Fallback if Lottie doesn't load
+        document.addEventListener('DOMContentLoaded', function() {
+            const lottiePlayer = document.querySelector('lottie-player');
+            const fallback = document.querySelector('.animation-fallback');
+            
+            // Check if Lottie loaded properly after a short delay
+            setTimeout(() => {
+                if (!lottiePlayer || !lottiePlayer.shadowRoot) {
+                    if (fallback) {
+                        fallback.style.display = 'block';
+                        if (lottiePlayer) lottiePlayer.style.display = 'none';
+                    }
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

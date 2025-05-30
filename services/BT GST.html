@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Consultant Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lottie Animations -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-weight: 300;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+        
+        .hero-btn {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-animation {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+        
+        .gst-pill {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .gst-pill:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-2px);
+        }
+        
+        .gst-pill i {
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 100px 0 60px;
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-animation {
+                position: relative;
+                width: 100%;
+                margin: 40px auto 0;
+                transform: none;
+                top: auto;
+                right: auto;
+                max-width: 400px;
+            }
+            
+            .gst-pills-container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
+                    <h1 class="hero-title animate__animated animate__fadeInDown">Expert GST Consultant Services</h1>
+                    <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s">
+                        Comprehensive GST solutions for businesses - from registration to filing and compliance management.
+                    </p>
+                    
+                    <div class="gst-pills-container d-flex flex-wrap animate__animated animate__fadeIn animate__delay-2s">
+                        <span class="gst-pill"><i class="fas fa-file-signature"></i>Registration</span>
+                        <span class="gst-pill"><i class="fas fa-file-invoice-dollar"></i>Filing</span>
+                        <span class="gst-pill"><i class="fas fa-search-dollar"></i>Audit</span>
+                        <span class="gst-pill"><i class="fas fa-hand-holding-usd"></i>Refunds</span>
+                    </div>
+                    
+                    <div class="d-flex gap-3 mt-4">
+                        <button class="hero-btn animate__animated animate__fadeInUp animate__delay-3s">
+                            Get Consultation <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                        <button class="hero-btn animate__animated animate__fadeInUp animate__delay-3s" style="
+                            background-color: transparent;
+                            border: 2px solid var(--accent-color);
+                            color: white;
+                        ">
+                            <i class="fas fa-phone-alt me-2"></i> Call Now
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <lottie-player class="hero-animation" 
+                        src="https://assets1.lottiefiles.com/packages/lf20_5tkzkblw.json" 
+                        background="transparent" 
+                        speed="1" 
+                        style="width: 100%; height: auto;"
+                        loop 
+                        autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2nd -->
+     <!-- GST Services in India - Card Grid Layout -->
+<section style="
+    padding: 100px 0;
+    background-color: #f8fafc;
+    position: relative;
+">
+    <!-- Diagonal Pattern Background -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            repeating-linear-gradient(
+                45deg,
+                rgba(10, 36, 99, 0.03),
+                rgba(10, 36, 99, 0.03) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+        z-index: 0;
+    "></div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 style="
+                    font-weight: 800;
+                    font-size: 2.8rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                    position: relative;
+                    display: inline-block;
+                ">
+                    <span style="
+                        position: absolute;
+                        bottom: -10px;
+                        left: 25%;
+                        width: 50%;
+                        height: 4px;
+                        background-color: var(--accent-color);
+                    "></span>
+                    Comprehensive GST Services
+                    <br>
+                    <span style="font-size: 1.8rem; color: var(--secondary-color); font-weight: 600;">Across India</span>
+                </h2>
+                <p style="
+                    color: #666;
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    max-width: 700px;
+                    margin: 0 auto;
+                ">
+                    End-to-end solutions for businesses of all sizes under India's GST regime
+                </p>
+            </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        ">
+            <!-- Registration Card -->
+            <div style="
+                background: white;
+                border-radius: 15px;
+                padding: 0;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                overflow: hidden;
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <div style="
+                    height: 10px;
+                    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+                "></div>
+                <div style="padding: 30px;">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background-color: rgba(62, 146, 204, 0.1);
+                        border-radius: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    ">
+                        <i class="fas fa-file-signature" style="font-size: 1.8rem; color: var(--secondary-color);"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">GST Registration</h3>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                        New GSTIN registration for businesses with complete documentation support
+                    </p>
+                    <ul style="
+                        color: #666;
+                        line-height: 1.8;
+                        padding-left: 20px;
+                        margin-bottom: 25px;
+                    ">
+                        <li>Regular, Composition, and Casual Taxpayer</li>
+                        <li>Amendment and Cancellation</li>
+                        <li>Voluntary Registration</li>
+                    </ul>
+                    <a href="#" style="
+                        display: inline-flex;
+                        align-items: center;
+                        color: var(--secondary-color);
+                        font-weight: 600;
+                        text-decoration: none;
+                    ">
+                        Learn More <i class="fas fa-arrow-right ms-2" style="transition: transform 0.3s ease;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Filing Card -->
+            <div style="
+                background: white;
+                border-radius: 15px;
+                padding: 0;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                overflow: hidden;
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <div style="
+                    height: 10px;
+                    background: linear-gradient(to right, var(--accent-color), #e83e8c);
+                "></div>
+                <div style="padding: 30px;">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background-color: rgba(255, 215, 0, 0.1);
+                        border-radius: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    ">
+                        <i class="fas fa-file-invoice-dollar" style="font-size: 1.8rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Monthly/Quarterly Filing</h3>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                        Accurate preparation and submission of all GST returns
+                    </p>
+                    <ul style="
+                        color: #666;
+                        line-height: 1.8;
+                        padding-left: 20px;
+                        margin-bottom: 25px;
+                    ">
+                        <li>GSTR-1, GSTR-3B, GSTR-4</li>
+                        <li>Invoice matching and reconciliation</li>
+                        <li>Late filing penalty avoidance</li>
+                    </ul>
+                    <a href="#" style="
+                        display: inline-flex;
+                        align-items: center;
+                        color: var(--accent-color);
+                        font-weight: 600;
+                        text-decoration: none;
+                    ">
+                        Learn More <i class="fas fa-arrow-right ms-2" style="transition: transform 0.3s ease;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Compliance Card -->
+            <div style="
+                background: white;
+                border-radius: 15px;
+                padding: 0;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                overflow: hidden;
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <div style="
+                    height: 10px;
+                    background: linear-gradient(to right, #e83e8c, var(--primary-color));
+                "></div>
+                <div style="padding: 30px;">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background-color: rgba(232, 62, 140, 0.1);
+                        border-radius: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    ">
+                        <i class="fas fa-search-dollar" style="font-size: 1.8rem; color: #e83e8c;"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Compliance & Audit</h3>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                        Ensuring full adherence to GST laws and regulations
+                    </p>
+                    <ul style="
+                        color: #666;
+                        line-height: 1.8;
+                        padding-left: 20px;
+                        margin-bottom: 25px;
+                    ">
+                        <li>Annual Return (GSTR-9/9C)</li>
+                        <li>Departmental audit support</li>
+                        <li>Notice response and representation</li>
+                    </ul>
+                    <a href="#" style="
+                        display: inline-flex;
+                        align-items: center;
+                        color: #e83e8c;
+                        font-weight: 600;
+                        text-decoration: none;
+                    ">
+                        Learn More <i class="fas fa-arrow-right ms-2" style="transition: transform 0.3s ease;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- View All Button -->
+        <div class="text-center mt-5">
+            <button style="
+                background-color: var(--primary-color);
+                color: white;
+                font-weight: 600;
+                padding: 12px 40px;
+                border-radius: 50px;
+                border: none;
+                transition: all 0.3s ease;
+                font-size: 1.1rem;
+                margin-top: 30px;
+            " onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='';this.style.boxShadow=''">
+                <i class="fas fa-list-ul me-2"></i> View All GST Services
+            </button>
+        </div>
+    </div>
+</section>
+<!-- 3rd -->
+ <!-- Why Choose Us Section -->
+<section style="
+    background: linear-gradient(135deg, #0a2463, #001845);
+    padding: 80px 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+">
+    <!-- Decorative elements -->
+    <div style="
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: rgba(255, 215, 0, 0.05);
+    "></div>
+    <div style="
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: rgba(62, 146, 204, 0.05);
+    "></div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 15px;
+                color: #ffd700;
+            ">
+                Why Choose Us as Your GST Consultant in India
+            </h2>
+            <p style="
+                color: rgba(255,255,255,0.8);
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: 0 auto;
+            ">
+                Trusted by 500+ businesses across India for comprehensive GST solutions and compliance management
+            </p>
+        </div>
+
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        ">
+            <!-- Feature 1 -->
+            <div style="
+                background: rgba(255,255,255,0.05);
+                border-radius: 12px;
+                padding: 30px;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255,215,0,0.2);
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='rgba(255,215,0,0.5)'" 
+            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,215,0,0.2)'">
+                <div style="
+                    background: rgba(255, 215, 0, 0.1);
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                ">
+                    <i class="fas fa-user-tie" style="font-size: 1.8rem; color: #ffd700;"></i>
+                </div>
+                <h3 style="
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                    color: white;
+                ">15+ Years Experience</h3>
+                <p style="
+                    color: rgba(255,255,255,0.8);
+                    margin-bottom: 0;
+                    line-height: 1.6;
+                ">
+                    Our team of Chartered Accountants and GST practitioners bring unmatched expertise in Indian tax laws and compliance procedures.
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div style="
+                background: rgba(255,255,255,0.05);
+                border-radius: 12px;
+                padding: 30px;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255,215,0,0.2);
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='rgba(255,215,0,0.5)'" 
+            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,215,0,0.2)'">
+                <div style="
+                    background: rgba(255, 215, 0, 0.1);
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                ">
+                    <i class="fas fa-rupee-sign" style="font-size: 1.8rem; color: #ffd700;"></i>
+                </div>
+                <h3 style="
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                    color: white;
+                ">Cost-Effective Solutions</h3>
+                <p style="
+                    color: rgba(255,255,255,0.8);
+                    margin-bottom: 0;
+                    line-height: 1.6;
+                ">
+                    We help optimize your tax liabilities while ensuring full compliance, saving you money in penalties and interest charges.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div style="
+                background: rgba(255,255,255,0.05);
+                border-radius: 12px;
+                padding: 30px;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255,215,0,0.2);
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='rgba(255,215,0,0.5)'" 
+            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,215,0,0.2)'">
+                <div style="
+                    background: rgba(255, 215, 0, 0.1);
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                ">
+                    <i class="fas fa-headset" style="font-size: 1.8rem; color: #ffd700;"></i>
+                </div>
+                <h3 style="
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                    color: white;
+                ">Dedicated Support</h3>
+                <p style="
+                    color: rgba(255,255,255,0.8);
+                    margin-bottom: 0;
+                    line-height: 1.6;
+                ">
+                    Get 24/7 access to your dedicated GST consultant via phone, email, and WhatsApp for urgent queries.
+                </p>
+            </div>
+        </div>
+
+        <div style="
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px dashed rgba(255,215,0,0.3);
+        ">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                        color: #ffd700;
+                    ">Our GST Services</h3>
+                    <ul style="
+                        color: rgba(255,255,255,0.8);
+                        padding-left: 20px;
+                        margin: 0;
+                    ">
+                        <li style="margin-bottom: 8px;">GST Registration & Migration</li>
+                        <li style="margin-bottom: 8px;">Monthly/Quarterly Returns Filing</li>
+                        <li style="margin-bottom: 8px;">GST Audit & Annual Returns</li>
+                        <li style="margin-bottom: 8px;">Refund & ITC Reconciliation</li>
+                        <li style="margin-bottom: 8px;">Notices & Assessment Handling</li>
+                        <li>Advisory & Compliance Review</li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 300px; text-align: center;">
+                    <div style="
+                        background: rgba(255,215,0,0.1);
+                        border-radius: 12px;
+                        padding: 30px;
+                        display: inline-block;
+                        border: 1px solid rgba(255,215,0,0.3);
+                    ">
+                        <div style="
+                            background: #ffd700;
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0 auto 20px;
+                        ">
+                            <i class="fas fa-award" style="font-size: 2rem; color: #0a2463;"></i>
+                        </div>
+                        <h4 style="
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                            color: white;
+                        ">Recognized by</h4>
+                        <p style="
+                            color: rgba(255,255,255,0.8);
+                            margin: 0;
+                        ">ICAI • GSTN • MSME Ministry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <button style="
+                background: #ffd700;
+                color: #0a2463;
+                border: none;
+                padding: 14px 35px;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 20px rgba(255,215,0,0.3);
+            " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(255,215,0,0.4)'" 
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(255,215,0,0.3)'">
+                <i class="fas fa-calendar-check me-2"></i> Schedule Free Consultation
+            </button>
+        </div>
+    </div>
+</section>
+<!-- last -->
+ <!-- Trusted GST Partners in India -->
+<section style="
+    padding: 100px 0;
+    background-color: #f8fafc;
+    position: relative;
+">
+    <!-- Diagonal Pattern Background -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            repeating-linear-gradient(
+                45deg,
+                rgba(10, 36, 99, 0.03),
+                rgba(10, 36, 99, 0.03) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+        z-index: 0;
+    "></div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 style="
+                    font-weight: 800;
+                    font-size: 2.8rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                    position: relative;
+                    display: inline-block;
+                ">
+                    <span style="
+                        position: absolute;
+                        bottom: -10px;
+                        left: 25%;
+                        width: 50%;
+                        height: 4px;
+                        background-color: var(--accent-color);
+                    "></span>
+                    Trusted GST Partners
+                    <br>
+                    <span style="font-size: 1.8rem; color: var(--secondary-color); font-weight: 600;">Across India</span>
+                </h2>
+                <p style="
+                    color: #666;
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    max-width: 700px;
+                    margin: 0 auto;
+                ">
+                    Collaborate with certified experts for seamless GST compliance and advisory services
+                </p>
+            </div>
+        </div>
+
+        <!-- Partners Grid -->
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        ">
+            <!-- Why Choose Us Card -->
+            <div style="
+                background: white;
+                border-radius: 15px;
+                padding: 0;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                overflow: hidden;
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <div style="
+                    height: 10px;
+                    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+                "></div>
+                <div style="padding: 30px;">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background-color: rgba(62, 146, 204, 0.1);
+                        border-radius: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    ">
+                        <i class="fas fa-award" style="font-size: 1.8rem; color: var(--secondary-color);"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Why Choose Our Partners?</h3>
+                    <ul style="
+                        color: #666;
+                        line-height: 1.8;
+                        padding-left: 20px;
+                        margin-bottom: 25px;
+                    ">
+                        <li>Expertise in GST compliance and advisory</li>
+                        <li>Timely and accurate return submissions</li>
+                        <li>Dedicated support for audits and notices</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Services Card -->
+            <div style="
+                background: white;
+                border-radius: 15px;
+                padding: 0;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                overflow: hidden;
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <div style="
+                    height: 10px;
+                    background: linear-gradient(to right, var(--accent-color), #e83e8c);
+                "></div>
+                <div style="padding: 30px;">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background-color: rgba(255, 215, 0, 0.1);
+                        border-radius: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    ">
+                        <i class="fas fa-handshake" style="font-size: 1.8rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Key Services Offered</h3>
+                    <ul style="
+                        color: #666;
+                        line-height: 1.8;
+                        padding-left: 20px;
+                        margin-bottom: 25px;
+                    ">
+                        <li>GST registration & migration</li>
+                        <li>Monthly/quarterly return filing</li>
+                        <li>ITC maximization and reconciliation</li>
+                        <li>Litigation and dispute resolution</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Reliability Card -->
+            <div style="
+                background: white;
+                border-radius: 15px;
+                padding: 0;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                overflow: hidden;
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <div style="
+                    height: 10px;
+                    background: linear-gradient(to right, #e83e8c, var(--primary-color));
+                "></div>
+                <div style="padding: 30px;">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background-color: rgba(232, 62, 140, 0.1);
+                        border-radius: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    ">
+                        <i class="fas fa-shield-alt" style="font-size: 1.8rem; color: #e83e8c;"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">How We Ensure Reliability</h3>
+                    <ul style="
+                        color: #666;
+                        line-height: 1.8;
+                        padding-left: 20px;
+                        margin-bottom: 25px;
+                    ">
+                        <li>Proven track record & client testimonials</li>
+                        <li>Transparent pricing with no hidden costs</li>
+                        <li>Certified professionals with 10+ years experience</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center mt-5">
+            <button style="
+                background-color: var(--primary-color);
+                color: white;
+                font-weight: 600;
+                padding: 12px 40px;
+                border-radius: 50px;
+                border: none;
+                transition: all 0.3s ease;
+                font-size: 1.1rem;
+                margin-top: 30px;
+            " onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)'" 
+            onmouseout="this.style.transform='';this.style.boxShadow=''">
+                <i class="fas fa-user-tie me-2"></i> Connect with a Partner
+            </button>
+        </div>
+    </div>
+</section>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>

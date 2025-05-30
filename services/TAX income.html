@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxable Income for Expatriates</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lottie Animations -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-weight: 300;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+        
+        .hero-btn {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background-color: #ffc107;
+            color: var(--dark-color);
+        }
+        
+        .hero-animation {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40%;
+            max-width: 500px;
+            opacity: 0.9;
+        }
+        
+        .benefit-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 2rem;
+        }
+        
+        .benefit-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        
+        @media (max-width: 992px) {
+            .hero-section {
+                text-align: center;
+                padding: 80px 0;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1.3rem;
+            }
+            
+            .hero-animation {
+                position: relative;
+                width: 100%;
+                margin: 30px auto 0;
+                transform: none;
+                top: auto;
+                right: auto;
+                max-width: 400px;
+            }
+            
+            .benefit-list {
+                text-align: left;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title animate__animated animate__fadeInDown">Taxable Income for Expatriates</h1>
+                    <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s">Expert guidance on international tax compliance to help you navigate cross-border taxation with confidence.</p>
+                    
+                    <ul class="benefit-list animate__animated animate__fadeIn animate__delay-1s">
+                        <li>Understand your tax obligations</li>
+                        <li>Maximize allowable deductions</li>
+                        <li>Comply with international regulations</li>
+                        <li>Optimize your tax position</li>
+                    </ul>
+                    
+                    <button class="btn hero-btn animate__animated animate__fadeInUp animate__delay-2s">
+                        <i class="fas fa-calendar-check me-2"></i> Schedule Consultation
+                    </button>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Changed to a tax/finance related animation -->
+                    <lottie-player class="hero-animation animate__animated animate__fadeIn animate__delay-1s" 
+                        src="https://assets5.lottiefiles.com/packages/lf20_vybwn7df.json" 
+                        background="transparent" 
+                        speed="1" 
+                        style="width: 100%; height: auto;"
+                        loop 
+                        autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- 2nd -->
+ <!-- Overview Section -->
+<section style="padding: 80px 0; background-color: #f9f9f9;">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 50px; font-weight: 700; color: #0a2463;">Overview of Expatriate Taxation</h2>
+    
+    <div class="row g-4">
+      <!-- Left Card -->
+      <div class="col-md-6" style="padding: 15px;">
+        <div style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); padding: 30px; height: 100%;">
+          <div style="background: #0a2463; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <i class="fas fa-globe" style="color: white; font-size: 24px;"></i>
+          </div>
+          <h3 style="color: #001845; margin-bottom: 15px; font-weight: 600;">Global Tax Obligations</h3>
+          <p style="color: #555; line-height: 1.7;">
+            Expatriates often face complex tax situations with obligations in both their home country and host country. 
+            Understanding tax treaties, foreign earned income exclusions, and tax credits is essential for compliance.
+          </p>
+          <ul style="padding-left: 20px; color: #555; margin-top: 15px;">
+            <li style="margin-bottom: 8px;">Dual taxation risks</li>
+            <li style="margin-bottom: 8px;">Tax treaty benefits</li>
+            <li style="margin-bottom: 8px;">Foreign tax credits</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Right Card -->
+      <div class="col-md-6" style="padding: 15px;">
+        <div style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); padding: 30px; height: 100%;">
+          <div style="background: #3e92cc; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <i class="fas fa-file-invoice-dollar" style="color: white; font-size: 24px;"></i>
+          </div>
+          <h3 style="color: #001845; margin-bottom: 15px; font-weight: 600;">Key Considerations</h3>
+          <p style="color: #555; line-height: 1.7;">
+            Proper planning can help expatriates minimize tax liabilities while remaining compliant. Important factors include 
+            residency status, income sourcing, and reporting requirements for foreign assets.
+          </p>
+          <ul style="padding-left: 20px; color: #555; margin-top: 15px;">
+            <li style="margin-bottom: 8px;">Residency determinations</li>
+            <li style="margin-bottom: 8px;">Foreign bank account reporting</li>
+            <li style="margin-bottom: 8px;">Tax equalization policies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+      <button style="background: #0a2463; color: white; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 600; transition: all 0.3s ease;">
+        Learn More About Your Situation
+      </button>
+    </div>
+  </div>
+</section>
+<!-- 3rd -->
+ <!-- Benefits Timeline Section -->
+<section style="padding: 80px 0; background-color: #ffffff;">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 60px; font-weight: 700; color: #0a2463;">Benefits of Proper Expatriate Tax Planning</h2>
+    
+    <div style="position: relative; max-width: 800px; margin: 0 auto;">
+      <!-- Timeline Line -->
+      <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, #3e92cc, #0a2463); transform: translateX(-50%); z-index: 1;"></div>
+      
+      <!-- Timeline Item 1 -->
+      <div style="display: flex; margin-bottom: 40px; position: relative; z-index: 2;">
+        <div style="flex: 1; padding-right: 30px; text-align: right;">
+          <h3 style="color: #0a2463; margin-top: 0; font-weight: 600;">Tax Savings</h3>
+          <p style="color: #555; line-height: 1.6;">Maximize foreign tax credits and exclusions to legally minimize your tax burden across jurisdictions.</p>
+        </div>
+        <div style="width: 30px; height: 30px; background-color: #ffd700; border-radius: 50%; border: 4px solid #0a2463; margin: 0 15px; flex-shrink: 0;"></div>
+        <div style="flex: 1; padding-left: 30px;"></div>
+      </div>
+      
+      <!-- Timeline Item 2 -->
+      <div style="display: flex; margin-bottom: 40px; position: relative; z-index: 2;">
+        <div style="flex: 1; padding-right: 30px;"></div>
+        <div style="width: 30px; height: 30px; background-color: #ffd700; border-radius: 50%; border: 4px solid #0a2463; margin: 0 15px; flex-shrink: 0;"></div>
+        <div style="flex: 1; padding-left: 30px;">
+          <h3 style="color: #0a2463; margin-top: 0; font-weight: 600;">Compliance Assurance</h3>
+          <p style="color: #555; line-height: 1.6;">Avoid penalties by meeting all filing requirements for FBAR, FATCA, and foreign asset disclosures.</p>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 3 -->
+      <div style="display: flex; margin-bottom: 40px; position: relative; z-index: 2;">
+        <div style="flex: 1; padding-right: 30px; text-align: right;">
+          <h3 style="color: #0a2463; margin-top: 0; font-weight: 600;">Double Taxation Avoidance</h3>
+          <p style="color: #555; line-height: 1.6;">Leverage tax treaties to prevent being taxed twice on the same income in different countries.</p>
+        </div>
+        <div style="width: 30px; height: 30px; background-color: #ffd700; border-radius: 50%; border: 4px solid #0a2463; margin: 0 15px; flex-shrink: 0;"></div>
+        <div style="flex: 1; padding-left: 30px;"></div>
+      </div>
+      
+      <!-- Timeline Item 4 -->
+      <div style="display: flex; margin-bottom: 40px; position: relative; z-index: 2;">
+        <div style="flex: 1; padding-right: 30px;"></div>
+        <div style="width: 30px; height: 30px; background-color: #ffd700; border-radius: 50%; border: 4px solid #0a2463; margin: 0 15px; flex-shrink: 0;"></div>
+        <div style="flex: 1; padding-left: 30px;">
+          <h3 style="color: #0a2463; margin-top: 0; font-weight: 600;">Financial Clarity</h3>
+          <p style="color: #555; line-height: 1.6;">Gain a comprehensive understanding of your worldwide tax position and future obligations.</p>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 5 -->
+      <div style="display: flex; position: relative; z-index: 2;">
+        <div style="flex: 1; padding-right: 30px; text-align: right;">
+          <h3 style="color: #0a2463; margin-top: 0; font-weight: 600;">Peace of Mind</h3>
+          <p style="color: #555; line-height: 1.6;">Reduce stress knowing your international tax matters are handled by professionals.</p>
+        </div>
+        <div style="width: 30px; height: 30px; background-color: #ffd700; border-radius: 50%; border: 4px solid #0a2463; margin: 0 15px; flex-shrink: 0;"></div>
+        <div style="flex: 1; padding-left: 30px;"></div>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 60px;">
+      <button style="background: linear-gradient(to right, #0a2463, #3e92cc); color: white; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(10, 36, 99, 0.3); transition: all 0.3s ease;">
+        <i class="fas fa-hand-holding-usd" style="margin-right: 8px;"></i> Start Optimizing Your Taxes
+      </button>
+    </div>
+  </div>
+</section>
+<!-- last -->
+ <!-- Rules and Regulations Section -->
+<section style="padding: 80px 0; background-color: #f5f7fa;">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 50px; font-weight: 700; color: #0a2463;">Key Rules & Regulations for Expatriates</h2>
+    
+    <div class="row" style="margin-bottom: 40px;">
+      <!-- Left Column -->
+      <div class="col-md-6" style="padding: 15px;">
+        <div style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); padding: 30px; height: 100%;">
+          <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <div style="background: #0a2463; width: 50px; height: 50px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
+              <i class="fas fa-flag-usa" style="color: white; font-size: 20px;"></i>
+            </div>
+            <h3 style="color: #001845; margin: 0; font-weight: 600;">U.S. Tax Requirements</h3>
+          </div>
+          <ul style="padding-left: 20px; color: #555;">
+            <li style="margin-bottom: 12px; position: relative; padding-left: 25px;">
+              <div style="position: absolute; left: 0; top: 6px; width: 8px; height: 8px; background-color: #3e92cc; border-radius: 50%;"></div>
+              <strong>Filing Requirements:</strong> Worldwide income reporting regardless of residence
+            </li>
+            <li style="margin-bottom: 12px; position: relative; padding-left: 25px;">
+              <div style="position: absolute; left: 0; top: 6px; width: 8px; height: 8px; background-color: #3e92cc; border-radius: 50%;"></div>
+              <strong>Form 2555:</strong> Foreign Earned Income Exclusion ($120,000 for 2023)
+            </li>
+            <li style="margin-bottom: 12px; position: relative; padding-left: 25px;">
+              <div style="position: absolute; left: 0; top: 6px; width: 8px; height: 8px; background-color: #3e92cc; border-radius: 50%;"></div>
+              <strong>FBAR (FinCEN 114):</strong> Required for foreign accounts exceeding $10,000
+            </li>
+            <li style="position: relative; padding-left: 25px;">
+              <div style="position: absolute; left: 0; top: 6px; width: 8px; height: 8px; background-color: #3e92cc; border-radius: 50%;"></div>
+              <strong>FATCA:</strong> Form 8938 for specified foreign assets
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Right Column -->
+      <div class="col-md-6" style="padding: 15px;">
+        <div style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); padding: 30px; height: 100%;">
+          <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <div style="background: #3e92cc; width: 50px; height: 50px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
+              <i class="fas fa-globe-europe" style="color: white; font-size: 20px;"></i>
+            </div>
+            <h3 style="color: #001845; margin: 0; font-weight: 600;">International Considerations</h3>
+          </div>
+          <ul style="padding-left: 20px; color: #555;">
+            <li style="margin-bottom: 12px; position: relative; padding-left: 25px;">
+              <div style="position: absolute; left: 0; top: 6px; width: 8px; height: 8px; background-color: #0a2463; border-radius: 50%;"></div>
+              <strong>Tax Treaties:</strong> Over 60 U.S. treaties to prevent double taxation
+            </li>
+            <li style="margin-bottom: 12px; position: relative; padding-left: 25px;">
+              <div style="position: absolute; left: 0; top: 6px; width: 8px; height: 8px; background-color: #0a2463; border-radius: 50%;"></div>
+              <strong>Residency Rules:</strong> Vary by country (183-day rule common)
+            </li>
+            <li style="margin-bottom: 12px; position: relative; padding-left: 25px;">
+              <div style="position: absolute; left: 0; top: 6px; width: 8px; height: 8px; background-color: #0a2463; border-radius: 50%;"></div>
+              <strong>CFC Rules:</strong> Controlled Foreign Corporation regulations
+            </li>
+            <li style="position: relative; padding-left: 25px;">
+              <div style="position: absolute; left: 0; top: 6px; width: 8px; height: 8px; background-color: #0a2463; border-radius: 50%;"></div>
+              <strong>Local Compliance:</strong> Host country payroll/tax requirements
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Full Width Important Notice -->
+    <div style="background: #fff8e6; border-left: 4px solid #ffd700; padding: 25px; border-radius: 0 8px 8px 0; margin-top: 30px;">
+      <div style="display: flex;">
+        <div style="margin-right: 15px; color: #ffd700; font-size: 24px;">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div>
+          <h4 style="margin-top: 0; margin-bottom: 10px; color: #001845;">Important Compliance Notice</h4>
+          <p style="color: #555; margin-bottom: 0;">
+            Penalties for non-compliance can be severe, including fines up to $10,000 per violation for FBAR and 
+            40% of underpaid tax for FATCA violations. Many expatriates qualify for streamlined procedures if 
+            they need to correct past filings.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+      <button style="background: #0a2463; color: white; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 600; transition: all 0.3s ease;">
+        <i class="fas fa-file-alt" style="margin-right: 8px;"></i> Download Compliance Checklist
+      </button>
+    </div>
+  </div>
+</section>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

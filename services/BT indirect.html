@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indirect & Direct Taxation of India</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lottie Animations -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-weight: 700;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-weight: 300;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+        
+        .hero-btn {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-animation {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(255, 215, 0, 0.2);
+            color: var(--accent-color);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .tax-pill {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.15);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 100px 0 60px;
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-animation {
+                position: relative;
+                width: 100%;
+                margin: 40px auto 0;
+                transform: none;
+                top: auto;
+                right: auto;
+                max-width: 400px;
+            }
+            
+            .tax-pills-container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
+                    <span class="hero-badge animate__animated animate__fadeIn">
+                        <i class="fas fa-landmark me-2"></i> Indian Tax System
+                    </span>
+                    <h1 class="hero-title animate__animated animate__fadeInDown">Indirect & Direct Taxation of India</h1>
+                    <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s">
+                        Comprehensive guide to India's dual tax structure with expert insights on compliance, planning, and optimization for businesses and individuals.
+                    </p>
+                    
+                    <div class="tax-pills-container d-flex flex-wrap animate__animated animate__fadeIn animate__delay-2s">
+                        <span class="tax-pill"><i class="fas fa-rupee-sign me-2"></i>Income Tax</span>
+                        <span class="tax-pill"><i class="fas fa-receipt me-2"></i>GST</span>
+                        <span class="tax-pill"><i class="fas fa-hand-holding-usd me-2"></i>TDS</span>
+                        <span class="tax-pill"><i class="fas fa-building me-2"></i>Corporate Tax</span>
+                    </div>
+                    
+                    <div class="d-flex gap-3 mt-4">
+                        <button class="hero-btn animate__animated animate__fadeInUp animate__delay-3s">
+                            <i class="fas fa-book-open me-2"></i> Learn More
+                        </button>
+                        <button class="hero-btn animate__animated animate__fadeInUp animate__delay-3s" style="
+                            background-color: transparent;
+                            border: 2px solid var(--accent-color);
+                            color: white;
+                        ">
+                            <i class="fas fa-headset me-2"></i> Consult Expert
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <lottie-player class="hero-animation" 
+                        src="https://assets1.lottiefiles.com/packages/lf20_5tkzkblw.json" 
+                        background="transparent" 
+                        speed="1" 
+                        style="width: 100%; height: auto;"
+                        loop 
+                        autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2nd -->
+     <!-- Overview of Indirect Taxation in India - Diamond Layout -->
+<section style="
+    padding: 100px 0;
+    background-color: #f8fafc;
+    position: relative;
+">
+    <!-- Diamond Background Element -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(circle at 70% 30%, rgba(62, 146, 204, 0.05) 0%, transparent 20%),
+            radial-gradient(circle at 30% 70%, rgba(255, 215, 0, 0.05) 0%, transparent 20%);
+        z-index: 0;
+    "></div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 style="
+                    font-weight: 800;
+                    font-size: 2.8rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                    line-height: 1.2;
+                    position: relative;
+                    display: inline-block;
+                ">
+                    <span style="
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                        width: 100%;
+                        height: 8px;
+                        background-color: var(--accent-color);
+                        opacity: 0.5;
+                    "></span>
+                    Indirect Taxation Framework
+                    <br>
+                    <span style="font-size: 1.8rem; color: var(--secondary-color); font-weight: 600;">of India</span>
+                </h2>
+                <p style="
+                    color: #555;
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    max-width: 700px;
+                    margin: 0 auto;
+                ">
+                    India's indirect tax system comprises taxes levied on goods and services, where the burden can be shifted to others.
+                </p>
+            </div>
+        </div>
+
+        <!-- Diamond Grid Layout -->
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        ">
+            <!-- GST Diamond -->
+            <div style="
+                background: white;
+                border-radius: 0;
+                padding: 40px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                transform: rotate(45deg);
+                width: 280px;
+                height: 280px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px dashed var(--secondary-color);
+                position: relative;
+                overflow: hidden;
+            ">
+                <div style="
+                    transform: rotate(-45deg);
+                    text-align: center;
+                    width: 100%;
+                ">
+                    <div style="
+                        width: 70px;
+                        height: 70px;
+                        background-color: rgba(62, 146, 204, 0.1);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto 20px;
+                    ">
+                        <i class="fas fa-file-invoice" style="font-size: 1.8rem; color: var(--secondary-color);"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">GST</h3>
+                    <p style="
+                        color: #666;
+                        line-height: 1.7;
+                        margin-bottom: 0;
+                        padding: 0 20px;
+                    ">
+                        Goods and Services Tax - Comprehensive indirect tax levied on manufacture, sale, and consumption
+                    </p>
+                </div>
+                <div style="
+                    position: absolute;
+                    top: -1px;
+                    right: -1px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 60px 60px 0;
+                    border-color: transparent var(--secondary-color) transparent transparent;
+                "></div>
+            </div>
+
+            <!-- Customs Duty Diamond -->
+            <div style="
+                background: white;
+                border-radius: 0;
+                padding: 40px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                transform: rotate(45deg);
+                width: 280px;
+                height: 280px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px dashed var(--accent-color);
+                position: relative;
+                overflow: hidden;
+            ">
+                <div style="
+                    transform: rotate(-45deg);
+                    text-align: center;
+                    width: 100%;
+                ">
+                    <div style="
+                        width: 70px;
+                        height: 70px;
+                        background-color: rgba(255, 215, 0, 0.1);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto 20px;
+                    ">
+                        <i class="fas fa-ship" style="font-size: 1.8rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Customs Duty</h3>
+                    <p style="
+                        color: #666;
+                        line-height: 1.7;
+                        margin-bottom: 0;
+                        padding: 0 20px;
+                    ">
+                        Levied on imports and exports of goods with rates varying by product category
+                    </p>
+                </div>
+                <div style="
+                    position: absolute;
+                    top: -1px;
+                    right: -1px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 60px 60px 0;
+                    border-color: transparent var(--accent-color) transparent transparent;
+                "></div>
+            </div>
+
+            <!-- Excise Duty Diamond -->
+            <div style="
+                background: white;
+                border-radius: 0;
+                padding: 40px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                transform: rotate(45deg);
+                width: 280px;
+                height: 280px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px dashed #e83e8c;
+                position: relative;
+                overflow: hidden;
+            ">
+                <div style="
+                    transform: rotate(-45deg);
+                    text-align: center;
+                    width: 100%;
+                ">
+                    <div style="
+                        width: 70px;
+                        height: 70px;
+                        background-color: rgba(232, 62, 140, 0.1);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto 20px;
+                    ">
+                        <i class="fas fa-industry" style="font-size: 1.8rem; color: #e83e8c;"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Excise Duty</h3>
+                    <p style="
+                        color: #666;
+                        line-height: 1.7;
+                        margin-bottom: 0;
+                        padding: 0 20px;
+                    ">
+                        Tax on goods manufactured in India (now largely subsumed under GST)
+                    </p>
+                </div>
+                <div style="
+                    position: absolute;
+                    top: -1px;
+                    right: -1px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 60px 60px 0;
+                    border-color: transparent #e83e8c transparent transparent;
+                "></div>
+            </div>
+        </div>
+
+        <!-- Key Features Below Diamonds -->
+        <div class="row mt-5 pt-5">
+            <div class="col-md-4" style="margin-bottom: 30px;">
+                <div style="
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    height: 100%;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    border-left: 4px solid var(--secondary-color);
+                ">
+                    <h4 style="
+                        font-weight: 700;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                        font-size: 1.3rem;
+                    ">
+                        <i class="fas fa-arrows-alt-h me-2" style="color: var(--secondary-color);"></i>
+                        Tax Incidence Shifting
+                    </h4>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                        The ultimate burden of indirect taxes can be passed on through the supply chain until it reaches the end consumer.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4" style="margin-bottom: 30px;">
+                <div style="
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    height: 100%;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    border-left: 4px solid var(--accent-color);
+                ">
+                    <h4 style="
+                        font-weight: 700;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                        font-size: 1.3rem;
+                    ">
+                        <i class="fas fa-layer-group me-2" style="color: var(--accent-color);"></i>
+                        Multi-Stage Collection
+                    </h4>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                        Indirect taxes are collected at multiple points in the supply chain with credit mechanisms to avoid cascading.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4" style="margin-bottom: 30px;">
+                <div style="
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    height: 100%;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    border-left: 4px solid #e83e8c;
+                ">
+                    <h4 style="
+                        font-weight: 700;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                        font-size: 1.3rem;
+                    ">
+                        <i class="fas fa-rupee-sign me-2" style="color: #e83e8c;"></i>
+                        Regressive Nature
+                    </h4>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                        Indirect taxes typically represent a larger percentage of income for lower-income groups compared to higher-income groups.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 3rd -->
+ <!-- Key Components of Indirect Taxation - Timeline Design -->
+<section style="
+    padding: 100px 0;
+    background-color: white;
+    position: relative;
+">
+    <!-- Decorative Wave Background -->
+    <!-- <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120 xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%230a2463" opacity=".03"/></svg>');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+    "></div> -->
+
+    <div class="container" style="position: relative; z-index: 1;">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 text-center">
+                <h2 style="
+                    font-weight: 800;
+                    font-size: 2.5rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                    position: relative;
+                    display: inline-block;
+                ">
+                    <span style="
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        width: 100%;
+                        height: 6px;
+                        background-color: var(--accent-color);
+                        opacity: 0.3;
+                    "></span>
+                    Key Components of India's Indirect Tax System
+                </h2>
+                <p style="
+                    color: #666;
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    max-width: 700px;
+                    margin: 0 auto;
+                ">
+                    The modern indirect tax structure in India with its layered compliance requirements
+                </p>
+            </div>
+        </div>
+
+        <!-- Timeline Style Layout -->
+        <div style="position: relative; margin-top: 50px;">
+            <!-- Vertical Line -->
+            <div style="
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 4px;
+                background: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
+                transform: translateX(-50%);
+                z-index: 0;
+            "></div>
+
+            <!-- Component 1 - GST Structure -->
+            <div style="
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                margin-bottom: 80px;
+                padding-right: 50px;
+            ">
+                <div style="
+                    width: 45%;
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                    position: relative;
+                    z-index: 1;
+                    border-top: 4px solid var(--secondary-color);
+                ">
+                    <div style="
+                        position: absolute;
+                        right: -30px;
+                        top: 40px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: var(--secondary-color);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                    ">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">GST Structure</h3>
+                    <ul style="
+                        color: #666;
+                        line-height: 1.8;
+                        padding-left: 20px;
+                        margin-bottom: 0;
+                    ">
+                        <li style="margin-bottom: 8px;">CGST (Central GST)</li>
+                        <li style="margin-bottom: 8px;">SGST (State GST)</li>
+                        <li style="margin-bottom: 8px;">IGST (Integrated GST)</li>
+                        <li>UTGST (Union Territory GST)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Component 2 - Tax Rates -->
+            <div style="
+                display: flex;
+                justify-content: flex-start;
+                position: relative;
+                margin-bottom: 80px;
+                padding-left: 50px;
+            ">
+                <div style="
+                    width: 45%;
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                    position: relative;
+                    z-index: 1;
+                    border-top: 4px solid var(--accent-color);
+                ">
+                    <div style="
+                        position: absolute;
+                        left: -30px;
+                        top: 40px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: var(--accent-color);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--dark-color);
+                    ">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">GST Rate Slabs</h3>
+                    <div style="
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        margin-bottom: 15px;
+                    ">
+                        <span style="
+                            display: inline-block;
+                            background-color: rgba(62, 146, 204, 0.1);
+                            color: var(--secondary-color);
+                            padding: 5px 15px;
+                            border-radius: 50px;
+                            font-weight: 600;
+                            font-size: 0.9rem;
+                        ">0% (Essential goods)</span>
+                        <span style="
+                            display: inline-block;
+                            background-color: rgba(62, 146, 204, 0.1);
+                            color: var(--secondary-color);
+                            padding: 5px 15px;
+                            border-radius: 50px;
+                            font-weight: 600;
+                            font-size: 0.9rem;
+                        ">5%</span>
+                        <span style="
+                            display: inline-block;
+                            background-color: rgba(62, 146, 204, 0.1);
+                            color: var(--secondary-color);
+                            padding: 5px 15px;
+                            border-radius: 50px;
+                            font-weight: 600;
+                            font-size: 0.9rem;
+                        ">12%</span>
+                        <span style="
+                            display: inline-block;
+                            background-color: rgba(62, 146, 204, 0.1);
+                            color: var(--secondary-color);
+                            padding: 5px 15px;
+                            border-radius: 50px;
+                            font-weight: 600;
+                            font-size: 0.9rem;
+                        ">18%</span>
+                        <span style="
+                            display: inline-block;
+                            background-color: rgba(62, 146, 204, 0.1);
+                            color: var(--secondary-color);
+                            padding: 5px 15px;
+                            border-radius: 50px;
+                            font-weight: 600;
+                            font-size: 0.9rem;
+                        ">28% (Luxury items)</span>
+                    </div>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                        Plus cess on certain demerit goods like automobiles and tobacco products
+                    </p>
+                </div>
+            </div>
+
+            <!-- Component 3 - Compliance -->
+            <div style="
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                margin-bottom: 80px;
+                padding-right: 50px;
+            ">
+                <div style="
+                    width: 45%;
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                    position: relative;
+                    z-index: 1;
+                    border-top: 4px solid #e83e8c;
+                ">
+                    <div style="
+                        position: absolute;
+                        right: -30px;
+                        top: 40px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: #e83e8c;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                    ">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Compliance Requirements</h3>
+                    <div style="
+                        background-color: rgba(232, 62, 140, 0.05);
+                        border-left: 3px solid #e83e8c;
+                        padding: 15px;
+                        margin-bottom: 15px;
+                        border-radius: 0 8px 8px 0;
+                    ">
+                        <h4 style="
+                            font-weight: 600;
+                            color: var(--primary-color);
+                            margin-bottom: 8px;
+                            font-size: 1.1rem;
+                        ">Monthly/Quarterly Filings</h4>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                            GSTR-1 (Outward supplies), GSTR-3B (Summary return), GSTR-9 (Annual return)
+                        </p>
+                    </div>
+                    <div style="
+                        background-color: rgba(232, 62, 140, 0.05);
+                        border-left: 3px solid #e83e8c;
+                        padding: 15px;
+                        border-radius: 0 8px 8px 0;
+                    ">
+                        <h4 style="
+                            font-weight: 600;
+                            color: var(--primary-color);
+                            margin-bottom: 8px;
+                            font-size: 1.1rem;
+                        ">Input Tax Credit Mechanism</h4>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                            Reconciliation through GSTR-2A/2B and timely filing to avoid credit loss
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Component 4 - Other Taxes -->
+            <div style="
+                display: flex;
+                justify-content: flex-start;
+                position: relative;
+                padding-left: 50px;
+            ">
+                <div style="
+                    width: 45%;
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                    position: relative;
+                    z-index: 1;
+                    border-top: 4px solid #28a745;
+                ">
+                    <div style="
+                        position: absolute;
+                        left: -30px;
+                        top: 40px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: #28a745;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                    ">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Other Indirect Taxes</h3>
+                    <div style="
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 15px;
+                    ">
+                        <div style="
+                            background-color: rgba(40, 167, 69, 0.05);
+                            padding: 15px;
+                            border-radius: 8px;
+                        ">
+                            <h4 style="
+                                font-weight: 600;
+                                color: var(--primary-color);
+                                margin-bottom: 8px;
+                                font-size: 1rem;
+                            ">Customs Duty</h4>
+                            <p style="color: #666; line-height: 1.5; margin-bottom: 0; font-size: 0.9rem;">
+                                On imports and exports with various exemptions
+                            </p>
+                        </div>
+                        <div style="
+                            background-color: rgba(40, 167, 69, 0.05);
+                            padding: 15px;
+                            border-radius: 8px;
+                        ">
+                            <h4 style="
+                                font-weight: 600;
+                                color: var(--primary-color);
+                                margin-bottom: 8px;
+                                font-size: 1rem;
+                            ">Compensation Cess</h4>
+                            <p style="color: #666; line-height: 1.5; margin-bottom: 0; font-size: 0.9rem;">
+                                For states' revenue protection during GST transition
+                            </p>
+                        </div>
+                        <div style="
+                            background-color: rgba(40, 167, 69, 0.05);
+                            padding: 15px;
+                            border-radius: 8px;
+                        ">
+                            <h4 style="
+                                font-weight: 600;
+                                color: var(--primary-color);
+                                margin-bottom: 8px;
+                                font-size: 1rem;
+                            ">Stamp Duty</h4>
+                            <p style="color: #666; line-height: 1.5; margin-bottom: 0; font-size: 0.9rem;">
+                                On legal documents and property transactions
+                            </p>
+                        </div>
+                        <div style="
+                            background-color: rgba(40, 167, 69, 0.05);
+                            padding: 15px;
+                            border-radius: 8px;
+                        ">
+                            <h4 style="
+                                font-weight: 600;
+                                color: var(--primary-color);
+                                margin-bottom: 8px;
+                                font-size: 1rem;
+                            ">Entertainment Tax</h4>
+                            <p style="color: #666; line-height: 1.5; margin-bottom: 0; font-size: 0.9rem;">
+                                Levied by some states on movie tickets etc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- last -->
+<!-- VAT Section - Stepped Visualization -->
+<section style="
+    padding: 100px 0;
+    background-color: var(--light-color);
+    position: relative;
+    overflow: hidden;
+">
+    <!-- Diagonal Background Pattern -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            repeating-linear-gradient(
+                45deg,
+                rgba(10, 36, 99, 0.03),
+                rgba(10, 36, 99, 0.03) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+        z-index: 0;
+    "></div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+        <!-- Section Header -->
+        <div class="row">
+            <div class="col-lg-8">
+                <span style="
+                    display: inline-block;
+                    background-color: rgba(255, 215, 0, 0.2);
+                    color: var(--dark-color);
+                    padding: 8px 20px;
+                    border-radius: 50px;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                    font-size: 0.9rem;
+                ">
+                    <i class="fas fa-history me-2"></i> Pre-GST Tax System
+                </span>
+                <h2 style="
+                    font-weight: 800;
+                    font-size: 2.5rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                    line-height: 1.3;
+                ">
+                    Value Added Tax (VAT) in India
+                </h2>
+                <p style="
+                    color: #555;
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    max-width: 600px;
+                ">
+                    The consumption tax levied on goods at each stage of production and distribution until final sale.
+                </p>
+            </div>
+        </div>
+
+        <!-- Stepped VAT Process Visualization -->
+        <div style="margin-top: 60px;">
+            <!-- Step 1 - Manufacturer -->
+            <div style="
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                position: relative;
+            ">
+                <div style="
+                    width: 80px;
+                    height: 80px;
+                    background-color: white;
+                    border-radius: 50%;
+                    border: 3px solid var(--secondary-color);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 30px;
+                    flex-shrink: 0;
+                    z-index: 1;
+                ">
+                    <i class="fas fa-industry" style="font-size: 1.8rem; color: var(--secondary-color);"></i>
+                </div>
+                <div style="
+                    background: white;
+                    border-radius: 12px;
+                    padding: 25px;
+                    flex-grow: 1;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    border-left: 4px solid var(--secondary-color);
+                ">
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.4rem;
+                        color: var(--primary-color);
+                        margin-bottom: 10px;
+                    ">Manufacturer Stage</h3>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                        Raw material purchased for ₹10,000 + VAT @4% (₹400) = ₹10,400<br>
+                        Finished goods sold for ₹15,000 + VAT @12.5% (₹1,875)<br>
+                        <strong>VAT Payable:</strong> ₹1,875 - ₹400 = ₹1,475
+                    </p>
+                </div>
+                <div style="
+                    position: absolute;
+                    left: 110px;
+                    top: 50%;
+                    width: calc(100% - 140px);
+                    height: 2px;
+                    background-color: var(--secondary-color);
+                    opacity: 0.3;
+                    z-index: 0;
+                "></div>
+            </div>
+
+            <!-- Step 2 - Wholesaler -->
+            <div style="
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                position: relative;
+                margin-left: 80px;
+            ">
+                <div style="
+                    width: 80px;
+                    height: 80px;
+                    background-color: white;
+                    border-radius: 50%;
+                    border: 3px solid #e83e8c;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 30px;
+                    flex-shrink: 0;
+                    z-index: 1;
+                ">
+                    <i class="fas fa-warehouse" style="font-size: 1.8rem; color: #e83e8c;"></i>
+                </div>
+                <div style="
+                    background: white;
+                    border-radius: 12px;
+                    padding: 25px;
+                    flex-grow: 1;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    border-left: 4px solid #e83e8c;
+                ">
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.4rem;
+                        color: var(--primary-color);
+                        margin-bottom: 10px;
+                    ">Wholesaler Stage</h3>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                        Purchased for ₹15,000 (₹1,875 VAT already paid)<br>
+                        Sold for ₹20,000 + VAT @12.5% (₹2,500)<br>
+                        <strong>VAT Payable:</strong> ₹2,500 - ₹1,875 = ₹625
+                    </p>
+                </div>
+                <div style="
+                    position: absolute;
+                    left: 110px;
+                    top: 50%;
+                    width: calc(100% - 140px);
+                    height: 2px;
+                    background-color: #e83e8c;
+                    opacity: 0.3;
+                    z-index: 0;
+                "></div>
+            </div>
+
+            <!-- Step 3 - Retailer -->
+            <div style="
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                position: relative;
+                margin-left: 160px;
+            ">
+                <div style="
+                    width: 80px;
+                    height: 80px;
+                    background-color: white;
+                    border-radius: 50%;
+                    border: 3px solid var(--accent-color);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 30px;
+                    flex-shrink: 0;
+                    z-index: 1;
+                ">
+                    <i class="fas fa-store" style="font-size: 1.8rem; color: var(--accent-color);"></i>
+                </div>
+                <div style="
+                    background: white;
+                    border-radius: 12px;
+                    padding: 25px;
+                    flex-grow: 1;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    border-left: 4px solid var(--accent-color);
+                ">
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.4rem;
+                        color: var(--primary-color);
+                        margin-bottom: 10px;
+                    ">Retailer Stage</h3>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                        Purchased for ₹20,000 (₹2,500 VAT already paid)<br>
+                        Sold to consumer for ₹25,000 + VAT @12.5% (₹3,125)<br>
+                        <strong>VAT Payable:</strong> ₹3,125 - ₹2,500 = ₹625
+                    </p>
+                </div>
+                <div style="
+                    position: absolute;
+                    left: 110px;
+                    top: 50%;
+                    width: calc(100% - 140px);
+                    height: 2px;
+                    background-color: var(--accent-color);
+                    opacity: 0.3;
+                    z-index: 0;
+                "></div>
+            </div>
+
+            <!-- VAT Calculation Summary -->
+            <div style="
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                margin-top: 50px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                border-top: 4px solid var(--primary-color);
+            ">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 style="
+                            font-weight: 700;
+                            font-size: 1.5rem;
+                            color: var(--primary-color);
+                            margin-bottom: 20px;
+                        ">
+                            <i class="fas fa-calculator me-3"></i>
+                            VAT Calculation Summary
+                        </h3>
+                        <ul style="
+                            color: #666;
+                            line-height: 1.8;
+                            padding-left: 20px;
+                        ">
+                            <li style="margin-bottom: 10px;"><strong>Total VAT Collected:</strong> ₹3,125</li>
+                            <li style="margin-bottom: 10px;"><strong>Total VAT Credited:</strong> ₹2,500</li>
+                            <li style="margin-bottom: 10px;"><strong>Net VAT to Government:</strong> ₹625</li>
+                            <li><strong>Cumulative VAT Paid:</strong> ₹1,475 (Mfr) + ₹625 (Wholesale) + ₹625 (Retail) = ₹2,725</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="
+                            background-color: rgba(10, 36, 99, 0.05);
+                            border-radius: 10px;
+                            padding: 20px;
+                            height: 100%;
+                        ">
+                            <h4 style="
+                                font-weight: 600;
+                                color: var(--primary-color);
+                                margin-bottom: 15px;
+                                font-size: 1.2rem;
+                            ">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Key Characteristics
+                            </h4>
+                            <div style="
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 15px;
+                            ">
+                                <div style="
+                                    width: 24px;
+                                    height: 24px;
+                                    background-color: var(--accent-color);
+                                    border-radius: 4px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-right: 10px;
+                                    flex-shrink: 0;
+                                ">
+                                    <i class="fas fa-check" style="font-size: 0.7rem; color: var(--dark-color);"></i>
+                                </div>
+                                <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                                    <strong>State-Level Tax:</strong> Rates and rules varied across Indian states
+                                </p>
+                            </div>
+                            <div style="
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 15px;
+                            ">
+                                <div style="
+                                    width: 24px;
+                                    height: 24px;
+                                    background-color: var(--accent-color);
+                                    border-radius: 4px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-right: 10px;
+                                    flex-shrink: 0;
+                                ">
+                                    <i class="fas fa-check" style="font-size: 0.7rem; color: var(--dark-color);"></i>
+                                </div>
+                                <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                                    <strong>Cascading Effect:</strong> Partially eliminated through input tax credit
+                                </p>
+                            </div>
+                            <div style="
+                                display: flex;
+                                align-items: flex-start;
+                            ">
+                                <div style="
+                                    width: 24px;
+                                    height: 24px;
+                                    background-color: var(--accent-color);
+                                    border-radius: 4px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-right: 10px;
+                                    flex-shrink: 0;
+                                ">
+                                    <i class="fas fa-check" style="font-size: 0.7rem; color: var(--dark-color);"></i>
+                                </div>
+                                <p style="color: #666; line-height: 1.7; margin-bottom: 0;">
+                                    <strong>Replaced by GST:</strong> Subsumed under GST regime from July 1, 2017
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>

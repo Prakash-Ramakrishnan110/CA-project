@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Tax Audit</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lottie Animations -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-weight: 700;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .hero-title span {
+            color: var(--accent-color);
+        }
+        
+        .hero-subtitle {
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        
+        .hero-btn {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-btn:hover {
+            background-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-image-container {
+            position: relative;
+        }
+        
+        /* Audit Badge Styles */
+        .audit-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 50px;
+            padding: 8px 20px;
+            margin-bottom: 25px;
+            gap: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .audit-badge i {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+        
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center right;
+        }
+        
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section {
+                text-align: center;
+                padding: 80px 0;
+            }
+            
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .audit-badge {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
+                    <div class="audit-badge animate__animated animate__fadeIn">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Trusted Audit Solutions Since 2010</span>
+                    </div>
+                    <h1 class="hero-title animate__animated animate__fadeInDown">
+                        Professional <span>Service Tax Audit</span> Solutions
+                    </h1>
+                    <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s">
+                        Ensure compliance and minimize risks with our comprehensive tax audit services. Our experts provide thorough examination and analysis of your financial records.
+                    </p>
+                    <div class="d-flex gap-3 animate__animated animate__fadeInUp animate__delay-1s">
+                        <button class="hero-btn btn">
+                            Get Started <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                        <button class="hero-btn btn btn-outline-light">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image-container" data-aos="fade-left">
+                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_sk5h1kfn.json" background="transparent" speed="1" style="width: 100%; height: 500px;" loop autoplay></lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section style="padding: 100px 0; background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--dark-color); margin-bottom: 30px; text-align: center;">
+                        Overview of <span style="color: var(--accent-color);">Service Tax Audit</span>
+                    </h2>
+                    
+                    <div class="row justify-content-center">
+                        <!-- Feature 1 -->
+                        <div class="col-md-4" style="padding: 20px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%;">
+                                <div style="background-color: rgba(62, 146, 204, 0.1); width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                                    <i class="fas fa-search-dollar" style="font-size: 2rem; color: var(--secondary-color);"></i>
+                                </div>
+                                <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--primary-color); margin-bottom: 15px;">Comprehensive Examination</h3>
+                                <p style="color: #555; line-height: 1.6;">Thorough review of all financial records and tax documents to ensure complete compliance with current regulations.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Feature 2 -->
+                        <div class="col-md-4" style="padding: 20px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%;">
+                                <div style="background-color: rgba(255, 215, 0, 0.1); width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                                    <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--accent-color);"></i>
+                                </div>
+                                <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--primary-color); margin-bottom: 15px;">Risk Mitigation</h3>
+                                <p style="color: #555; line-height: 1.6;">Identify potential compliance issues before they become problems, protecting your business from penalties.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Feature 3 -->
+                        <div class="col-md-4" style="padding: 20px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%;">
+                                <div style="background-color: rgba(10, 36, 99, 0.1); width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                                    <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--primary-color);"></i>
+                                </div>
+                                <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--primary-color); margin-bottom: 15px;">Strategic Insights</h3>
+                                <p style="color: #555; line-height: 1.6;">Gain valuable financial insights that can help optimize your tax strategy and improve business performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audit Process Section -->
+    <section style="padding: 80px 0; background-color: #ffffff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); position: relative; display: inline-block;">
+                        Our Audit Process
+                        <span style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: var(--accent-color);"></span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="process-step" data-aos="fade-up" style="display: flex; align-items: flex-start; margin-bottom: 40px; position: relative;">
+                    <div style="position: relative; margin-right: 25px;">
+                        <div style="width: 60px; height: 60px; background-color: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; z-index: 2;">
+                            1
+                        </div>
+                        <div style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 2px; height: calc(100% + 40px); background: var(--secondary-color); z-index: 1;"></div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 10px;">Initial Consultation</h3>
+                        <p style="color: #555; line-height: 1.7; margin-bottom: 0;">We begin with understanding your business needs, objectives, and specific requirements to tailor our audit approach.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100" style="display: flex; align-items: flex-start; margin-bottom: 40px; position: relative;">
+                    <div style="position: relative; margin-right: 25px;">
+                        <div style="width: 60px; height: 60px; background-color: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; z-index: 2;">
+                            2
+                        </div>
+                        <div style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 2px; height: calc(100% + 40px); background: var(--secondary-color); z-index: 1;"></div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 10px;">Planning & Preparation</h3>
+                        <p style="color: #555; line-height: 1.7; margin-bottom: 0;">Our team develops a customized audit plan, sets timelines, and prepares necessary documentation requests.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200" style="display: flex; align-items: flex-start; margin-bottom: 40px; position: relative;">
+                    <div style="position: relative; margin-right: 25px;">
+                        <div style="width: 60px; height: 60px; background-color: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; z-index: 2;">
+                            3
+                        </div>
+                        <div style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 2px; height: calc(100% + 40px); background: var(--secondary-color); z-index: 1;"></div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 10px;">Fieldwork & Analysis</h3>
+                        <p style="color: #555; line-height: 1.7; margin-bottom: 0;">We conduct thorough examination of financial records, transactions, and internal controls through detailed testing procedures.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300" style="display: flex; align-items: flex-start; margin-bottom: 40px; position: relative;">
+                    <div style="position: relative; margin-right: 25px;">
+                        <div style="width: 60px; height: 60px; background-color: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; z-index: 2;">
+                            4
+                        </div>
+                        <div style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 2px; height: calc(100% + 40px); background: var(--secondary-color); z-index: 1;"></div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 10px;">Findings Review</h3>
+                        <p style="color: #555; line-height: 1.7; margin-bottom: 0;">We analyze collected data, identify key findings, and evaluate them against applicable standards and regulations.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400" style="display: flex; align-items: flex-start; margin-bottom: 40px; position: relative;">
+                    <div style="position: relative; margin-right: 25px;">
+                        <div style="width: 60px; height: 60px; background-color: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; z-index: 2;">
+                            5
+                        </div>
+                        <div style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 2px; height: calc(100% + 40px); background: var(--secondary-color); z-index: 1;"></div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 10px;">Report Preparation</h3>
+                        <p style="color: #555; line-height: 1.7; margin-bottom: 0;">Our experts compile comprehensive reports with clear findings, recommendations, and action plans for improvement.</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="process-step" data-aos="fade-up" data-aos-delay="500" style="display: flex; align-items: flex-start; margin-bottom: 0; position: relative;">
+                    <div style="position: relative; margin-right: 25px;">
+                        <div style="width: 60px; height: 60px; background-color: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; z-index: 2;">
+                            6
+                        </div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 10px;">Follow-up Support</h3>
+                        <p style="color: #555; line-height: 1.7; margin-bottom: 0;">We provide ongoing consultation to help implement recommendations and address any post-audit questions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section style="padding: 80px 0; background-color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--dark-color); margin-bottom: 15px;">
+                        Why <span style="color: var(--accent-color);">Choose Us</span> For Your Tax Audit
+                    </h2>
+                    <p style="color: #555; max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+                        We provide unparalleled expertise and personalized service to ensure your tax compliance is flawless.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Feature 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div style="background-color: #f8f9fa; border-radius: 15px; padding: 30px; height: 100%; border-left: 4px solid var(--primary-color);">
+                        <div style="background-color: rgba(10, 36, 99, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="fas fa-user-tie" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--dark-color); margin-bottom: 15px;">Expert Team</h3>
+                        <p style="color: #555; line-height: 1.6;">
+                            Our certified tax professionals average 15+ years of experience in complex tax audits and compliance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div style="background-color: #f8f9fa; border-radius: 15px; padding: 30px; height: 100%; border-left: 4px solid var(--secondary-color);">
+                        <div style="background-color: rgba(62, 146, 204, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="fas fa-bullseye" style="font-size: 1.5rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--dark-color); margin-bottom: 15px;">Proven Results</h3>
+                        <p style="color: #555; line-height: 1.6;">
+                            98% client satisfaction rate with $2.3M average savings identified in recent audits.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div style="background-color: #f8f9fa; border-radius: 15px; padding: 30px; height: 100%; border-left: 4px solid var(--accent-color);">
+                        <div style="background-color: rgba(255, 215, 0, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="fas fa-handshake" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; color: var(--dark-color); margin-bottom: 15px;">Client-First Approach</h3>
+                        <p style="color: #555; line-height: 1.6;">
+                            Dedicated account managers and 24/7 support ensure you're never left with unanswered questions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="col-12 mt-5">
+                    <div class="row text-center" style="background-color: var(--primary-color); border-radius: 15px; padding: 40px 20px; color: white;">
+                        <div class="col-md-3 mb-4 mb-md-0">
+                            <h3 style="font-size: 2.5rem; font-weight: 700; color: var(--accent-color);">15+</h3>
+                            <p style="font-weight: 500;">Years Experience</p>
+                        </div>
+                        <div class="col-md-3 mb-4 mb-md-0">
+                            <h3 style="font-size: 2.5rem; font-weight: 700; color: var(--accent-color);">500+</h3>
+                            <p style="font-weight: 500;">Clients Served</p>
+                        </div>
+                        <div class="col-md-3 mb-4 mb-md-0">
+                            <h3 style="font-size: 2.5rem; font-weight: 700; color: var(--accent-color);">98%</h3>
+                            <p style="font-weight: 500;">Satisfaction Rate</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3 style="font-size: 2.5rem; font-weight: 700; color: var(--accent-color);">$50M+</h3>
+                            <p style="font-weight: 500;">In Savings Identified</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .process-step:hover {
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+        }
+        .process-step:hover h3 {
+            color: var(--secondary-color) !important;
+            transition: all 0.3s ease;
+        }
+        .process-step:hover div div:first-child {
+            background: var(--accent-color) !important;
+            color: var(--primary-color) !important;
+            transition: all 0.3s ease;
+        }
+    </style>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>

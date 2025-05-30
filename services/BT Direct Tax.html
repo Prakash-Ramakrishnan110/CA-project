@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Taxation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lottie Animations -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-weight: 700;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-weight: 300;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+        
+        .hero-btn {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-animation {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+        
+        .animation-fallback {
+            display: none;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(255, 215, 0, 0.2);
+            color: var(--accent-color);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 100px 0 60px;
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-animation {
+                position: relative;
+                width: 100%;
+                margin: 40px auto 0;
+                transform: none;
+                top: auto;
+                right: auto;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
+                    <span class="hero-badge animate__animated animate__fadeIn">
+                        <i class="fas fa-gem me-2"></i> Expert Tax Solutions
+                    </span>
+                    <h1 class="hero-title animate__animated animate__fadeInDown">Direct Taxation Services</h1>
+                    <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s">
+                        Comprehensive solutions for income tax, corporate tax, and all direct taxation needs. Maximize compliance while optimizing your tax position.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <button class="hero-btn animate__animated animate__fadeInUp animate__delay-2s">
+                            Get Consultation <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                        <button class="hero-btn animate__animated animate__fadeInUp animate__delay-2s" style="
+                            background-color: transparent;
+                            border: 2px solid var(--accent-color);
+                            color: white;
+                        ">
+                            <i class="fas fa-phone-alt me-2"></i> Call Us
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <!-- New Lottie Animation with Fallback -->
+                    <lottie-player class="hero-animation" 
+                        src="https://assets1.lottiefiles.com/packages/lf20_5tkzkblw.json" 
+                        background="transparent" 
+                        speed="1" 
+                        style="width: 100%; height: auto;"
+                        loop 
+                        autoplay>
+                    </lottie-player>
+                    <div class="animation-fallback">
+                        <img src="https://via.placeholder.com/600x500/0a2463/ffffff?text=Tax+Consulting" alt="Tax Consulting Illustration" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2nd -->
+     <!-- Overview Section -->
+<section style="
+    padding: 100px 0;
+    background-color: white;
+">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0" style="position: relative;">
+                <div style="
+                    background-color: var(--light-color);
+                    border-radius: 20px;
+                    padding: 40px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                    height: 100%;
+                ">
+                    <h2 style="
+                        color: var(--primary-color);
+                        font-weight: 700;
+                        font-size: 2.5rem;
+                        margin-bottom: 1.5rem;
+                    ">Understanding Direct Taxation</h2>
+                    
+                    <p style="
+                        color: #555;
+                        line-height: 1.8;
+                        margin-bottom: 2rem;
+                        font-size: 1.1rem;
+                    ">
+                        Direct taxation refers to taxes imposed directly on individuals and organizations, 
+                        including income tax, corporate tax, and capital gains tax. These taxes are 
+                        non-transferable and form the backbone of government revenue systems worldwide.
+                    </p>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <div style="
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 15px;
+                        ">
+                            <div style="
+                                width: 50px;
+                                height: 50px;
+                                background-color: var(--accent-color);
+                                border-radius: 12px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            ">
+                                <i class="fas fa-landmark" style="font-size: 1.3rem; color: var(--dark-color);"></i>
+                            </div>
+                            <div>
+                                <h4 style="
+                                    font-weight: 600;
+                                    margin-bottom: 5px;
+                                    color: var(--primary-color);
+                                ">Government Revenue</h4>
+                                <p style="margin: 0; color: #555;">Primary source for public services and infrastructure</p>
+                            </div>
+                        </div>
+                        
+                        <div style="
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 15px;
+                        ">
+                            <div style="
+                                width: 50px;
+                                height: 50px;
+                                background-color: var(--accent-color);
+                                border-radius: 12px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            ">
+                                <i class="fas fa-balance-scale" style="font-size: 1.3rem; color: var(--dark-color);"></i>
+                            </div>
+                            <div>
+                                <h4 style="
+                                    font-weight: 600;
+                                    margin-bottom: 5px;
+                                    color: var(--primary-color);
+                                ">Progressive System</h4>
+                                <p style="margin: 0; color: #555;">Tax rates increase with higher income levels</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" style="padding-left: 50px;">
+                <h3 style="
+                    color: var(--primary-color);
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    margin-bottom: 1.5rem;
+                ">Key Components of Direct Tax</h3>
+                
+                <div style="margin-bottom: 2.5rem;">
+                    <div style="
+                        display: flex;
+                        align-items: flex-start;
+                        margin-bottom: 25px;
+                    ">
+                        <div style="
+                            background-color: var(--primary-color);
+                            color: white;
+                            width: 36px;
+                            height: 36px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 15px;
+                            flex-shrink: 0;
+                            font-weight: 700;
+                        ">1</div>
+                        <div>
+                            <h4 style="
+                                font-weight: 600;
+                                margin-bottom: 8px;
+                                color: var(--dark-color);
+                            ">Income Tax</h4>
+                            <p style="
+                                color: #666;
+                                line-height: 1.7;
+                                margin: 0;
+                            ">
+                                Tax levied on individual earnings including salaries, business profits, 
+                                and investment returns with progressive rate structures.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="
+                        display: flex;
+                        align-items: flex-start;
+                        margin-bottom: 25px;
+                    ">
+                        <div style="
+                            background-color: var(--primary-color);
+                            color: white;
+                            width: 36px;
+                            height: 36px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 15px;
+                            flex-shrink: 0;
+                            font-weight: 700;
+                        ">2</div>
+                        <div>
+                            <h4 style="
+                                font-weight: 600;
+                                margin-bottom: 8px;
+                                color: var(--dark-color);
+                            ">Corporate Tax</h4>
+                            <p style="
+                                color: #666;
+                                line-height: 1.7;
+                                margin: 0;
+                            ">
+                                Taxes on company profits with varying rates based on business size 
+                                and structure, including MAT provisions.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="
+                        display: flex;
+                        align-items: flex-start;
+                    ">
+                        <div style="
+                            background-color: var(--primary-color);
+                            color: white;
+                            width: 36px;
+                            height: 36px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 15px;
+                            flex-shrink: 0;
+                            font-weight: 700;
+                        ">3</div>
+                        <div>
+                            <h4 style="
+                                font-weight: 600;
+                                margin-bottom: 8px;
+                                color: var(--dark-color);
+                            ">Capital Gains Tax</h4>
+                            <p style="
+                                color: #666;
+                                line-height: 1.7;
+                                margin: 0;
+                            ">
+                                Taxes on profits from sale of assets, classified as short-term 
+                                or long-term with different rate structures.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button style="
+                    background-color: var(--primary-color);
+                    color: white;
+                    font-weight: 600;
+                    padding: 12px 30px;
+                    border-radius: 50px;
+                    border: none;
+                    transition: all 0.3s ease;
+                    font-size: 1.1rem;
+                " onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)'" 
+                onmouseout="this.style.transform='';this.style.boxShadow=''">
+                    <i class="fas fa-file-alt me-2"></i> Download Tax Guide
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- last -->
+ <!-- Why Choose Us - New Design -->
+<section style="
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #f8f9fa, white);
+    position: relative;
+    overflow: hidden;
+">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5" style="max-width: 700px; margin: 0 auto;">
+            <span style="
+                display: inline-block;
+                background-color: rgba(10, 36, 99, 0.1);
+                color: var(--primary-color);
+                padding: 8px 20px;
+                border-radius: 50px;
+                font-weight: 600;
+                margin-bottom: 15px;
+                font-size: 0.9rem;
+            ">
+                <i class="fas fa-star me-2"></i> OUR DIFFERENCE
+            </span>
+            <h2 style="
+                font-weight: 700;
+                font-size: 2.8rem;
+                color: var(--primary-color);
+                margin-bottom: 1rem;
+            ">
+                Why Tax Professionals <br>Choose Our Services
+            </h2>
+            <p style="
+                color: #666;
+                font-size: 1.1rem;
+                line-height: 1.8;
+            ">
+                We combine technical expertise with practical solutions to deliver exceptional value to our clients
+            </p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="row g-4">
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div style="
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    height: 100%;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    border-top: 4px solid var(--accent-color);
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)'" 
+                onmouseout="this.style.transform='';this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)'">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background-color: rgba(255, 215, 0, 0.1);
+                        border-radius: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    ">
+                        <i class="fas fa-user-tie" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.3rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Industry Veterans</h3>
+                    <p style="
+                        color: #666;
+                        line-height: 1.7;
+                        margin-bottom: 0;
+                    ">
+                        15+ years average experience with Big 4 alumni leading our tax practice
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div style="
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    height: 100%;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    border-top: 4px solid var(--secondary-color);
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)'" 
+                onmouseout="this.style.transform='';this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)'">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background-color: rgba(62, 146, 204, 0.1);
+                        border-radius: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    ">
+                        <i class="fas fa-chart-pie" style="font-size: 1.5rem; color: var(--secondary-color);"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.3rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Strategic Approach</h3>
+                    <p style="
+                        color: #666;
+                        line-height: 1.7;
+                        margin-bottom: 0;
+                    ">
+                        Holistic tax planning integrated with your business objectives
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div style="
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    height: 100%;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    border-top: 4px solid #28a745;
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)'" 
+                onmouseout="this.style.transform='';this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)'">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background-color: rgba(40, 167, 69, 0.1);
+                        border-radius: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    ">
+                        <i class="fas fa-shield-alt" style="font-size: 1.5rem; color: #28a745;"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.3rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Compliance First</h3>
+                    <p style="
+                        color: #666;
+                        line-height: 1.7;
+                        margin-bottom: 0;
+                    ">
+                        Zero penalty record with 100% compliance across all client engagements
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div style="
+                    background: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    height: 100%;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    border-top: 4px solid #dc3545;
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)'" 
+                onmouseout="this.style.transform='';this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)'">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background-color: rgba(220, 53, 69, 0.1);
+                        border-radius: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    ">
+                        <i class="fas fa-clock" style="font-size: 1.5rem; color: #dc3545;"></i>
+                    </div>
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.3rem;
+                        color: var(--primary-color);
+                        margin-bottom: 15px;
+                    ">Timely Execution</h3>
+                    <p style="
+                        color: #666;
+                        line-height: 1.7;
+                        margin-bottom: 0;
+                    ">
+                        98% of filings completed before deadline with proactive reminders
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="row mt-5 pt-5">
+            <div class="col-6 col-md-3 text-center">
+                <h3 style="
+                    font-weight: 700;
+                    font-size: 3rem;
+                    color: var(--primary-color);
+                    margin-bottom: 0;
+                ">
+                    <span class="counter" data-target="500">0</span>+
+                </h3>
+                <p style="color: #666;">Satisfied Clients</p>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <h3 style="
+                    font-weight: 700;
+                    font-size: 3rem;
+                    color: var(--primary-color);
+                    margin-bottom: 0;
+                ">
+                    <span class="counter" data-target="95">0</span>%
+                </h3>
+                <p style="color: #666;">Client Retention</p>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <h3 style="
+                    font-weight: 700;
+                    font-size: 3rem;
+                    color: var(--primary-color);
+                    margin-bottom: 0;
+                ">
+                    ₹<span class="counter" data-target="250">0</span>Cr
+                </h3>
+                <p style="color: #666;">Tax Savings Generated</p>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <h3 style="
+                    font-weight: 700;
+                    font-size: 3rem;
+                    color: var(--primary-color);
+                    margin-bottom: 0;
+                ">
+                    <span class="counter" data-target="15">0</span>+
+                </h3>
+                <p style="color: #666;">Years Experience</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animation Background Element -->
+    <div style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 800px;
+        opacity: 0.03;
+        z-index: 0;
+    ">
+        <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="var(--primary-color)" d="M50,100 Q150,200 250,100 T450,100" stroke="none"/>
+        </svg>
+    </div>
+</section>
+
+<script>
+    // Counter animation script
+    document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if(count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            const startCounter = () => {
+                const sectionPos = document.querySelector('section').getBoundingClientRect().top;
+                const screenPos = window.innerHeight / 1.3;
+                
+                if(sectionPos < screenPos) {
+                    updateCount();
+                    window.removeEventListener('scroll', startCounter);
+                }
+            };
+            
+            window.addEventListener('scroll', startCounter);
+            startCounter(); // Run on load if already in view
+        });
+    });
+</script>
+<!-- la -->
+ <!-- Income Tax & Withholding Tax Section -->
+<section style="
+    padding: 100px 0;
+    background-color: white;
+    position: relative;
+">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <span style="
+                    display: inline-block;
+                    background-color: rgba(10, 36, 99, 0.1);
+                    color: var(--primary-color);
+                    padding: 8px 20px;
+                    border-radius: 50px;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                    font-size: 0.9rem;
+                ">
+                    <i class="fas fa-file-invoice-dollar me-2"></i> TAX COMPLIANCE
+                </span>
+                <h2 style="
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                    line-height: 1.3;
+                ">
+                    Income Tax & Withholding Tax <br>Management Solutions
+                </h2>
+            </div>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="row g-5 align-items-center">
+            <!-- Left Column - Income Tax -->
+            <div class="col-lg-6">
+                <div style="
+                    background-color: var(--light-color);
+                    border-radius: 20px;
+                    padding: 40px;
+                    height: 100%;
+                    position: relative;
+                    overflow: hidden;
+                ">
+                    <div style="
+                        position: absolute;
+                        top: -20px;
+                        right: -20px;
+                        width: 100px;
+                        height: 100px;
+                        background-color: var(--accent-color);
+                        border-radius: 50%;
+                        opacity: 0.15;
+                    "></div>
+                    
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.8rem;
+                        color: var(--primary-color);
+                        margin-bottom: 1.5rem;
+                        position: relative;
+                    ">
+                        <i class="fas fa-user-tie me-3" style="color: var(--accent-color);"></i>
+                        Income Tax Compliance
+                    </h3>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <div style="
+                            display: flex;
+                            align-items: flex-start;
+                            margin-bottom: 20px;
+                        ">
+                            <div style="
+                                width: 30px;
+                                height: 30px;
+                                background-color: var(--accent-color);
+                                border-radius: 6px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            ">
+                                <i class="fas fa-check" style="font-size: 0.8rem; color: white;"></i>
+                            </div>
+                            <div>
+                                <h4 style="
+                                    font-weight: 600;
+                                    margin-bottom: 5px;
+                                    color: var(--dark-color);
+                                ">Individual Tax Planning</h4>
+                                <p style="
+                                    color: #666;
+                                    line-height: 1.7;
+                                    margin: 0;
+                                ">
+                                    Strategic planning for salary, investments, and deductions to optimize tax liability under Section 80C, 80D, and other applicable provisions.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div style="
+                            display: flex;
+                            align-items: flex-start;
+                            margin-bottom: 20px;
+                        ">
+                            <div style="
+                                width: 30px;
+                                height: 30px;
+                                background-color: var(--accent-color);
+                                border-radius: 6px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            ">
+                                <i class="fas fa-check" style="font-size: 0.8rem; color: white;"></i>
+                            </div>
+                            <div>
+                                <h4 style="
+                                    font-weight: 600;
+                                    margin-bottom: 5px;
+                                    color: var(--dark-color);
+                                ">Corporate Tax Filing</h4>
+                                <p style="
+                                    color: #666;
+                                    line-height: 1.7;
+                                    margin: 0;
+                                ">
+                                    Comprehensive compliance for companies including MAT, book profits, and tax audit requirements under Income Tax Act.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div style="
+                            display: flex;
+                            align-items: flex-start;
+                        ">
+                            <div style="
+                                width: 30px;
+                                height: 30px;
+                                background-color: var(--accent-color);
+                                border-radius: 6px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            ">
+                                <i class="fas fa-check" style="font-size: 0.8rem; color: white;"></i>
+                            </div>
+                            <div>
+                                <h4 style="
+                                    font-weight: 600;
+                                    margin-bottom: 5px;
+                                    color: var(--dark-color);
+                                ">Tax Dispute Resolution</h4>
+                                <p style="
+                                    color: #666;
+                                    line-height: 1.7;
+                                    margin: 0;
+                                ">
+                                    Representation before CIT(A), ITAT, and DRP for appeals, rectifications, and assessment proceedings.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" style="
+                        display: inline-flex;
+                        align-items: center;
+                        color: var(--primary-color);
+                        font-weight: 600;
+                        text-decoration: none;
+                    ">
+                        Explore Income Tax Services
+                        <i class="fas fa-arrow-right ms-2" style="transition: transform 0.3s ease;"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Column - Withholding Tax -->
+            <div class="col-lg-6">
+                <div style="
+                    background-color: var(--primary-color);
+                    border-radius: 20px;
+                    padding: 40px;
+                    height: 100%;
+                    color: white;
+                    position: relative;
+                    overflow: hidden;
+                ">
+                    <div style="
+                        position: absolute;
+                        bottom: -30px;
+                        left: -30px;
+                        width: 120px;
+                        height: 120px;
+                        background-color: var(--accent-color);
+                        border-radius: 50%;
+                        opacity: 0.15;
+                    "></div>
+                    
+                    <h3 style="
+                        font-weight: 700;
+                        font-size: 1.8rem;
+                        margin-bottom: 1.5rem;
+                        position: relative;
+                        color: white;
+                    ">
+                        <i class="fas fa-hand-holding-usd me-3" style="color: var(--accent-color);"></i>
+                        Withholding Tax (TDS/TCS)
+                    </h3>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <div style="
+                            display: flex;
+                            align-items: flex-start;
+                            margin-bottom: 20px;
+                        ">
+                            <div style="
+                                width: 30px;
+                                height: 30px;
+                                background-color: var(--accent-color);
+                                border-radius: 6px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            ">
+                                <i class="fas fa-check" style="font-size: 0.8rem; color: var(--dark-color);"></i>
+                            </div>
+                            <div>
+                                <h4 style="
+                                    font-weight: 600;
+                                    margin-bottom: 5px;
+                                    color: white;
+                                ">TDS Compliance</h4>
+                                <p style="
+                                    color: rgba(255,255,255,0.8);
+                                    line-height: 1.7;
+                                    margin: 0;
+                                ">
+                                    Complete management of tax deducted at source including quarterly returns (24Q, 26Q, 27Q), challans, and certificates.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div style="
+                            display: flex;
+                            align-items: flex-start;
+                            margin-bottom: 20px;
+                        ">
+                            <div style="
+                                width: 30px;
+                                height: 30px;
+                                background-color: var(--accent-color);
+                                border-radius: 6px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            ">
+                                <i class="fas fa-check" style="font-size: 0.8rem; color: var(--dark-color);"></i>
+                            </div>
+                            <div>
+                                <h4 style="
+                                    font-weight: 600;
+                                    margin-bottom: 5px;
+                                    color: white;
+                                ">TCS Management</h4>
+                                <p style="
+                                    color: rgba(255,255,255,0.8);
+                                    line-height: 1.7;
+                                    margin: 0;
+                                ">
+                                    Compliance for tax collected at source on specified goods and services as per Section 206C.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div style="
+                            display: flex;
+                            align-items: flex-start;
+                        ">
+                            <div style="
+                                width: 30px;
+                                height: 30px;
+                                background-color: var(--accent-color);
+                                border-radius: 6px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            ">
+                                <i class="fas fa-check" style="font-size: 0.8rem; color: var(--dark-color);"></i>
+                            </div>
+                            <div>
+                                <h4 style="
+                                    font-weight: 600;
+                                    margin-bottom: 5px;
+                                    color: white;
+                                ">Lower/Nil Deduction Certificates</h4>
+                                <p style="
+                                    color: rgba(255,255,255,0.8);
+                                    line-height: 1.7;
+                                    margin: 0;
+                                ">
+                                    Assistance in obtaining certificates under Section 197 for reduced TDS rates and Form 13 approvals.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" style="
+                        display: inline-flex;
+                        align-items: center;
+                        color: var(--accent-color);
+                        font-weight: 600;
+                        text-decoration: none;
+                    ">
+                        Explore Withholding Tax Solutions
+                        <i class="fas fa-arrow-right ms-2" style="transition: transform 0.3s ease;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compliance Process -->
+        <div class="row mt-5 pt-4">
+            <div class="col-12">
+                <h3 style="
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1.5rem;
+                    text-align: center;
+                ">
+                    Our End-to-End Tax Compliance Process
+                </h3>
+                
+                <div style="
+                    background-color: white;
+                    border-radius: 15px;
+                    padding: 30px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                    position: relative;
+                ">
+                    <div style="
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 20px;
+                    ">
+                        <!-- Step 1 -->
+                        <div style="
+                            flex: 1;
+                            min-width: 200px;
+                            text-align: center;
+                            padding: 20px;
+                            position: relative;
+                        ">
+                            <div style="
+                                width: 60px;
+                                height: 60px;
+                                background-color: var(--accent-color);
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0 auto 15px;
+                                color: var(--dark-color);
+                                font-weight: 700;
+                                font-size: 1.3rem;
+                            ">1</div>
+                            <h4 style="
+                                font-weight: 600;
+                                margin-bottom: 10px;
+                                color: var(--primary-color);
+                            ">Assessment</h4>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                Detailed review of your income sources and tax obligations
+                            </p>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div style="
+                            flex: 1;
+                            min-width: 200px;
+                            text-align: center;
+                            padding: 20px;
+                            position: relative;
+                        ">
+                            <div style="
+                                width: 60px;
+                                height: 60px;
+                                background-color: var(--accent-color);
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0 auto 15px;
+                                color: var(--dark-color);
+                                font-weight: 700;
+                                font-size: 1.3rem;
+                            ">2</div>
+                            <h4 style="
+                                font-weight: 600;
+                                margin-bottom: 10px;
+                                color: var(--primary-color);
+                            ">Planning</h4>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                Customized strategies to minimize liability within legal framework
+                            </p>
+                        </div>
+                        
+                        <!-- Step 3 -->
+                        <div style="
+                            flex: 1;
+                            min-width: 200px;
+                            text-align: center;
+                            padding: 20px;
+                            position: relative;
+                        ">
+                            <div style="
+                                width: 60px;
+                                height: 60px;
+                                background-color: var(--accent-color);
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0 auto 15px;
+                                color: var(--dark-color);
+                                font-weight: 700;
+                                font-size: 1.3rem;
+                            ">3</div>
+                            <h4 style="
+                                font-weight: 600;
+                                margin-bottom: 10px;
+                                color: var(--primary-color);
+                            ">Implementation</h4>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                Accurate calculation and timely deposit of taxes
+                            </p>
+                        </div>
+                        
+                        <!-- Step 4 -->
+                        <div style="
+                            flex: 1;
+                            min-width: 200px;
+                            text-align: center;
+                            padding: 20px;
+                            position: relative;
+                        ">
+                            <div style="
+                                width: 60px;
+                                height: 60px;
+                                background-color: var(--accent-color);
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0 auto 15px;
+                                color: var(--dark-color);
+                                font-weight: 700;
+                                font-size: 1.3rem;
+                            ">4</div>
+                            <h4 style="
+                                font-weight: 600;
+                                margin-bottom: 10px;
+                                color: var(--primary-color);
+                            ">Filing</h4>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                Complete return preparation and submission with documentation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Fallback if Lottie doesn't load
+        document.addEventListener('DOMContentLoaded', function() {
+            const lottiePlayer = document.querySelector('lottie-player');
+            const fallback = document.querySelector('.animation-fallback');
+            
+            // Check if Lottie player is working after a short delay
+            setTimeout(() => {
+                if (!lottiePlayer || lottiePlayer.shadowRoot.querySelector('svg') === null) {
+                    if (fallback) fallback.style.display = 'block';
+                }
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

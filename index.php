@@ -380,7 +380,7 @@
     </style>
 </head>
 <body>
-
+   <?php include "layout/header.php"; ?>
   <!-- Hero Section -->
   <section class="hero-section">
     <!-- Floating Particles -->

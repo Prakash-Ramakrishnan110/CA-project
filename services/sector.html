@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDI-Prohibited Sectors</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e92cc;
+            --accent-color: #ffd700;
+            --dark-color: #001845;
+            --light-color: #f9f9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            padding: 120px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            padding: 40px 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .text-accent {
+            color: var(--accent-color);
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 8px 8px 0;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .feature-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            margin-bottom: 2.5rem;
+        }
+        
+        .hero-btn {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn-warning {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+        
+        /* Floating animation elements */
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+        
+        /* Modal styles */
+        .modal-content {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .modal-footer {
+            border-top: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .close {
+            color: white;
+            text-shadow: none;
+            opacity: 0.8;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 100px 0;
+                min-height: auto;
+            }
+            
+            .hero-content {
+                padding: 30px 0;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0;
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .d-flex {
+                justify-content: center;
+            }
+            
+            .feature-card {
+                text-align: left;
+            }
+            
+            .ps-4 {
+                padding-left: 0 !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            
+            .feature-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Floating background elements -->
+        <div class="floating-elements">
+            <div class="floating-element" style="width: 300px; height: 300px; top: -150px; right: -150px;"></div>
+            <div class="floating-element" style="width: 200px; height: 200px; bottom: -100px; left: -100px;"></div>
+            <div class="floating-element" style="width: 150px; height: 150px; top: 30%; left: 10%;"></div>
+            <div class="floating-element" style="width: 100px; height: 100px; bottom: 20%; right: 15%;"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <h1 class="hero-title fw-bold text-accent animate__animated animate__fadeInDown">FDI-Prohibited Sectors</h1>
+                    <p class="hero-subtitle text-white animate__animated animate__fadeIn animate__delay-1s">Understanding the sectors where Foreign Direct Investment is restricted or prohibited in accordance with government regulations and policies.</p>
+                    <div class="d-flex gap-4 flex-wrap animate__animated animate__fadeInUp animate__delay-1s">
+                        <button class="btn btn-warning hero-btn fw-bold" data-bs-toggle="modal" data-bs-target="#sectorsModal">Explore Sectors</button>
+                        <button class="btn btn-outline-light hero-btn" data-bs-toggle="modal" data-bs-target="#downloadModal">Download Guidelines</button>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="ps-lg-4 mt-5 mt-lg-0">
+                        <div class="feature-card animate__animated animate__fadeInRight animate__delay-1s" data-bs-toggle="modal" data-bs-target="#securityModal">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="feature-title">National Security</h4>
+                            <p class="feature-text">Sectors critical to national defense and security are completely off-limits to foreign investment.</p>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sector Details Modal -->
+    <div class="modal fade" id="sectorsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title text-accent">FDI-Prohibited Sectors Overview</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <h4 class="text-accent"><i class="fas fa-ban me-2"></i>Complete Prohibitions</h4>
+                            <ul class="text-white">
+                                <li>Lottery business including government/private lottery</li>
+                                <li>Gambling and betting including casinos</li>
+                                <li>Chit fund and Nidhi company activities</li>
+                                <li>Atomic energy generation</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h4 class="text-accent"><i class="fas fa-exclamation-triangle me-2"></i>Restricted Sectors</h4>
+                            <ul class="text-white">
+                                <li>Defense (up to 74% with approval)</li>
+                                <li>Telecom (up to 100% with approval)</li>
+                                <li>Private security agencies (up to 74%)</li>
+                                <li>Civil aviation (up to 100% with conditions)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="alert alert-warning mt-3">
+                        <i class="fas fa-info-circle me-2"></i> These restrictions are subject to change based on government policies.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning">Request Consultation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Modal -->
+    <div class="modal fade" id="downloadModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title text-accent">Download Guidelines</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label text-white">Email address</label>
+                            <input type="email" class="form-control bg-dark text-white" id="emailInput" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="countrySelect" class="form-label text-white">Country</label>
+                            <select class="form-select bg-dark text-white" id="countrySelect">
+                                <option selected>Select your country</option>
+                                <option>India</option>
+                                <option>United States</option>
+                                <option>United Kingdom</option>
+                                <option>Japan</option>
+                                <option>Germany</option>
+                            </select>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="agreeCheck">
+                            <label class="form-check-label text-white" for="agreeCheck">
+                                I agree to receive updates and newsletters
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-warning">Download PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Modal -->
+    <div class="modal fade" id="securityModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title text-accent"><i class="fas fa-shield-alt me-2"></i>National Security Sectors</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-white">The following sectors are completely prohibited from foreign direct investment due to national security concerns:</p>
+                    <ul class="text-white">
+                        <li>Defense equipment manufacturing (beyond 74%)</li>
+                        <li>Cryptography and security technologies</li>
+                        <li>Critical infrastructure protection</li>
+                        <li>Border area development projects</li>
+                    </ul>
+                    <div class="alert alert-warning mt-3">
+                        <i class="fas fa-lock me-2"></i> These restrictions are strictly enforced to protect national interests.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 2nd -->
+     <!-- Overview Section -->
+<section class="overview-section py-5" style="background-color: white;">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3" style="color: var(--primary-color);">Overview</h2>
+            <p class="lead" style="color: var(--dark-color); max-width: 700px; margin: 0 auto;">
+                Key sectors with FDI restrictions and their governing regulations
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Prohibited Sector 1 -->
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="regulation-card h-100 p-4" style="border-left: 4px solid var(--accent-color);">
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="icon-wrapper me-3" style="background: rgba(10, 36, 99, 0.1); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-shield-alt" style="color: var(--primary-color);"></i>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--primary-color);">Defense Sector</h3>
+                            <p class="badge bg-warning text-dark mb-2">Prohibited beyond 74%</p>
+                        </div>
+                    </div>
+                    <div class="regulation-content">
+                        <p style="color: var(--dark-color);">Foreign investment in defense industries is capped at 74% under automatic route and requires government approval beyond 49%.</p>
+                        <div class="regulation-details mt-3">
+                            <h5 class="mb-2" style="color: var(--secondary-color);">Key Regulations:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-gavel text-accent me-2"></i> FDI Policy 2020, Para 5.2.18</li>
+                                <li class="mb-2"><i class="fas fa-file-alt text-accent me-2"></i> Arms Rules 2016</li>
+                                <li><i class="fas fa-balance-scale text-accent me-2"></i> Defense Production Policy 2018</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prohibited Sector 2 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="regulation-card h-100 p-4" style="border-left: 4px solid #dc3545;">
+                <div class="d-flex align-items-start mb-3">
+                    <div class="icon-wrapper me-3" style="background: rgba(220, 53, 69, 0.1); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-atom" style="color: #dc3545;"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--primary-color);">Atomic Energy</h3>
+                        <p class="badge bg-danger text-white mb-2">100% Prohibited</p>
+                    </div>
+                </div>
+                <div class="regulation-content">
+                    <p style="color: var(--dark-color);">All activities related to atomic energy generation and related technologies are completely prohibited for foreign investment.</p>
+                    <div class="regulation-details mt-3">
+                        <h5 class="mb-2" style="color: var(--secondary-color);">Key Regulations:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-gavel text-accent me-2"></i> Atomic Energy Act 1962</li>
+                            <li class="mb-2"><i class="fas fa-file-alt text-accent me-2"></i> FDI Policy 2020, Para 5.2.4</li>
+                            <li><i class="fas fa-ban text-accent me-2"></i> Complete prohibition under Schedule I</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Prohibited Sector 3 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="regulation-card h-100 p-4" style="border-left: 4px solid var(--secondary-color);">
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="icon-wrapper me-3" style="background: rgba(62, 146, 204, 0.1); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-satellite-dish" style="color: var(--secondary-color);"></i>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--primary-color);">Space Technology</h3>
+                            <p class="badge bg-primary text-white mb-2">Restricted</p>
+                        </div>
+                    </div>
+                    <div class="regulation-content">
+                        <p style="color: var(--dark-color);">FDI in space sector is permitted up to 100% in specific activities with government approval, while certain areas remain prohibited.</p>
+                        <div class="regulation-details mt-3">
+                            <h5 class="mb-2" style="color: var(--secondary-color);">Key Regulations:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-gavel text-accent me-2"></i> Space FDI Policy 2020</li>
+                                <li class="mb-2"><i class="fas fa-file-alt text-accent me-2"></i> Satellite Communication Policy</li>
+                                <li><i class="fas fa-rocket text-accent me-2"></i> IN-SPACe Guidelines</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prohibited Sector 4 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="regulation-card h-100 p-4" style="border-left: 4px solid #6f42c1;">
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="icon-wrapper me-3" style="background: rgba(111, 66, 193, 0.1); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-coins" style="color: #6f42c1;"></i>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--primary-color);">Lottery & Gambling</h3>
+                            <p class="badge bg-danger text-white mb-2">100% Prohibited</p>
+                        </div>
+                    </div>
+                    <div class="regulation-content">
+                        <p style="color: var(--dark-color);">All activities including government/private lottery, gambling, betting and casinos are completely prohibited for foreign investment.</p>
+                        <div class="regulation-details mt-3">
+                            <h5 class="mb-2" style="color: var(--secondary-color);">Key Regulations:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-gavel text-accent me-2"></i> FDI Policy 2020, Para 5.2.4.4</li>
+                                <li class="mb-2"><i class="fas fa-file-alt text-accent me-2"></i> Public Gambling Act 1867</li>
+                                <li><i class="fas fa-dice text-accent me-2"></i> State-specific lottery regulations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="#" class="btn btn-primary px-4 py-2 fw-bold">View Complete Sector List</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .overview-section {
+        position: relative;
+    }
+    
+    .regulation-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .regulation-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .icon-wrapper {
+        flex-shrink: 0;
+    }
+    
+    .regulation-details {
+        background: rgba(249, 249, 249, 0.7);
+        padding: 15px;
+        border-radius: 8px;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .regulation-card {
+            padding: 1.5rem !important;
+        }
+    }
+</style>
+
+    <!-- 3nd  -->
+     <!-- Our Services Section -->
+<section class="services-section py-5" style="background-color: var(--light-color);">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3" style="color: var(--primary-color);">Our Services</h2>
+            <p class="lead" style="color: var(--dark-color); max-width: 700px; margin: 0 auto;">
+                Comprehensive solutions to navigate FDI regulations and maximize your investment potential
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Service Card 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card h-100 d-flex flex-column">
+                    <div class="icon-half d-flex align-items-center justify-content-center" 
+                         style="background: linear-gradient(135deg, rgba(10, 36, 99, 0.1) 0%, rgba(62, 146, 204, 0.1) 100%);">
+                        <div class="icon-circle">
+                            <i class="fas fa-file-contract" style="color: var(--primary-color); font-size: 2rem;"></i>
+                        </div>
+                    </div>
+                    <div class="content-half p-4">
+                        <h3 class="h4 fw-bold mb-3" style="color: var(--primary-color);">FDI Compliance</h3>
+                        <p style="color: var(--dark-color);">
+                            Ensure full compliance with FDI regulations through our comprehensive legal framework analysis and documentation services.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Regulatory analysis</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Documentation support</li>
+                            <li><i class="fas fa-check-circle text-accent me-2"></i> Compliance audits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card h-100 d-flex flex-column">
+                    <div class="icon-half d-flex align-items-center justify-content-center" 
+                         style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 166, 0, 0.1) 100%);">
+                        <div class="icon-circle">
+                            <i class="fas fa-chart-line" style="color: var(--accent-color); font-size: 2rem;"></i>
+                        </div>
+                    </div>
+                    <div class="content-half p-4">
+                        <h3 class="h4 fw-bold mb-3" style="color: var(--primary-color);">Sector Analysis</h3>
+                        <p style="color: var(--dark-color);">
+                            Detailed analysis of prohibited, restricted and open sectors to help you make informed investment decisions.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Sector-specific reports</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Policy updates</li>
+                            <li><i class="fas fa-check-circle text-accent me-2"></i> Investment feasibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card h-100 d-flex flex-column">
+                    <div class="icon-half d-flex align-items-center justify-content-center" 
+                         style="background: linear-gradient(135deg, rgba(62, 146, 204, 0.1) 0%, rgba(0, 24, 69, 0.1) 100%);">
+                        <div class="icon-circle">
+                            <i class="fas fa-hands-helping" style="color: var(--secondary-color); font-size: 2rem;"></i>
+                        </div>
+                    </div>
+                    <div class="content-half p-4">
+                        <h3 class="h4 fw-bold mb-3" style="color: var(--primary-color);">Government Liaison</h3>
+                        <p style="color: var(--dark-color);">
+                            Expert assistance in navigating government approvals and clearances for restricted sector investments.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Approval facilitation</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Regulatory consultations</li>
+                            <li><i class="fas fa-check-circle text-accent me-2"></i> Policy advocacy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .services-section {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .service-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .icon-half {
+        height: 200px;
+        position: relative;
+    }
+    
+    .content-half {
+        flex: 1;
+    }
+    
+    .icon-circle {
+        width: 100px;
+        height: 100px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .icon-half {
+            height: 150px;
+        }
+        
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .content-half {
+            padding: 1.5rem !important;
+        }
+    }
+</style>
+<!-- 4th -->
+ <!-- Why Choose Us Section -->
+<section class="py-5" style="background-color: #f8fafd;">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <!-- Left Column - Image -->
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <!-- Main Image -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Investment experts discussing strategy" 
+                         class="img-fluid rounded-4 shadow-lg" 
+                         style="border: 8px solid white;">
+                    
+                    <!-- Badge Overlay -->
+                    <div class="position-absolute bottom-0 start-0 translate-middle-y ms-4">
+                        <div class="bg-primary text-white p-3 rounded-3 shadow" style="width: 180px;">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white text-primary rounded-circle p-2 me-3" style="width: 40px; height: 40px;">
+                                    <i class="fas fa-award fs-5"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-bold fs-5">15+ Years</div>
+                                    <div class="small">Experience</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Content -->
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold mb-4" style="color: #0a2463;">
+                    Why Global Investors <span style="color: var(--accent-color);">Choose Our Expertise</span>
+                </h2>
+                
+                <p class="lead mb-5" style="color: #555;">
+                    We simplify complex investment processes while maximizing your returns and minimizing risks
+                </p>
+                
+                <!-- Benefits List -->
+                <div class="row g-4">
+                    <!-- Benefit 1 -->
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="me-4">
+                                <div style="width: 50px; height: 50px; background-color: rgba(62, 146, 204, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-chess-queen fs-4" style="color: #3e92cc;"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 style="color: #0a2463; font-weight: 600;">Strategic Advantage</h4>
+                                <p class="small" style="color: #666;">
+                                    Insider knowledge of local regulations and market conditions
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 2 -->
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="me-4">
+                                <div style="width: 50px; height: 50px; background-color: rgba(255, 215, 0, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-bolt fs-4" style="color: #d4af37;"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 style="color: #0a2463; font-weight: 600;">Fast Approvals</h4>
+                                <p class="small" style="color: #666;">
+                                    Average 30% faster processing than industry standard
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 3 -->
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="me-4">
+                                <div style="width: 50px; height: 50px; background-color: rgba(10, 36, 99, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-shield-alt fs-4" style="color: #0a2463;"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 style="color: #0a2463; font-weight: 600;">Risk Protection</h4>
+                                <p class="small" style="color: #666;">
+                                    Comprehensive compliance safeguards
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 4 -->
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="me-4">
+                                <div style="width: 50px; height: 50px; background-color: rgba(255, 107, 107, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-headset fs-4" style="color: #ff6b6b;"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 style="color: #0a2463; font-weight: 600;">Dedicated Support</h4>
+                                <p class="small" style="color: #666;">
+                                    Multilingual team available 24/5
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="mt-5 pt-3">
+                    <a href="#contact" class="btn btn-primary btn-lg px-4 py-3 rounded-pill hover-scale" style="background-color: #3e92cc; border: none;">
+                        <i class="fas fa-handshake me-2"></i> Start Your Investment Journey
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Add pop animation to elements when they appear in viewport
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.feature-card, .hero-title, .hero-subtitle, .hero-btn');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Add click animation to buttons
+            document.querySelectorAll('.hero-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    this.classList.add('animate__animated', 'animate__pulse');
+                    setTimeout(() => {
+                        this.classList.remove('animate__animated', 'animate__pulse');
+                    }, 1000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -512,7 +512,7 @@
                         </ul>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-contact" href="#">Contact Us</a>
+                        <a class="btn btn-contact" href="contact.php">Contact Us</a>
                     </li>
                 </ul>
             </div>
