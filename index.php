@@ -420,7 +420,7 @@
                 </div>
             </div>
             <div class="col-lg-5 d-none d-lg-block">
-                <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_uwWgICKCxj.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player>
+                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_6wzcvn2a.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player>
             </div>
         </div>
     </div>
