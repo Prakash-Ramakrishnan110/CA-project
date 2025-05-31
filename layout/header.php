@@ -17,16 +17,16 @@
             --light-blue: #e6f0ff;
             --dark-blue: #0d2b4e;
             --gold: #d4af37;
-            --saffron: #FF9933;  /* Indian flag saffron */
-            --white: #FFFFFF;    /* Indian flag white */
-            --green: #138808;    /* Indian flag green */
-            --navy-blue: #000080; /* Ashoka Chakra blue */
+            --saffron: #FF9933;
+            --white: #FFFFFF;
+            --green: #138808;
+            --navy-blue: #000080;
             --transition: all 0.3s ease;
         }
         
         body {
             font-family: 'Poppins', sans-serif;
-            padding-top: 80px; /* To account for fixed header */
+            padding-top: 80px;
         }
         
         /* Header/Navbar Styles */
@@ -40,6 +40,12 @@
         .navbar.scrolled {
             padding: 5px 0;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .navbar-transparent {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            backdrop-filter: blur(10px);
         }
         
         .navbar-brand {
@@ -109,7 +115,7 @@
             color: var(--primary-blue);
         }
         
-        /* Unified dropdown style for all sections with Indian flag colors */
+        /* Dropdown styles */
         .dropdown-menu {
             border: none;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
@@ -147,7 +153,7 @@
             opacity: 1;
         }
         
-        /* Submenu items with flag colors */
+        /* Submenu items */
         .dropdown-submenu > .dropdown-item {
             background-color: rgba(255, 255, 255, 0.9);
         }
@@ -177,7 +183,7 @@
             vertical-align: 0.15em;
         }
         
-        /* Multi-level dropdown styles */
+        /* Multi-level dropdown */
         .dropdown-submenu {
             position: relative;
         }
@@ -202,7 +208,7 @@
             margin-top: -0.5em;
         }
         
-        /* Contact button with Indian flag gradient - Improved responsive version */
+        /* Contact button */
         .btn-contact {
             background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
             color: var(--navy-blue);
@@ -243,7 +249,7 @@
             left: 100%;
         }
         
-        /* Mobile menu styles */
+        /* Mobile menu */
         .navbar-toggler {
             border: none;
             padding: 0.5rem;
@@ -296,7 +302,42 @@
             top: 0;
         }
         
-        /* Enhanced Responsive adjustments */
+        /* Dark mode toggle */
+        .dark-mode-toggle {
+            background: none;
+            border: none;
+            color: var(--dark-blue);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 5px 10px;
+            margin-left: 15px;
+            transition: var(--transition);
+        }
+        
+        .dark-mode-toggle:hover {
+            color: var(--primary-blue);
+        }
+        
+        /* Language switcher */
+        .language-switcher {
+            position: relative;
+            margin-left: 15px;
+        }
+        
+        .language-switcher button {
+            background: none;
+            border: none;
+            color: var(--dark-blue);
+            font-weight: 600;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        
+        .language-switcher .dropdown-menu {
+            min-width: 120px;
+        }
+        
+        /* Responsive adjustments */
         @media (max-width: 991.98px) {
             .navbar-collapse {
                 background-color: white;
@@ -332,7 +373,6 @@
                 width: 85%;
             }
             
-            /* Improved mobile contact button */
             .btn-contact {
                 display: inline-block;
                 width: auto;
@@ -341,13 +381,19 @@
                 padding: 10px 20px;
                 font-size: 1rem;
                 min-width: 140px;
-                white-space: nowrap;
             }
             
-            /* Make dropdown items more tappable on mobile */
             .dropdown-item {
                 padding: 12px 20px;
                 font-size: 0.95rem;
+            }
+            
+            .dark-mode-toggle, .language-switcher {
+                margin-left: 0;
+                padding: 10px 15px;
+                display: block;
+                width: 100%;
+                text-align: left;
             }
         }
         
@@ -407,7 +453,6 @@
                 font-size: 0.9rem;
             }
             
-            /* Small mobile contact button */
             .btn-contact {
                 padding: 8px 12px;
                 font-size: 0.9rem;
@@ -423,13 +468,15 @@
                 font-size: 0.85rem;
             }
         }
+        
+    
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="" alt=" Logo" class="logo-img">
+                <img src="logo.png" alt=" Logo" class="logo-img">
                 <div class="brand-text">
                     <span>Karthika and Associates</span>
                     <span class="brand-subtitle">Chartered Accountants</span>
@@ -441,7 +488,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="#" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -514,15 +561,11 @@
                     <li class="nav-item ms-lg-3">
                         <a class="btn btn-contact" href="contact.php">Contact Us</a>
                     </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+            
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Initialize dropdown submenus and scroll effect
         document.addEventListener('DOMContentLoaded', function() {
             // Multi-level dropdown functionality
             var dropdownElements = [].slice.call(document.querySelectorAll('.dropdown-submenu a.dropdown-toggle'));
@@ -530,7 +573,6 @@
             dropdownElements.forEach(function(el) {
                 el.addEventListener('click', function(e) {
                     if (!this.nextElementSibling.classList.contains('show')) {
-                        // Close other open submenus at this level
                         var siblingMenus = this.parentNode.parentNode.querySelectorAll('.dropdown-menu');
                         siblingMenus.forEach(function(menu) {
                             if (menu !== this.nextElementSibling) {
@@ -554,23 +596,80 @@
             
             // Scroll effect for navbar
             window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
                 if (window.scrollY > 50) {
-                    document.querySelector('.navbar').classList.add('scrolled');
+                    navbar.classList.add('scrolled');
+                    navbar.classList.remove('navbar-transparent');
                 } else {
-                    document.querySelector('.navbar').classList.remove('scrolled');
+                    navbar.classList.remove('scrolled');
+                    // Add transparent class only on home page when at top
+                    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+                        navbar.classList.add('navbar-transparent');
+                    }
                 }
             });
             
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+            // Initialize scroll effect on page load
+            if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+                document.querySelector('.navbar').classList.add('navbar-transparent');
+            }
+            
+            // Dark mode toggle
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const body = document.body;
+            
+            // Check for saved user preference
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                body.classList.add('dark-mode');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+            
+            darkModeToggle.addEventListener('click', function() {
+                body.classList.toggle('dark-mode');
+                
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+            
+            // Set active nav item based on current page
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.classList.remove('active');
+                    link.removeAttribute('aria-current');
+                }
+            });
+            
+            // Accessibility - close dropdown when focus is lost
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        this.querySelector('.dropdown-toggle').click();
+                    }
                 });
             });
         });
+        
+        // Make this header reusable by including it via JavaScript
+        function includeHeader() {
+            const header = document.querySelector('nav');
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    header.innerHTML = data;
+                });
+        }
+        
+        // Uncomment this if you want to use the header as a reusable component
+        // includeHeader();
     </script>
 </body>
 </html>
