@@ -496,6 +496,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="companyDropdown">
                             <li><a class="dropdown-item" href="#">Founder</a></li>
+                            <li><a class="dropdown-item" href="#">Our Company</a></li>
                             <li><a class="dropdown-item" href="#">Our Team</a></li>
                             <li><a class="dropdown-item" href="#">Why India</a></li>
                             <li><a class="dropdown-item" href="#">Gallery</a></li>
